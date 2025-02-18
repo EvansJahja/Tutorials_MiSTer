@@ -123,7 +123,7 @@ dpram #( .init_file(""),.widthad_a(12),.width_a(8)) ram
         .address_b(cpu_addr[11:0]),
         .wren_b(1'b0),
         .q_b(),
-        .data_b(),
+        .data_b()
 
 );
 

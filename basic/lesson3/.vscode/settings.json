@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.A22": "arm",
+        "*.idc": "c",
+        "LZSS.C": "cpp",
+        "LZARI.C": "cpp"
+    }
+}
