@@ -7078,7 +7078,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
         if ((0U == (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__mode))) {
             if ((0U == (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__step))) {
                 vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram0_addr 
-                    = (0x3fffU & ((IData)(0x18c0U) 
+                    = (0x3fffU & ((IData)(0x1800U) 
                                   + (((IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__LX) 
                                       >> 3U) + (0x3fe0U 
                                                 & VL_SHIFTL_III(14,32,32, (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_LY), 2U)))));
@@ -7106,7 +7106,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                     = ((1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__pixel_buf) 
                               >> (7U & ((IData)(7U) 
                                         - (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileX)))))
-                        ? 0x4aU : 0U);
+                        ? 0x4aU : 0xffU);
                 if ((8U > (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileX))) {
                     vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileX 
                         = (0xffU & ((IData)(1U) + (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileX)));
@@ -7116,7 +7116,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                     vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileX = 0U;
                     vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu__DOT__step = 0U;
                     vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu__DOT__mode = 0U;
-                    if ((0x97U <= (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__LX))) {
+                    if ((0xa0U <= (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__LX))) {
                         vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu__DOT__LX = 0U;
                         vlSelfRef.top__DOT__soc__DOT__ppu_LY 
                             = (0xffU & ((IData)(1U) 

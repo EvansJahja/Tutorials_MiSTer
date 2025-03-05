@@ -189,12 +189,14 @@ int main(int argc, char** argv, char** env) {
 
 	// Enable tracing
 
+	/*
 	if (!m_trace) {
 		Verilated::traceEverOn(true);
 		m_trace = new VerilatedVcdC();
 		top->trace(m_trace, 99);
 		m_trace->open("trace.vcd");
 	}
+	*/
 
 
 
