@@ -1,6 +1,6 @@
 
 #include "Vtop.h"
-
+#include "verilated_vcd_c.h"
 #include "imgui.h"
 #ifndef _MSC_VER
 #include <stdio.h>
@@ -27,9 +27,6 @@ const char* windowTitle = "Verilator Sim: Lesson3";
 bool showDebugWindow = true;
 const char* debugWindowTitle = "Virtual Dev Board v1.0";
 DebugConsole console;
-MemoryEditor mem_edit_1;
-MemoryEditor mem_edit_2;
-MemoryEditor mem_edit_3;
 // HPS emulator
 // ------------
 SimBus bus(console);
@@ -52,19 +49,19 @@ const int input_pause = 11;
 
 // Video
 // -----
-#define VGA_WIDTH 640
-#define VGA_HEIGHT 400
+#define VGA_WIDTH 768
+#define VGA_HEIGHT 576
 #define VGA_ROTATE 0  // 90 degrees anti-clockwise
 SimVideo video(VGA_WIDTH, VGA_HEIGHT, VGA_ROTATE);
 
 // Simulation control
 // ------------------
 int initialReset = 48;
-bool run_enable = 1;
+bool run_enable = 0;
 int batchSize = 25000000 / 100;
 bool single_step = 0;
 bool multi_step = 0;
-int multi_step_amount = 1024;
+int multi_step_amount = 102400;
 
 // Verilog module
 // --------------
@@ -79,6 +76,8 @@ int clockSpeed = 24; // This is not used, just a reminder for the dividers below
 SimClock clk_sys(1); // 12mhz
 SimClock clk_pix(1); // 6mhz
 
+VerilatedVcdC* m_trace; // for tracing
+
 void resetSim() {
 	main_time = 0;
 	top->reset = 1;
@@ -86,8 +85,8 @@ void resetSim() {
 	clk_pix.Reset();
 }
 
-int verilate() {
 
+int verilate() {
 	if (!Verilated::gotFinish()) {
 
 		// Assert reset during startup
@@ -113,6 +112,14 @@ int verilate() {
 		if (clk_sys.clk != clk_sys.old) {
 			if (clk_sys.clk) { bus.BeforeEval(); }
 			top->eval();
+			
+			// Trace
+			if (m_trace) {
+				bool ppuen = top->rootp->top__DOT__soc__DOT__ppu__DOT__lcd_ppu_en > 0;
+				if (main_time >= 1024000 && ppuen)
+					m_trace->dump(main_time);
+			}
+
 			if (clk_sys.clk) { bus.AfterEval(); }
 		}
 
@@ -180,6 +187,17 @@ int main(int argc, char** argv, char** env) {
 
 	//bus.QueueDownload("bird.bin", 0);
 
+	// Enable tracing
+
+	if (!m_trace) {
+		Verilated::traceEverOn(true);
+		m_trace = new VerilatedVcdC();
+		top->trace(m_trace, 99);
+		m_trace->open("trace.vcd");
+	}
+
+
+
 
 #ifdef WIN32
 	MSG msg;
@@ -231,7 +249,7 @@ int main(int argc, char** argv, char** env) {
 		if (ImGui::Button("Multi Step")) { run_enable = 0; multi_step = 1; }
 		ImGui::SameLine();
 
-		ImGui::SliderInt("Step amount", &multi_step_amount, 8, 1024);
+		ImGui::SliderInt("Step amount", &multi_step_amount, 8, 1024000);
 
 		ImGui::SliderInt("Rotate", &video.output_rotate, -1, 1); ImGui::SameLine();
 		ImGui::Checkbox("Flip V", &video.output_vflip);
@@ -242,20 +260,51 @@ int main(int argc, char** argv, char** env) {
 		float m = 1.0;
 		ImGui::Image(video.texture_id, ImVec2(video.output_width * m, video.output_height * m));
 		ImGui::End();
-
+		
+		
                 ImGui::Begin("ROM Editor");
-        //mem_edit_1.DrawContents(top->top__DOT__soc__DOT__vga__DOT__vmem__DOT__mem, 16384, 0);
-				
+				{
+					static MemoryEditor mem_edit;
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__rom__DOT__mem.data(), 4096, 0);
+				}
+                ImGui::End();
 
-                mem_edit_1.DrawContents(top->rootp->top__DOT__soc__DOT__rom__DOT__mem.data(), 4096, 0);
-                ImGui::End();
                 ImGui::Begin("RAM Editor");
-                //mem_edit_1.DrawContents(top->top__DOT__soc__DOT__vga__DOT__vmem__DOT__mem, 16384, 0);
-                mem_edit_2.DrawContents(top->rootp->top__DOT__soc__DOT__ram__DOT__mem.data(), 4096, 0);
                 ImGui::End();
-                ImGui::Begin("VRAM Editor");
-                //mem_edit_1.DrawContents(top->top__DOT__soc__DOT__vga__DOT__vmem__DOT__mem, 16384, 0);
-                mem_edit_3.DrawContents(top->rootp->top__DOT__soc__DOT__vga__DOT__vmem.data(), 16000, 0);
+
+				ImGui::Begin("WRAM0");
+				{
+					static MemoryEditor mem_edit;
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__wram_0__DOT__mem.data(), 4096, 0);
+				}
+				ImGui::End();
+
+				ImGui::Begin("WRAM1");
+				{
+					static MemoryEditor mem_edit;
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__mem.data(), 4096, 0);
+				}
+				ImGui::End();
+
+				ImGui::Begin("WRAM2");
+				{
+					static MemoryEditor mem_edit;
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__wram___BRA__2__KET____DOT__wram_N__DOT__mem.data(), 4096, 0);
+				}
+				ImGui::End();
+
+                ImGui::Begin("VRAM0");
+                {
+					static MemoryEditor mem_edit;
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__vram_0__DOT__mem.data(), 8192, 0x8000);
+				}
+                ImGui::End();
+
+                ImGui::Begin("VRAM1");
+                {
+					static MemoryEditor mem_edit;
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__vram_1__DOT__mem.data(), 8192, 0x8000);
+				}
                 ImGui::End();
 
 
@@ -269,9 +318,10 @@ int main(int argc, char** argv, char** env) {
                 ImGui::Text("C       0x%02X", top->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__C);
                 ImGui::Text("D       0x%02X", top->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__D);
                 ImGui::Text("E       0x%02X", top->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__E);
-                ImGui::Text("H       0x%02X", top->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__H);
-                ImGui::Text("L       0x%02X", top->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__L);
 */
+                ImGui::Text("H       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__H);
+                ImGui::Text("L       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__L);
+
                 ImGui::Spacing();
                 ImGui::Separator();
                 ImGui::Text("16 bit Registers");
@@ -303,6 +353,11 @@ int main(int argc, char** argv, char** env) {
 				for (int step = 0; step < multi_step_amount; step++) { verilate(); }
 			}
 		}
+	}
+
+	// Stop tracing
+	if (m_trace) {
+		m_trace->close();
 	}
 
 	// Clean up before exit

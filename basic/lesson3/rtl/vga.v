@@ -7,15 +7,23 @@
 
 // http://tinyvga.com/vga-timing/640x400@70Hz
 
+// GB mode
+
+// To draw Game boy nicely, we need 160x144 pixels. Times 4 that gives us 640x576. We could use 768x576 which gives us
+// black bars of 128 columns (64 on left and right)
+// http://tinyvga.com/vga-timing/768x576@60Hz
+// VESA 768x576@60 Hz (pixel clock 34.96 MHz)
+
+
 module vga (
    // pixel clock
    input  pclk,
 	
-	// CPU interface (write only!)
-	input  cpu_clk,
-	input  cpu_wr,
-	input [13:0] cpu_addr,
-	input [7:0] cpu_data,
+	// FB interface for writing
+	input  fb_clk,
+	input  fb_wr,
+	input [14:0] fb_addr,
+	input [7:0] fb_data,
 		
    // VGA output
    output reg	hs,
@@ -28,16 +36,17 @@ module vga (
    output VGA_DE
 );
 					
-// 640x400 70HZ VESA according to  http://tinyvga.com/vga-timing/640x400@70Hz
-parameter H   = 640;    // width of visible area
-parameter HFP = 16;     // unused time before hsync
-parameter HS  = 96;     // width of hsync
-parameter HBP = 48;     // unused time after hsync
+// http://tinyvga.com/vga-timing/768x576@60Hz
+// VESA 768x576@60 Hz (pixel clock 34.96 MHz)
+parameter H   = 768;    // width of visible area
+parameter HFP = 24;     // unused time before hsync
+parameter HS  = 80;     // width of hsync
+parameter HBP = 104;     // unused time after hsync
 
-parameter V   = 400;    // height of visible area
-parameter VFP = 12;     // unused time before vsync
-parameter VS  = 2;      // width of vsync
-parameter VBP = 35;     // unused time after vsync
+parameter V   = 576;    // height of visible area
+parameter VFP = 1;      // unused time before vsync
+parameter VS  = 3;      // width of vsync
+parameter VBP = 17;     // unused time after vsync
 
 reg[9:0]  h_cnt;        // horizontal pixel counter
 reg[9:0]  v_cnt;        // vertical pixel counter
@@ -72,18 +81,26 @@ always@(posedge pclk) begin
 end
 
 // read VRAM
-reg [13:0] video_counter;
-reg [7:0] pixel;
+reg [15:0] video_counter;
+wire [7:0] pixel;
 reg de;
 
 // 16000 bytes of internal video memory for 160x100 pixel at 8 Bit (RGB 332)
-reg [7:0] vmem [160*100-1:0];
+// reg [7:0] vmem [160*144-1:0];
+dpram #( .widthad_a(16),.width_a(8)) fb
+(
+        .clock_a(pclk),
+        .address_a(video_counter),
+        .q_a(pixel),
+        .wren_a(1'b0),
 
+		.clock_b(fb_clk),
+		.address_b(fb_addr),
+		.data_b(fb_data),
+        .wren_b(fb_wr)
+);
 
-// write VRAM via CPU interface
-always @(posedge cpu_clk)
-	if(cpu_wr) 
-		vmem[cpu_addr] <= cpu_data;
+reg [0:0] show_black;
 
 always@(posedge pclk) begin
         // The video counter is being reset at the begin of each vsync.
@@ -102,31 +119,33 @@ always@(posedge pclk) begin
                 VGA_HB<=0;
         else
                 VGA_HB<=1;
-	if((v_cnt < V) && (h_cnt < H)) begin
+	if((v_cnt < V) && (h_cnt < H) && (h_cnt > 64 && h_cnt < (H-64))) begin
 		if(h_cnt[1:0] == 2'b11)
-			video_counter <= video_counter + 14'd1;
+			video_counter <= video_counter + 16'd1;
 		
-		//pixel <= (v_cnt[2] ^ h_cnt[2])?8'h00:8'hff;    // checkboard
+		// pixel <= (v_cnt[2] ^ h_cnt[2])?8'h00:8'hff;    // checkboard
 		// pixel <= video_counter[7:0];                // color pattern
-		pixel <= vmem[video_counter];               // read VRAM
+		// pixel <= vmem[video_counter];               // read VRAM
+		show_black <= 0;
 		de<=1;
 	end else begin
 		if(h_cnt == H+HFP) begin
 			if(v_cnt == V+VFP)
 				video_counter <= 14'd0;
 			else if((v_cnt < V) && (v_cnt[1:0] != 2'b11))
-				video_counter <= video_counter - 14'd160;
+				video_counter <= video_counter - 15'd160;
 		de<=0;
 		end
 			
-		pixel <= 8'h00;   // black
+		// show black when outside of drawing range (black columns)
+		show_black <= 1;
 	end
 end
 
 // seperate 8 bits into three colors (332)
-assign r = { pixel[7:5],  pixel[7:5] , pixel[7:6]};
-assign g = { pixel[4:2],  pixel[4:2] , pixel[4:3]};
-assign b = { pixel[1:0], pixel[1:0] , pixel[1:0],pixel[1:0] };
+assign r = show_black ? 8'd0 : { pixel[7:5],  pixel[7:5] , pixel[7:6]};
+assign g = show_black ? 8'd0 : { pixel[4:2],  pixel[4:2] , pixel[4:3]};
+assign b = show_black ? 8'd0 : { pixel[1:0], pixel[1:0] , pixel[1:0],pixel[1:0] };
 
 
 assign VGA_DE = de;

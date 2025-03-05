@@ -24,10 +24,11 @@ module dpram #(
 );
 
     initial begin
-        $display("Loading rom.");
-        $display(init_file);
-        if (init_file>0)
+        if (init_file>0) begin
+            $display("Loading rom.");
+            $display(init_file);
         	$readmemh(init_file, mem);
+        end
     end
 
  
@@ -45,6 +46,7 @@ end
 // Port B
 always @(posedge clock_b) begin
     q_b      <= mem[address_b];
+
     if(wren_b) begin
         q_b      <= data_b;
         mem[address_b] <= data_b;

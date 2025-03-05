@@ -87,7 +87,7 @@ module boot_rom (
 `ifdef NO_PLI
 		altsyncram_component.init_file = "boot_rom.rif"
 `else
-		altsyncram_component.init_file = "boot_rom.hex"
+		altsyncram_component.init_file = "gba.hex"
 `endif
 ,
 		altsyncram_component.intended_device_family = "Cyclone V",

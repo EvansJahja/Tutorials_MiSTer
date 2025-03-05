@@ -43,6 +43,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\EvansGrace02\Documents\Workspace\MiSTer\learn\Tutorials_MiSTer\basic\lesson3\verilator\obj_dir;C:\Users\EvansGrace02\Documents\Workspace\MiSTer\learn\Tutorials_MiSTer\basic\lesson3\verilator\sim\imgui;.\;..\..;sim\;C:\msys64\mingw64\share\verilator\include\vltstd;C:\msys64\mingw64\share\verilator\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <WarningLevel>Level4</WarningLevel>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -52,7 +53,16 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\EvansGrace02\Documents\Workspace\MiSTer\learn\Tutorials_MiSTer\basic\lesson3\verilator\obj_dir;C:\Users\EvansGrace02\Documents\Workspace\MiSTer\learn\Tutorials_MiSTer\basic\lesson3\verilator\sim\imgui;.\;..\..;sim\;C:\msys64\mingw64\share\verilator\include\vltstd;C:\msys64\mingw64\share\verilator\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\EvansGrace02\Documents\Workspace\MiSTer\learn\Tutorials_MiSTer\basic\lesson3\verilator\zlib;C:\Users\EvansGrace02\Documents\Workspace\MiSTer\learn\Tutorials_MiSTer\basic\lesson3\verilator\obj_dir;C:\Users\EvansGrace02\Documents\Workspace\MiSTer\learn\Tutorials_MiSTer\basic\lesson3\verilator\sim\imgui;.\;..\..;sim\;C:\msys64\mingw64\share\verilator\include\vltstd;C:\msys64\mingw64\share\verilator\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
+      <PreprocessorDefinitions>
+      </PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -63,14 +73,9 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated.cpp" />
     <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_threads.cpp" />
-    <ClCompile Include="obj_dir\Vtop.cpp" />
-    <ClCompile Include="obj_dir\Vtop__Dpi.cpp" />
-    <ClCompile Include="obj_dir\Vtop__Syms.cpp" />
-    <ClCompile Include="obj_dir\Vtop___024root__DepSet_h84412442__0.cpp" />
-    <ClCompile Include="obj_dir\Vtop___024root__DepSet_h84412442__0__Slow.cpp" />
-    <ClCompile Include="obj_dir\Vtop___024root__DepSet_heccd7ead__0.cpp" />
-    <ClCompile Include="obj_dir\Vtop___024root__DepSet_heccd7ead__0__Slow.cpp" />
-    <ClCompile Include="obj_dir\Vtop___024root__Slow.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_timing.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_vcd_c.cpp" />
+    <ClCompile Include="obj_dir\*.cpp" />
     <ClCompile Include="sim\imgui\imgui.cpp" />
     <ClCompile Include="sim\imgui\imgui_draw.cpp" />
     <ClCompile Include="sim\imgui\imgui_impl_dx11.cpp" />
@@ -85,6 +90,7 @@
     <ClCompile Include="sim_main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="obj_dir\Vtop___024root.h" />
     <ClInclude Include="sim\imgui\imconfig.h" />
     <ClInclude Include="sim\imgui\imgui.h" />
     <ClInclude Include="sim\imgui\imgui_impl_opengl2.h" />
