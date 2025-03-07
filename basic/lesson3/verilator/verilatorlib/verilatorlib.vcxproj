@@ -18,6 +18,12 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_threads.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_timing.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_vcd_c.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -128,12 +134,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_threads.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_timing.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_vcd_c.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

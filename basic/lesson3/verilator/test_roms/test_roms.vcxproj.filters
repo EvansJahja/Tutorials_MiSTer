@@ -15,17 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated.cpp">
+    <None Include="Makefile" />
+    <None Include="test_add_a_b_00_00.s">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_threads.cpp">
+    </None>
+    <None Include="test_add_a_b_00_01.s">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_timing.cpp">
+    </None>
+    <None Include="test_add_a_b_07_01.s">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_vcd_c.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    </None>
   </ItemGroup>
 </Project>

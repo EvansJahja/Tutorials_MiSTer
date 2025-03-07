@@ -782,7 +782,7 @@ module tv80_core (/*AUTOARG*/
                       F[7] <= #1 F_Out[7];
                       if (PreserveC_r == 1'b0 ) 
                         begin
-                          F[4] <= #1 F_Out[4];
+                          //F[4] <= #1 F_Out[4];
                         end
                     end 
                   else 
