@@ -1,0 +1,4 @@
+ld h, 0x11;
+ld l, 0x22;
+add a, 1;
+hlt;

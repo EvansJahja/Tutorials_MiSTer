@@ -87,9 +87,9 @@ vga vga (
 
 // The CPU is kept in reset for 256 cycles after power on
 reg [7:0] cpu_reset_cnt = 8'h00;
-wire cpu_reset = (cpu_reset_cnt != 255);
+wire cpu_reset = (cpu_reset_cnt != 7);
 always @(posedge cpu_clock)
-	if(cpu_reset_cnt != 255)
+	if(cpu_reset_cnt != 7)
 		cpu_reset_cnt <= cpu_reset_cnt + 8'd1;
 
 // CPU control signals
@@ -119,7 +119,7 @@ T80s T80s (
 );
 */
 
-tv80s #(.Mode(3)) T80x  (
+tv80s #(.Mode(3), .IOWait(0)) T80x  (
 	.reset_n   ( !cpu_reset    ),
 	.clk       ( cpu_clock     ),
 	.wait_n    ( 1'b1          ),
@@ -158,6 +158,8 @@ wire [7:0] wramN_q_a[1:7];
 reg [7:0] io_vbk;
 reg [7:0] io_lcdc;
 reg [7:0] io_svbk;
+reg [7:0] io_scx;
+reg [7:0] io_scy;
 wire [2:0] wram_sel;
 assign wram_sel = io_svbk[2:0];
 
@@ -203,6 +205,8 @@ always @(negedge cpu_mreq_n) begin
 	if (cpu_addr[15:8] == 8'hFF && !cpu_wr_n) begin
 		case (cpu_addr[7:0])
 			8'h40: io_lcdc <= cpu_dout;
+			8'h42: io_scy <= cpu_dout;
+			8'h43: io_scx <= cpu_dout;
 			8'h47: io_bgp <= cpu_dout;
 			8'h4F: io_vbk <= cpu_dout;
 			8'h70: io_svbk <= cpu_dout;
@@ -213,7 +217,7 @@ end
 
 // include 4k program code from boot_rom
 
-dpram #( .init_file("gba.hex"),.widthad_a(12),.width_a(8)) rom
+dpram #( .init_file("testalu.hex"),.widthad_a(12),.width_a(8)) rom
 (
         .clock_a(cpu_clock),
         .address_a(cpu_addr[11:0]),

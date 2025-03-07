@@ -1,25 +1,25 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Tue Mar 04 01:59:46 2025
+[*] Thu Mar 06 11:12:30 2025
 [*]
 [dumpfile] "C:\Users\EvansGrace02\Documents\Workspace\MiSTer\learn\Tutorials_MiSTer\basic\lesson3\verilator\trace.vcd"
-[dumpfile_mtime] "Tue Mar 04 01:57:54 2025"
-[dumpfile_size] 1364123432
+[dumpfile_mtime] "Thu Mar 06 11:08:43 2025"
+[dumpfile_size] 1141097683
 [savefile] "C:\Users\EvansGrace02\Documents\Workspace\MiSTer\learn\Tutorials_MiSTer\basic\lesson3\verilator\gtkworkspace.gtkw"
-[timestart] 1380484
-[size] 2048 1065
-[pos] -235 -232
-*-4.800000 1380594 460588 690046 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[timestart] 1258924
+[size] 1996 1053
+[pos] -1 -1
+*-4.200000 1258988 460588 690046 1259038 1259828 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] TOP.
 [treeopen] TOP.top.
 [treeopen] TOP.top.soc.
 [treeopen] TOP.top.soc.T80x.
 [treeopen] TOP.top.soc.T80x.i_tv80_core.
 [treeopen] TOP.top.soc.wram_[2].
-[sst_width] 246
-[signals_width] 134
+[sst_width] 284
+[signals_width] 380
 [sst_expanded] 1
-[sst_vpaned_height] 320
+[sst_vpaned_height] 315
 @c00022
 TOP.top.soc.T80x.i_tv80_core.PC[15:0]
 @28
@@ -41,12 +41,16 @@ TOP.top.soc.T80x.i_tv80_core.PC[15:0]
 (15)TOP.top.soc.T80x.i_tv80_core.PC[15:0]
 @1401200
 -group_end
-@28
-TOP.top.soc.ppu.lcd_ppu_en
-TOP.top.soc.ppu.fb_clk
-@23
-TOP.top.soc.ppu.fb_addr[14:0]
 @22
-TOP.top.soc.ppu.fb_data[7:0]
+TOP.top.soc.vram_0.address_a[12:0]
+TOP.top.soc.T80x.i_tv80_core.i_reg.H[7:0]
+TOP.top.soc.T80x.i_tv80_core.i_reg.L[7:0]
+@200
+-
 [pattern_trace] 1
 [pattern_trace] 0
+!100000@@
+?"42E
+@c00023
+TOP.top.soc.T80x.i_tv80_core.PC[15:0]
+!!

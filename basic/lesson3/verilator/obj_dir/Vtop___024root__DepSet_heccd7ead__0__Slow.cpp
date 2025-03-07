@@ -91,11 +91,16 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_initial__TOP\n"); );
     auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Init
+    VlWide<3>/*95:0*/ __Vtemp_1;
     // Body
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__cen = 1U;
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__rfsh_n = 1U;
-    VL_WRITEF_NX("Loading rom.\n29100092131140984\n",0);
-    VL_READMEM_N(true, 8, 4096, 0, std::string{"gba.hex"}
+    VL_WRITEF_NX("Loading rom.\n140714483851738526717076856\n",0);
+    __Vtemp_1[0U] = 0x2e686578U;
+    __Vtemp_1[1U] = 0x74616c75U;
+    __Vtemp_1[2U] = 0x746573U;
+    VL_READMEM_N(true, 8, 4096, 0, VL_CVT_PACK_STR_NW(3, __Vtemp_1)
                  ,  &(vlSelfRef.top__DOT__soc__DOT__rom__DOT__mem)
                  , 0, ~0ULL);
     vlSelfRef.top__DOT__soc__DOT__vga__DOT__fb__DOT__wren_a = 0U;
@@ -482,6 +487,12 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
     vlSelfRef.top__DOT__soc__DOT__bgp_id1 = (3U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_bgp) 
                                                    >> 2U));
     vlSelfRef.top__DOT__soc__DOT__bgp_id0 = (3U & (IData)(vlSelfRef.top__DOT__soc__DOT__io_bgp));
+    vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_bank_vram 
+        = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data) 
+                 >> 3U));
+    vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_bank 
+        = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_attr) 
+                 >> 3U));
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__B 
         = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__RegsH
         [0U];
@@ -627,8 +638,7 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                                                 & (0xcfffU 
                                                    >= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)));
     vlSelfRef.top__DOT__soc__DOT__fb_clk = vlSelfRef.clk_sys;
-    vlSelfRef.top__DOT__soc__DOT__cpu_reset = (0xffU 
-                                               != (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_reset_cnt));
+    vlSelfRef.top__DOT__soc__DOT__cpu_reset = (7U != (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_reset_cnt));
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__RegWEH = 0U;
     if ((1U & (((((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__tstate) 
                   >> 1U) & (~ (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Save_ALU_r))) 
@@ -1784,6 +1794,8 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__soc__DOT__io_vbk = 0;
     vlSelf->top__DOT__soc__DOT__io_lcdc = 0;
     vlSelf->top__DOT__soc__DOT__io_svbk = 0;
+    vlSelf->top__DOT__soc__DOT__io_scx = 0;
+    vlSelf->top__DOT__soc__DOT__io_scy = 0;
     vlSelf->top__DOT__soc__DOT__wram_sel = 0;
     vlSelf->top__DOT__soc__DOT__io_bgp = 0;
     vlSelf->top__DOT__soc__DOT__bgp_id3 = 0;
@@ -1838,6 +1850,9 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__soc__DOT__ppu__DOT__step = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__pixel_buf = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__tile_id = 0;
+    vlSelf->top__DOT__soc__DOT__ppu__DOT__tile_attr = 0;
+    vlSelf->top__DOT__soc__DOT__ppu__DOT__tile_bank = 0;
+    vlSelf->top__DOT__soc__DOT__ppu__DOT__tile_bank_vram = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__tick = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__tileX = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__tileY = 0;
@@ -2337,10 +2352,9 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ACC = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__SP = 0;
-    vlSelf->__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Auto_Wait_t1 = 0;
-    vlSelf->__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Auto_Wait_t2 = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IntE_FF1 = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IntE_FF2 = 0;
+    vlSelf->__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Auto_Wait_t1 = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__tstate = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Pre_XY_F_M = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle = 0;

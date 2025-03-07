@@ -10,6 +10,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <PropertyGroup>
+      <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup> 
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{A2A39241-8334-40A2-8D63-53A6CAEAEA05}</ProjectGuid>
@@ -69,6 +72,12 @@
       <AdditionalDependencies>d3d11.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PreBuildEvent>
+      <Command>set MSYSTEM=MINGW64&amp;&amp; C:\msys64\usr\bin\bash -lc "cd '$(ProjectDir)' &amp;&amp; ./verilate.sh"</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Verilate</Message>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated.cpp" />

@@ -35,6 +35,13 @@ reg [2:0] mode;
 reg [7:0] step;
 reg [7:0] pixel_buf;
 reg [7:0] tile_id;
+reg [7:0] tile_attr;
+
+wire tile_bank;
+wire tile_bank_vram;
+
+assign tile_bank = tile_attr[3];
+assign tile_bank_vram = vram1_data[3];
 
 reg [1:0] tick;
 
@@ -55,15 +62,24 @@ always @(posedge clk, negedge lcd_ppu_en) begin
         if(mode == 3'd0) begin
             case(step)
             8'd0: begin
-                vram0_addr <= 'h9800 + (LX / 8) + ((LY / 8) * 'h20);
+                vram0_addr <= 'h9800 + (LX >> 3) + ((LY >> 3) * 'h20);
+                vram1_addr <= 'h9800 + (LX >> 3) + ((LY >> 3) * 'h20);
             end
             8'd2: begin
                 tile_id <= vram0_data;
-                vram1_addr <= 'h8000 + (vram0_data << 4) + (tileY*2);
+                tile_attr <= vram1_data;
+                // the base address depends on tile id and lcdc.4
+                if (tile_bank_vram == 1'b0)
+                    vram0_addr <= 'h8000 + (vram0_data << 4) + (tileY*2);
+                else
+                    vram1_addr <= 'h8000 + (vram0_data << 4) + (tileY*2);
             end
 
             8'd4: begin
-                pixel_buf <= vram1_data;
+                if (tile_bank == 1'b0)
+                    pixel_buf <= vram0_data;
+                else
+                    pixel_buf <= vram1_data;
                 fb_wr <= 1'b1;
                 mode <= 3'd1;
             end

@@ -61,7 +61,7 @@ bool run_enable = 0;
 int batchSize = 25000000 / 100;
 bool single_step = 0;
 bool multi_step = 0;
-int multi_step_amount = 102400;
+int multi_step_amount = 1024000;
 
 // Verilog module
 // --------------
@@ -116,8 +116,8 @@ int verilate() {
 			// Trace
 			if (m_trace) {
 				bool ppuen = top->rootp->top__DOT__soc__DOT__ppu__DOT__lcd_ppu_en > 0;
-				if (main_time >= 1024000 && ppuen)
-					m_trace->dump(main_time);
+				//if (main_time >= 1024000 && ppuen)
+			    //m_trace->dump(main_time);
 			}
 
 			if (clk_sys.clk) { bus.AfterEval(); }
@@ -189,14 +189,12 @@ int main(int argc, char** argv, char** env) {
 
 	// Enable tracing
 
-	/*
 	if (!m_trace) {
 		Verilated::traceEverOn(true);
 		m_trace = new VerilatedVcdC();
 		top->trace(m_trace, 99);
 		m_trace->open("trace.vcd");
 	}
-	*/
 
 
 
@@ -242,7 +240,8 @@ int main(int argc, char** argv, char** env) {
 		if (ImGui::Button("START")) { run_enable = 1; } ImGui::SameLine();
 		if (ImGui::Button("STOP")) { run_enable = 0; } ImGui::SameLine();
 		ImGui::Checkbox("RUN", &run_enable);
-		ImGui::SliderInt("Batch size", &batchSize, 1, 1000000);
+		//ImGui::SliderInt("Batch size", &batchSize, 1, 1000000);
+		ImGui::SliderInt("Batch size", &batchSize, 1, 1000);
 
 		if (single_step == 1) { single_step = 0; }
 		if (ImGui::Button("Single Step")) { run_enable = 0; single_step = 1; }
@@ -318,9 +317,13 @@ int main(int argc, char** argv, char** env) {
 /*
                 ImGui::Text("B       0x%02X", top->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__B);
                 ImGui::Text("C       0x%02X", top->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__C);
-                ImGui::Text("D       0x%02X", top->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__D);
-                ImGui::Text("E       0x%02X", top->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__E);
 */
+                ImGui::Text("Flag[Z]       0x%02X", (top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F>>7) & 1);
+                ImGui::Text("Flag[N]       0x%02X", (top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F>>6) & 1);
+                ImGui::Text("Flag[H]       0x%02X", (top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F>>5) & 1);
+                ImGui::Text("Flag[CY]      0x%02X", (top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F>>4) & 1);
+                ImGui::Text("D       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__D);
+                ImGui::Text("E       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__E);
                 ImGui::Text("H       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__H);
                 ImGui::Text("L       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__L);
 
