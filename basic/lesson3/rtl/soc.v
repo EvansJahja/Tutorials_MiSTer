@@ -217,7 +217,7 @@ end
 
 // include 4k program code from boot_rom
 
-dpram #( .init_file("testalu.hex"),.widthad_a(12),.width_a(8)) rom
+dpram #( .init_file("gbc.hex"),.widthad_a(12),.width_a(8)) rom
 (
         .clock_a(cpu_clock),
         .address_a(cpu_addr[11:0]),

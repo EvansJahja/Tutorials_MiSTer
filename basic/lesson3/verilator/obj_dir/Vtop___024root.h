@@ -173,7 +173,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__LX;
     CData/*2:0*/ top__DOT__soc__DOT__ppu__DOT__mode;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__step;
-    CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__pixel_buf;
+    CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__pixel_buf_h;
+    CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__pixel_buf_l;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__tile_id;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__tile_attr;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__tile_bank;
@@ -181,6 +182,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*1:0*/ top__DOT__soc__DOT__ppu__DOT__tick;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__tileX;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__tileY;
+    CData/*1:0*/ top__DOT__soc__DOT__ppu__DOT__pixel;
     CData/*0:0*/ top__DOT__soc__DOT__vga__DOT__pclk;
     CData/*0:0*/ top__DOT__soc__DOT__vga__DOT__fb_clk;
     CData/*0:0*/ top__DOT__soc__DOT__vga__DOT__fb_wr;
@@ -541,7 +543,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__q_b;
     CData/*0:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__byteena_a;
     CData/*0:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__byteena_b;
-    CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf;
+    CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_h;
+    CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_l;
     CData/*2:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__mode;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__step;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__LX;
@@ -746,37 +749,34 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__IOWait = 0U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Mode = 3U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IOWait = 0U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_C = 0U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_N = 1U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_P = 2U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_X = 3U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_H = 4U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_Y = 5U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_Z = 6U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_S = 7U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_C = 4U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_N = 6U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_P = 0U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_X = 1U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_H = 5U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_Y = 2U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_Z = 7U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_S = 3U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Mode = 3U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_C = 0U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_N = 1U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_P = 2U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_X = 3U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_H = 4U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_Y = 5U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_Z = 6U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_S = 7U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_C = 4U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_N = 6U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_P = 0U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_X = 1U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_H = 5U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_Y = 2U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_Z = 7U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Flag_S = 3U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Mode = 3U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_C = 0U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_N = 1U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_P = 2U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_X = 3U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_H = 4U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_Y = 5U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_Z = 6U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_S = 7U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_C = 4U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_N = 6U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_P = 0U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_X = 1U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_H = 5U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_Y = 2U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_Z = 7U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_S = 3U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__rom__DOT__width_a = 8U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__rom__DOT__widthad_a = 0x0000000cU;
-    static constexpr VlWide<3>/*87:0*/ top__DOT__soc__DOT__rom__DOT__init_file = {{
-        0x2e686578, 0x74616c75, 0x00746573
-    }};
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__wram_0__DOT__width_a = 8U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__wram_0__DOT__widthad_a = 0x0000000cU;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__vram_0__DOT__width_a = 8U;
@@ -799,6 +799,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__wram___BRA__6__KET____DOT__wram_N__DOT__widthad_a = 0x0000000cU;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__width_a = 8U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__widthad_a = 0x0000000cU;
+    static constexpr QData/*55:0*/ top__DOT__soc__DOT__rom__DOT__init_file = 0x006762632e686578ULL;
 
     // CONSTRUCTORS
     Vtop___024root(Vtop__Syms* symsp, const char* v__name);

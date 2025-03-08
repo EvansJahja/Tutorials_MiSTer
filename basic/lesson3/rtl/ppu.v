@@ -33,7 +33,8 @@ reg [2:0] mode;
 
 
 reg [7:0] step;
-reg [7:0] pixel_buf;
+reg [7:0] pixel_buf_h;
+reg [7:0] pixel_buf_l;
 reg [7:0] tile_id;
 reg [7:0] tile_attr;
 
@@ -47,6 +48,8 @@ reg [1:0] tick;
 
 reg [7:0] tileX;
 reg [7:0] tileY;
+
+reg [1:0] pixel;
 
 // Draw BG
 always @(posedge clk, negedge lcd_ppu_en) begin
@@ -76,23 +79,43 @@ always @(posedge clk, negedge lcd_ppu_en) begin
             end
 
             8'd4: begin
+                if (tile_bank == 1'b0) begin
+                    pixel_buf_h <= vram0_data;
+                    vram0_addr <= 'h8000 + (vram0_data << 4) + (tileY*2) + 1;
+                end else begin
+                    pixel_buf_h <= vram1_data;
+                    vram1_addr <= 'h8000 + (vram0_data << 4) + (tileY*2) + 1;
+                end
+            end
+
+            8'd6: begin
                 if (tile_bank == 1'b0)
-                    pixel_buf <= vram0_data;
+                    pixel_buf_l <= vram0_data;
                 else
-                    pixel_buf <= vram1_data;
+                    pixel_buf_l <= vram1_data;
                 fb_wr <= 1'b1;
                 mode <= 3'd1;
             end
             endcase
             step <= step + 1;
         end
+
         if(mode == 3'd1) begin
             if (tileY < 8) begin
+                pixel = {pixel_buf_h[7 - tileX], pixel_buf_l[7 - tileX]};
+
                 fb_addr <= 15'd160*LY+LX;
-                if (pixel_buf[7 - tileX])
-                    fb_data <= 8'b01001010;
-                else
+                case(pixel)
+                  2'b00: 
                     fb_data <= 8'b11111111;
+                  2'b01: 
+                    fb_data <= 8'b10110111;
+                  2'b10: 
+                    fb_data <= 8'b01001010;
+                  2'b11: 
+                    fb_data <= 8'b00000000;
+                endcase
+
                 if (tileX < 8) begin
                     tileX <= tileX + 1;
                     LX <= LX + 1;
