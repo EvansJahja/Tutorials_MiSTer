@@ -1,4 +1,4 @@
-ld a, 0x07;
+ld a, 0x0f;
 ld b, 0x01;
 add a,b;
 hlt;

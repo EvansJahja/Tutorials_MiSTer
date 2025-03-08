@@ -4,10 +4,7 @@
 #include "Vtv80s___024root.h"
 #include "verilated_vcd_c.h"
 
-#include "test_add_a_b_00_00.h"
-#include "test_add_a_b_00_01.h"
-#include "test_add_a_b_07_01.h"
-#include "test_sub_a_b_00_00.h"
+#include "test_roms.h"
 
 // #define TRACE
 
@@ -31,16 +28,6 @@ union Flags {
 		bool Z : 1;
 	};
 };
-/*
-
-			VerilatedVcdC *m_trace = new VerilatedVcdC(); // for tracing
-			Verilated::traceEverOn(true);
-			top->trace(m_trace, 99);
-			m_trace->open("test_method_1.vcd");
- 
-			m_trace->dump(i);
-			m_trace->close();
-*/
 
 namespace test
 {
@@ -67,6 +54,59 @@ namespace test
 
 			Assert::AreEqual((CData) 0x00, top->rootp->tv80s__DOT__i_tv80_core__DOT__ACC);
 			Assert::AreEqual(false, flags.CY);
+			Assert::AreEqual(false, flags.H);
+			Assert::AreEqual(false, flags.N);
+ 
+			top->final();
+			delete top;
+		}
+
+		TEST_METHOD(Test_ADD_A_B_2)
+		{
+			VerilatedContext *ctx = new VerilatedContext();
+			Vtv80s* top = new Vtv80s("tv80s");
+			ROM(test_add_a_b_0f_01)
+			int i = 0;
+
+			TEST_BEGIN(Test_ADD_A_B_1)
+
+			while (i<1000 && (i<3 || top->halt_n) ) {
+				STEP()
+			}
+
+			TEST_END()
+
+			Flags flags = { top->rootp->tv80s__DOT__i_tv80_core__DOT__F };
+
+			Assert::AreEqual((CData) 0x10, top->rootp->tv80s__DOT__i_tv80_core__DOT__ACC);
+			Assert::AreEqual(false, flags.CY);
+			Assert::AreEqual(true, flags.H);
+			Assert::AreEqual(false, flags.N);
+ 
+			top->final();
+			delete top;
+		}
+
+		TEST_METHOD(Test_ADD_A_B_3)
+		{
+			VerilatedContext *ctx = new VerilatedContext();
+			Vtv80s* top = new Vtv80s("tv80s");
+			ROM(test_add_a_b_f0_10)
+			int i = 0;
+
+			TEST_BEGIN(Test_ADD_A_B_3)
+
+			while (i<1000 && (i<3 || top->halt_n) ) {
+				STEP()
+			}
+
+			TEST_END()
+
+			Flags flags = { top->rootp->tv80s__DOT__i_tv80_core__DOT__F };
+
+			Assert::AreEqual((CData) 0x00, top->rootp->tv80s__DOT__i_tv80_core__DOT__ACC);
+			Assert::AreEqual(true, flags.CY);
+			Assert::AreEqual(false, flags.H);
 			Assert::AreEqual(false, flags.N);
  
 			top->final();

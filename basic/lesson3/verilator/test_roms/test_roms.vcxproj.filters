@@ -19,13 +19,19 @@
     <None Include="test_add_a_b_00_00.s">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="test_add_a_b_00_01.s">
+    <None Include="test_add_a_b_f0_10.s">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="test_add_a_b_07_01.s">
+    <None Include="test_add_a_b_0f_01.s">
       <Filter>Source Files</Filter>
     </None>
     <None Include="test_sub_a_b_00_00.s">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="test_add_hl_1.s">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="build.bat">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

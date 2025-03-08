@@ -1,0 +1,3 @@
+ld de, 0xfff
+add hl, 0x0001
+hlt

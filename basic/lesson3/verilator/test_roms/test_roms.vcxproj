@@ -65,7 +65,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <NMakeOutput>test_roms.exe</NMakeOutput>
     <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
-    <NMakeBuildCommandLine>nmake /A</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine>build.bat</NMakeBuildCommandLine>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <NMakeOutput>test_roms.exe</NMakeOutput>
@@ -78,15 +78,17 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <NMakeOutput>test_roms.exe</NMakeOutput>
     <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
-    <NMakeBuildCommandLine>nmake /A</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine>build.bat</NMakeBuildCommandLine>
   </PropertyGroup>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="build.bat" />
     <None Include="test_add_a_b_00_00.s" />
     <None Include="Makefile" />
-    <None Include="test_add_a_b_00_01.s" />
-    <None Include="test_add_a_b_07_01.s" />
+    <None Include="test_add_a_b_f0_10.s" />
+    <None Include="test_add_a_b_0f_01.s" />
+    <None Include="test_add_hl_1.s" />
     <None Include="test_sub_a_b_00_00.s" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

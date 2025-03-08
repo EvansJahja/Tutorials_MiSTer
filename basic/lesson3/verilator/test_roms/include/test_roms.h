@@ -1,0 +1,5 @@
+#include "test_add_a_b_00_00.h"
+#include "test_add_a_b_0f_01.h"
+#include "test_add_a_b_f0_10.h"
+#include "test_add_hl_1.h"
+#include "test_sub_a_b_00_00.h"
