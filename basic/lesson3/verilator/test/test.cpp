@@ -1,4 +1,4 @@
-#include "pch.h"
+ #include "pch.h"
 #include "CppUnitTest.h"
 #include "Vtv80s.h"
 #include "Vtv80s___024root.h"
@@ -7,10 +7,11 @@
 #include "test_add_a_b_00_00.h"
 #include "test_add_a_b_00_01.h"
 #include "test_add_a_b_07_01.h"
+#include "test_sub_a_b_00_00.h"
+
+// #define TRACE
 
 #include "test.h"
-
-#define TRACE
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -47,37 +48,51 @@ namespace test
 	TEST_CLASS(test)
 	{
 	public:
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(Test_ADD_A_B_1)
 		{
-			Vtv80s *top = new Vtv80s("tv80s");
- 
-			bool clk = 0;
+			VerilatedContext *ctx = new VerilatedContext();
+			Vtv80s* top = new Vtv80s("tv80s");
+			ROM(test_add_a_b_00_00)
+			int i = 0;
 
-			ROM(test_add_a_b_00_01)
+			TEST_BEGIN(Test_ADD_A_B_1)
 
-			top->wait_n = 1;
-			top->int_n = 1;
-			top->nmi_n = 1;
-			top->busrq_n = 1;
- 
-			for (int i = 0; i < 10000; i++) {
-				top->reset_n = i > 3;
-
-				top->di = rom[top->A % N];
- 
-				top->clk = clk;
-				top->eval();
-
-				clk = !clk;
-				if (!top->halt_n)
-					break;
+			while (i<1000 && (i<3 || top->halt_n) ) {
+				STEP()
 			}
 
-			Flags flags{};
-			flags.data = ~top->rootp->tv80s__DOT__i_tv80_core__DOT__F;
+			TEST_END()
 
-			Assert::AreEqual((CData) 0x01, top->rootp->tv80s__DOT__i_tv80_core__DOT__ACC);
-			//Assert::AreEqual(false, flags.CY);
+			Flags flags = { top->rootp->tv80s__DOT__i_tv80_core__DOT__F };
+
+			Assert::AreEqual((CData) 0x00, top->rootp->tv80s__DOT__i_tv80_core__DOT__ACC);
+			Assert::AreEqual(false, flags.CY);
+			Assert::AreEqual(false, flags.N);
+ 
+			top->final();
+			delete top;
+		}
+
+		TEST_METHOD(Test_SUB_A_B_1)
+		{
+			VerilatedContext *ctx = new VerilatedContext();
+			Vtv80s* top = new Vtv80s("tv80s");
+			ROM(test_sub_a_b_00_00)
+			int i = 0;
+
+			TEST_BEGIN(Test_SUB_A_B_1)
+ 
+			while (i<1000 && (i<3 || top->halt_n) ) {
+				STEP()
+			}
+
+			TEST_END()
+
+			Flags flags = { top->rootp->tv80s__DOT__i_tv80_core__DOT__F };
+
+			Assert::AreEqual((CData) 0x00, top->rootp->tv80s__DOT__i_tv80_core__DOT__ACC);
+			Assert::AreEqual(false, flags.CY);
+			Assert::AreEqual(true, flags.N);
  
 			top->final();
 			delete top;

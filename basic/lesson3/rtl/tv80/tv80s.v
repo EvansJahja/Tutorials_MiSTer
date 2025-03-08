@@ -69,7 +69,7 @@ module tv80s (/*AUTOARG*/
 
   assign    cen = 1;
 
-  tv80_core #(Mode, IOWait) i_tv80_core
+  tv80_core #(.Mode(Mode), .IOWait(IOWait), .Flag_P(0), .Flag_X(1), .Flag_Y(2), .Flag_S(3), .Flag_C(4), .Flag_H(5), .Flag_N(6), .Flag_Z(7)) i_tv80_core
     (
      .cen (cen),
      .m1_n (m1_n),

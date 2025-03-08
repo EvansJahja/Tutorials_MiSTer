@@ -1,6 +1,7 @@
 FILES = test_add_a_b_00_00.h \
 		test_add_a_b_00_01.h \
 		test_add_a_b_07_01.h \
+		test_sub_a_b_00_00.h \
 
 .SUFFIXES: .bin .s 
 

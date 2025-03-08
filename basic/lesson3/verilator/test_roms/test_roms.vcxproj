@@ -87,6 +87,7 @@
     <None Include="Makefile" />
     <None Include="test_add_a_b_00_01.s" />
     <None Include="test_add_a_b_07_01.s" />
+    <None Include="test_sub_a_b_00_00.s" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

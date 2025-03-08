@@ -25,5 +25,8 @@
     <None Include="test_add_a_b_07_01.s">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="test_sub_a_b_00_00.s">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

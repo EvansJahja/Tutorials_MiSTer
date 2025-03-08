@@ -1,0 +1,4 @@
+ld a, 0x00;
+ld b, 0x00;
+sub a,b;
+hlt;
