@@ -89,6 +89,9 @@
     <None Include="test_add_a_b_f0_10.s" />
     <None Include="test_add_a_b_0f_01.s" />
     <None Include="test_add_hl_1.s" />
+    <None Include="test_add_hl_2.s" />
+    <None Include="test_add_hl_3.s" />
+    <None Include="test_add_hl_4.s" />
     <None Include="test_sub_a_b_00_00.s" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

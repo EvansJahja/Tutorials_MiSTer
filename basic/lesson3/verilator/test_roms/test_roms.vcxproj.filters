@@ -34,5 +34,14 @@
     <None Include="build.bat">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="test_add_hl_2.s">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="test_add_hl_3.s">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="test_add_hl_4.s">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -2,4 +2,7 @@
 #include "test_add_a_b_0f_01.h"
 #include "test_add_a_b_f0_10.h"
 #include "test_add_hl_1.h"
+#include "test_add_hl_2.h"
+#include "test_add_hl_3.h"
+#include "test_add_hl_4.h"
 #include "test_sub_a_b_00_00.h"
