@@ -138,6 +138,7 @@ tv80s #(.Mode(3), .IOWait(0)) T80x  (
 // map 4k RAM into upper half of the address space (A15=1)
 // and 4k ROM into the lower half (A15=0)
 wire [7:0] rom_data_out;
+wire [7:0] game_rom_data_out;
 
 wire [7:0] vram_data_out;
 wire [7:0] vram0_data_out;
@@ -174,6 +175,11 @@ wire vram_sel = cpu_addr[15:0] >= 16'h8000 && cpu_addr[15:0] <= 16'h9fff;
 wire io_sel = cpu_addr[15:0] >= 16'hff00 && cpu_addr[15:0] <= 16'hff7f;
 wire wram_0_sel = cpu_addr[15:0] >= 16'hC000 && cpu_addr[15:0] <= 16'hCFFF;
 
+// CGB rom is split into 0x0000-0x00ff and 0x0200-0x8ff
+wire bios_rom_sel = cpu_addr[15:0] <= 16'h00ff || (cpu_addr[15:0] >= 16'h0200 && cpu_addr[15:0] <= 16'h08FF) ;
+
+wire game_rom_sel = cpu_addr[15:0] <= 16'h3fff ;
+
 // any of the wram_n is selected
 wire wram_n_group_sel = cpu_addr[15:0] >= 16'hD000 && cpu_addr[15:0] <= 16'hDFFF;
 
@@ -191,7 +197,10 @@ always @(*) begin
 		else if (hram_sel) cpu_din = hram_data_out;
 		else if (vram_sel) cpu_din = vram_data_out;
 
-		else cpu_din = rom_data_out;
+		else if (bios_rom_sel) cpu_din = rom_data_out;
+		else if (game_rom_sel) cpu_din = game_rom_data_out;
+		else cpu_din = 8'hFF;
+
 	end else cpu_din = 8'hFF;
 
 end
@@ -228,6 +237,17 @@ dpram #( .init_file("gbc.hex"),.widthad_a(12),.width_a(8)) rom
         .clock_b(cpu_clock),
         .wren_b(1'b0)
 
+);
+
+dpram #( .init_file("game_rom.hex"),.widthad_a(21),.width_a(8)) game_rom
+(
+        .clock_a(cpu_clock),
+        .address_a(cpu_addr[11:0]),
+        .wren_a(1'b0),
+        .q_a(game_rom_data_out),
+
+        .clock_b(cpu_clock),
+        .wren_b(1'b0)
 );
 
 dpram #( .widthad_a(12),.width_a(8)) wram_0

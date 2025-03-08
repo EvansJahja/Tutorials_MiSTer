@@ -76,6 +76,9 @@ constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__T80x__DOT__i_tv80_co
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_S;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__rom__DOT__width_a;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__rom__DOT__widthad_a;
+constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__game_rom__DOT__width_a;
+constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__game_rom__DOT__widthad_a;
+constexpr VlWide<3>/*95:0*/ Vtop___024root::top__DOT__soc__DOT__game_rom__DOT__init_file;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__wram_0__DOT__width_a;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__wram_0__DOT__widthad_a;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__vram_0__DOT__width_a;

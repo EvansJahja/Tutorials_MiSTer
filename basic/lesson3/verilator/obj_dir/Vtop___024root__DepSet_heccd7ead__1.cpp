@@ -184,7 +184,10 @@ VL_INLINE_OPT void Vtop___024root___nba_comb__TOP__1(Vtop___024root* vlSelf) {
                                                   : 
                                                  ((IData)(vlSelfRef.top__DOT__soc__DOT__vram_sel)
                                                    ? (IData)(vlSelfRef.top__DOT__soc__DOT__vram_data_out)
-                                                   : (IData)(vlSelfRef.top__DOT__soc__DOT__rom_data_out)));
+                                                   : 
+                                                  ((IData)(vlSelfRef.top__DOT__soc__DOT__bios_rom_sel)
+                                                    ? (IData)(vlSelfRef.top__DOT__soc__DOT__rom_data_out)
+                                                    : 0xffU)));
     }
     vlSelfRef.top__DOT__soc__DOT__vram_0__DOT__wren_a 
         = vlSelfRef.top__DOT__soc__DOT____Vcellinp__vram_0__wren_a;

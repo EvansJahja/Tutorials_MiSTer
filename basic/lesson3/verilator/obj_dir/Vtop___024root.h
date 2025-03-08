@@ -112,6 +112,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ top__DOT__soc__DOT__cpu_rd_n;
     CData/*0:0*/ top__DOT__soc__DOT__cpu_wr_n;
     CData/*7:0*/ top__DOT__soc__DOT__rom_data_out;
+    CData/*7:0*/ top__DOT__soc__DOT__game_rom_data_out;
     CData/*7:0*/ top__DOT__soc__DOT__vram_data_out;
     CData/*7:0*/ top__DOT__soc__DOT__vram0_data_out;
     CData/*7:0*/ top__DOT__soc__DOT__vram1_data_out;
@@ -134,6 +135,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ top__DOT__soc__DOT__vram_sel;
     CData/*0:0*/ top__DOT__soc__DOT__io_sel;
     CData/*0:0*/ top__DOT__soc__DOT__wram_0_sel;
+    CData/*0:0*/ top__DOT__soc__DOT__bios_rom_sel;
+    CData/*0:0*/ top__DOT__soc__DOT__game_rom_sel;
     CData/*0:0*/ top__DOT__soc__DOT__wram_n_group_sel;
     CData/*0:0*/ top__DOT__soc__DOT____Vcellinp__wram_0__wren_a;
     CData/*0:0*/ top__DOT__soc__DOT____Vcellinp__vram_0__wren_a;
@@ -440,6 +443,16 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ top__DOT__soc__DOT__rom__DOT__q_b;
     CData/*0:0*/ top__DOT__soc__DOT__rom__DOT__byteena_a;
     CData/*0:0*/ top__DOT__soc__DOT__rom__DOT__byteena_b;
+    CData/*0:0*/ top__DOT__soc__DOT__game_rom__DOT__clock_a;
+    CData/*0:0*/ top__DOT__soc__DOT__game_rom__DOT__wren_a;
+    CData/*7:0*/ top__DOT__soc__DOT__game_rom__DOT__data_a;
+    CData/*7:0*/ top__DOT__soc__DOT__game_rom__DOT__q_a;
+    CData/*0:0*/ top__DOT__soc__DOT__game_rom__DOT__clock_b;
+    CData/*0:0*/ top__DOT__soc__DOT__game_rom__DOT__wren_b;
+    CData/*7:0*/ top__DOT__soc__DOT__game_rom__DOT__data_b;
+    CData/*7:0*/ top__DOT__soc__DOT__game_rom__DOT__q_b;
+    CData/*0:0*/ top__DOT__soc__DOT__game_rom__DOT__byteena_a;
+    CData/*0:0*/ top__DOT__soc__DOT__game_rom__DOT__byteena_b;
     CData/*0:0*/ top__DOT__soc__DOT__wram_0__DOT__clock_a;
     CData/*0:0*/ top__DOT__soc__DOT__wram_0__DOT__wren_a;
     CData/*7:0*/ top__DOT__soc__DOT__wram_0__DOT__data_a;
@@ -682,6 +695,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     SData/*11:0*/ __VdlyDim0__top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__mem__v0;
     VL_IN(ioctl_addr,24,0);
     IData/*24:0*/ top__DOT__ioctl_addr;
+    IData/*20:0*/ top__DOT__soc__DOT__game_rom__DOT__address_a;
+    IData/*20:0*/ top__DOT__soc__DOT__game_rom__DOT__address_b;
     IData/*31:0*/ __VactIterCount;
     VlTriggerVec<1> __VstlTriggered;
     VlTriggerVec<1> __VicoTriggered;
@@ -692,6 +707,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     VlUnpacked<CData/*7:0*/, 8> top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__RegsH;
     VlUnpacked<CData/*7:0*/, 8> top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__RegsL;
     VlUnpacked<CData/*7:0*/, 4096> top__DOT__soc__DOT__rom__DOT__mem;
+    VlUnpacked<CData/*7:0*/, 2097152> top__DOT__soc__DOT__game_rom__DOT__mem;
     VlUnpacked<CData/*7:0*/, 4096> top__DOT__soc__DOT__wram_0__DOT__mem;
     VlUnpacked<CData/*7:0*/, 8192> top__DOT__soc__DOT__vram_0__DOT__mem;
     VlUnpacked<CData/*7:0*/, 8192> top__DOT__soc__DOT__vram_1__DOT__mem;
@@ -777,6 +793,11 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Flag_S = 3U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__rom__DOT__width_a = 8U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__rom__DOT__widthad_a = 0x0000000cU;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__game_rom__DOT__width_a = 8U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__game_rom__DOT__widthad_a = 0x00000015U;
+    static constexpr VlWide<3>/*95:0*/ top__DOT__soc__DOT__game_rom__DOT__init_file = {{
+        0x2e686578, 0x5f726f6d, 0x67616d65
+    }};
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__wram_0__DOT__width_a = 8U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__wram_0__DOT__widthad_a = 0x0000000cU;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__vram_0__DOT__width_a = 8U;

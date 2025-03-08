@@ -21,7 +21,7 @@
 
 #include "Vtop___024root.h"
 
-// Debug GUI 
+// Debug GUI false
 // ---------
 const char* windowTitle = "Verilator Sim: Lesson3";
 bool showDebugWindow = true;
@@ -76,7 +76,9 @@ int clockSpeed = 24; // This is not used, just a reminder for the dividers below
 SimClock clk_sys(1); // 12mhz
 SimClock clk_pix(1); // 6mhz
 
+#ifdef TRACE
 VerilatedVcdC* m_trace; // for tracing
+#endif
 
 void resetSim() {
 	main_time = 0;
@@ -113,12 +115,13 @@ int verilate() {
 			if (clk_sys.clk) { bus.BeforeEval(); }
 			top->eval();
 			
-			// Trace
+#ifdef TRACE
 			if (m_trace) {
 				bool ppuen = top->rootp->top__DOT__soc__DOT__ppu__DOT__lcd_ppu_en > 0;
 				//if (main_time >= 1024000 && ppuen)
 			    //m_trace->dump(main_time);
 			}
+#endif
 
 			if (clk_sys.clk) { bus.AfterEval(); }
 		}
@@ -189,12 +192,14 @@ int main(int argc, char** argv, char** env) {
 
 	// Enable tracing
 
+#ifdef TRACE
 	if (!m_trace) {
 		Verilated::traceEverOn(true);
 		m_trace = new VerilatedVcdC();
 		top->trace(m_trace, 99);
 		m_trace->open("trace.vcd");
 	}
+#endif
 
 
 
@@ -240,8 +245,7 @@ int main(int argc, char** argv, char** env) {
 		if (ImGui::Button("START")) { run_enable = 1; } ImGui::SameLine();
 		if (ImGui::Button("STOP")) { run_enable = 0; } ImGui::SameLine();
 		ImGui::Checkbox("RUN", &run_enable);
-		//ImGui::SliderInt("Batch size", &batchSize, 1, 1000000);
-		ImGui::SliderInt("Batch size", &batchSize, 1, 1000);
+		ImGui::SliderInt("Batch size", &batchSize, 1, 1000000);
 
 		if (single_step == 1) { single_step = 0; }
 		if (ImGui::Button("Single Step")) { run_enable = 0; single_step = 1; }
@@ -267,6 +271,13 @@ int main(int argc, char** argv, char** env) {
 				{
 					static MemoryEditor mem_edit;
 					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__rom__DOT__mem.data(), 4096, 0);
+				}
+                ImGui::End();
+
+                ImGui::Begin("Game ROM");
+				{
+					static MemoryEditor mem_edit;
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__game_rom__DOT__mem.data(), 0x200000, 0);
 				}
                 ImGui::End();
 
@@ -360,10 +371,12 @@ int main(int argc, char** argv, char** env) {
 		}
 	}
 
+#ifdef TRACE
 	// Stop tracing
 	if (m_trace) {
 		m_trace->close();
 	}
+#endif
 
 	// Clean up before exit
 	// --------------------

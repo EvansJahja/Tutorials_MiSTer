@@ -54,6 +54,10 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
         = vlSelfRef.top__DOT__soc__DOT__cpu_clock;
     vlSelfRef.top__DOT__soc__DOT__rom__DOT__clock_b 
         = vlSelfRef.top__DOT__soc__DOT__cpu_clock;
+    vlSelfRef.top__DOT__soc__DOT__game_rom__DOT__clock_a 
+        = vlSelfRef.top__DOT__soc__DOT__cpu_clock;
+    vlSelfRef.top__DOT__soc__DOT__game_rom__DOT__clock_b 
+        = vlSelfRef.top__DOT__soc__DOT__cpu_clock;
     vlSelfRef.top__DOT__soc__DOT__wram_0__DOT__clock_a 
         = vlSelfRef.top__DOT__soc__DOT__cpu_clock;
     vlSelfRef.top__DOT__soc__DOT__vram_0__DOT__clock_a 
@@ -472,6 +476,12 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__1(Vtop___024root* vlSelf) 
     }
     vlSelfRef.top__DOT__soc__DOT__rom__DOT__q_b = vlSelfRef.top__DOT__soc__DOT__rom__DOT__mem
         [vlSelfRef.top__DOT__soc__DOT__rom__DOT__address_b];
+    vlSelfRef.top__DOT__soc__DOT__game_rom__DOT__q_b 
+        = vlSelfRef.top__DOT__soc__DOT__game_rom__DOT__mem
+        [vlSelfRef.top__DOT__soc__DOT__game_rom__DOT__address_b];
+    vlSelfRef.top__DOT__soc__DOT__game_rom_data_out 
+        = vlSelfRef.top__DOT__soc__DOT__game_rom__DOT__mem
+        [(0xfffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr))];
     vlSelfRef.top__DOT__soc__DOT__rom_data_out = vlSelfRef.top__DOT__soc__DOT__rom__DOT__mem
         [(0xfffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr))];
     vlSelfRef.top__DOT__soc__DOT__wram0_data_out = 
@@ -648,6 +658,8 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__1(Vtop___024root* vlSelf) 
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__DOCH 
         = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__RegsH
         [vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__RegAddrC];
+    vlSelfRef.top__DOT__soc__DOT__game_rom__DOT__q_a 
+        = vlSelfRef.top__DOT__soc__DOT__game_rom_data_out;
     vlSelfRef.top__DOT__soc__DOT__rom__DOT__q_a = vlSelfRef.top__DOT__soc__DOT__rom_data_out;
     vlSelfRef.top__DOT__soc__DOT__wram_0__DOT__q_a 
         = vlSelfRef.top__DOT__soc__DOT__wram0_data_out;
@@ -7976,6 +7988,9 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__19(Vtop___024root* vlSelf)
     vlSelfRef.top__DOT__soc__DOT__rom__DOT__address_a 
         = (0xfffU & ((IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr) 
                      >> 0U));
+    vlSelfRef.top__DOT__soc__DOT__game_rom__DOT__address_a 
+        = (0xfffU & ((IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr) 
+                     >> 0U));
     vlSelfRef.top__DOT__soc__DOT__wram_0__DOT__address_a 
         = (0xfffU & ((IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr) 
                      >> 0U));
@@ -8009,6 +8024,8 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__19(Vtop___024root* vlSelf)
     vlSelfRef.top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__address_a 
         = (0xfffU & ((IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr) 
                      >> 0U));
+    vlSelfRef.top__DOT__soc__DOT__game_rom_sel = (0x3fffU 
+                                                  >= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr));
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__A = vlSelfRef.top__DOT__soc__DOT__cpu_addr;
     vlSelfRef.top__DOT__soc__DOT__wram_0_sel = ((0xc000U 
                                                  <= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)) 
@@ -8018,6 +8035,12 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__19(Vtop___024root* vlSelf)
                                              <= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)) 
                                             & (0xff7fU 
                                                >= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)));
+    vlSelfRef.top__DOT__soc__DOT__bios_rom_sel = ((0xffU 
+                                                   >= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)) 
+                                                  | ((0x200U 
+                                                      <= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)) 
+                                                     & (0x8ffU 
+                                                        >= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr))));
     vlSelfRef.top__DOT__soc__DOT__hram_sel = ((0xff80U 
                                                <= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)) 
                                               & (0xfffeU 
