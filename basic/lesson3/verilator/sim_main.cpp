@@ -351,15 +351,21 @@ int main(int argc, char** argv, char** env) {
 
                 ImGui::Spacing();
                 ImGui::Separator();
-                ImGui::Text("16 bit Registers");
 /*
                 ImGui::Text("IX      0x%04X", top->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__IX);
                 ImGui::Text("IY      0x%04X", top->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__IY);
                 ImGui::Text("SP      0x%04X", top->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__SP);
 */
-                ImGui::Text("PC      0x%04X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__PC);
-
                 ImGui::End();
+
+                ImGui::Begin("PPU");
+                ImGui::Text("PPU EN		  %d", top->rootp->top__DOT__soc__DOT__ppu__DOT__lcd_ppu_en);
+                ImGui::Text("Mode		  %d", top->rootp->top__DOT__soc__DOT__ppu__DOT__mode);
+                ImGui::Text("Step		  %d", top->rootp->top__DOT__soc__DOT__ppu__DOT__step);
+                ImGui::Text("LY			%04X", top->rootp->top__DOT__soc__DOT__ppu_LY);
+                ImGui::Text("TileY			%04X", top->rootp->top__DOT__soc__DOT__ppu__DOT__tileY);
+                ImGui::Text("TileX			%04X", top->rootp->top__DOT__soc__DOT__ppu__DOT__tileX);
+				ImGui::End();
 
 		video.UpdateTexture();
 

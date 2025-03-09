@@ -162,6 +162,7 @@ reg [7:0] io_lcdc;
 reg [7:0] io_svbk;
 reg [7:0] io_scx;
 reg [7:0] io_scy;
+reg [7:0] io_bios_disable;
 wire [2:0] wram_sel;
 assign wram_sel = io_svbk[2:0];
 
@@ -177,7 +178,7 @@ wire io_sel = cpu_addr[15:0] >= 16'hff00 && cpu_addr[15:0] <= 16'hff7f;
 wire wram_0_sel = cpu_addr[15:0] >= 16'hC000 && cpu_addr[15:0] <= 16'hCFFF;
 
 // CGB rom is split into 0x0000-0x00ff and 0x0200-0x8ff
-wire bios_rom_sel = cpu_addr[15:0] <= 16'h00ff || (cpu_addr[15:0] >= 16'h0200 && cpu_addr[15:0] <= 16'h08FF) ;
+wire bios_rom_sel = io_bios_disable == 8'd0 && (cpu_addr[15:0] <= 16'h00ff || (cpu_addr[15:0] >= 16'h0200 && cpu_addr[15:0] <= 16'h08FF)) ;
 
 wire game_rom_sel = cpu_addr[15:0] <= 16'h3fff ;
 
@@ -220,6 +221,7 @@ always @(negedge cpu_mreq_n) begin
 			8'h43: io_scx <= cpu_dout;
 			8'h47: io_bgp <= cpu_dout;
 			8'h4F: io_vbk <= cpu_dout;
+			8'h50: io_bios_disable <= cpu_dout;
 			8'h70: io_svbk <= cpu_dout;
 		endcase
 	end
@@ -244,7 +246,7 @@ dpram #( .init_file("gbc.hex"),.widthad_a(12),.width_a(8)) rom
 dpram #( .init_file("game_rom.hex"),.widthad_a(21),.width_a(8)) game_rom
 (
         .clock_a(cpu_clock),
-        .address_a(cpu_addr[11:0]),
+        .address_a(cpu_addr[13:0]),
         .wren_a(1'b0),
         .q_a(game_rom_data_out),
 

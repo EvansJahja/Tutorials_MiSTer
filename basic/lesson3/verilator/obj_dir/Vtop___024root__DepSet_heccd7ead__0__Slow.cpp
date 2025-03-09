@@ -403,8 +403,8 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                      >> 0U));
     vlSelfRef.top__DOT__soc__DOT__rom__DOT__q_a = vlSelfRef.top__DOT__soc__DOT__rom_data_out;
     vlSelfRef.top__DOT__soc__DOT__game_rom__DOT__address_a 
-        = (0xfffU & ((IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr) 
-                     >> 0U));
+        = (0x3fffU & ((IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr) 
+                      >> 0U));
     vlSelfRef.top__DOT__soc__DOT__game_rom__DOT__q_a 
         = vlSelfRef.top__DOT__soc__DOT__game_rom_data_out;
     vlSelfRef.top__DOT__soc__DOT__wram_0__DOT__address_a 
@@ -749,14 +749,16 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                                              <= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)) 
                                             & (0xff7fU 
                                                >= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)));
-    vlSelfRef.top__DOT__soc__DOT__bios_rom_sel = ((0xffU 
-                                                   >= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)) 
-                                                  | ((0x200U 
-                                                      <= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)) 
-                                                     & (0x8ffU 
-                                                        >= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr))));
     vlSelfRef.top__DOT__soc__DOT__game_rom_sel = (0x3fffU 
                                                   >= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr));
+    vlSelfRef.top__DOT__soc__DOT__bios_rom_sel = ((0U 
+                                                   == (IData)(vlSelfRef.top__DOT__soc__DOT__io_bios_disable)) 
+                                                  & ((0xffU 
+                                                      >= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)) 
+                                                     | ((0x200U 
+                                                         <= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)) 
+                                                        & (0x8ffU 
+                                                           >= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))));
     vlSelfRef.top__DOT__soc__DOT__vram_data_out = (
                                                    (1U 
                                                     & (IData)(vlSelfRef.top__DOT__soc__DOT__io_vbk))
@@ -1841,6 +1843,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__soc__DOT__io_svbk = 0;
     vlSelf->top__DOT__soc__DOT__io_scx = 0;
     vlSelf->top__DOT__soc__DOT__io_scy = 0;
+    vlSelf->top__DOT__soc__DOT__io_bios_disable = 0;
     vlSelf->top__DOT__soc__DOT__wram_sel = 0;
     vlSelf->top__DOT__soc__DOT__io_bgp = 0;
     vlSelf->top__DOT__soc__DOT__bgp_id3 = 0;

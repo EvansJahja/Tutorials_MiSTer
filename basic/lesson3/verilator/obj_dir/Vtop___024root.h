@@ -125,6 +125,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ top__DOT__soc__DOT__io_svbk;
     CData/*7:0*/ top__DOT__soc__DOT__io_scx;
     CData/*7:0*/ top__DOT__soc__DOT__io_scy;
+    CData/*7:0*/ top__DOT__soc__DOT__io_bios_disable;
     CData/*2:0*/ top__DOT__soc__DOT__wram_sel;
     CData/*7:0*/ top__DOT__soc__DOT__io_bgp;
     CData/*1:0*/ top__DOT__soc__DOT__bgp_id3;
