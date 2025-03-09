@@ -190,6 +190,7 @@ module tv80_core (/*AUTOARG*/
   wire           LDW;
   wire           LDSPHL;
   wire           iorq_i;
+  wire           will_iorq;
   wire [2:0]     Special_LD;
   wire           ExchangeDH;
   wire           ExchangeRp;
@@ -241,6 +242,7 @@ module tv80_core (/*AUTOARG*/
      .Arith16              (Arith16),
      .Set_Addr_To          (Set_Addr_To),
      .IORQ                 (iorq_i),
+     .WILL_IORQ            (will_iorq),
      .Jump                 (Jump),
      .JumpE                (JumpE),
      .JumpXY               (JumpXY),
@@ -591,16 +593,17 @@ module tv80_core (/*AUTOARG*/
                               
                               aBC :
                                 begin
-                                  if (Mode == 3 && iorq_i == 1'b1 ) 
-                                    begin
-                                      // Memory map I/O on GBZ80
-                                      A[15:8] <= #1 8'hFF;
-                                      A[7:0] <= #1 RegBusC[7:0];
-                                    end 
-                                  else 
-                                    begin
-                                      A <= #1 RegBusC;
-                                    end
+                                  // Evans: Use iorq_i and will_iorq to gain 1 clock head-start
+                                  if (Mode == 3 && (iorq_i == 1'b1 || will_iorq == 1'b1) ) 
+                                     begin
+                                       // Memory map I/O on GBZ80
+                                       A[15:8] <= #1 8'hFF;
+                                       A[7:0] <= #1 RegBusC[7:0];
+                                     end 
+                                   else 
+                                     begin
+                                       A <= #1 RegBusC;
+                                     end
                                 end // case: aBC
                               
                               aDE :

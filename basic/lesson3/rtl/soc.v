@@ -119,7 +119,7 @@ T80s T80s (
 );
 */
 
-tv80s #(.Mode(3), .IOWait(0)) T80x  (
+tv80s #(.Mode(3), .IOWait(1)) T80x  (
 	.reset_n   ( !cpu_reset    ),
 	.clk       ( cpu_clock     ),
 	.wait_n    ( 1'b1          ),
@@ -149,8 +149,9 @@ assign vram_data_out = vram0_sel ? vram0_data_out : vram1_data_out;
 
 
 wire [7:0] wram0_data_out;
-reg [7:0] wramN_data_out;
+wire [7:0] wramN_data_out;
 wire [7:0] hram_data_out;
+assign wramN_data_out = wramN_q_a[wram_sel];
 
 wire [7:0] wramN_q_a[1:7];
 
@@ -192,21 +193,22 @@ always @(*) begin
 			case (cpu_addr[7:0])
 				8'h70: cpu_din = io_svbk;
 				8'h47: cpu_din = io_bgp;
+				8'h0f: cpu_din = 8'd1; // force vblank to 1
+				8'h44: cpu_din = ppu_LY;
 			endcase
 		end
 		else if (hram_sel) cpu_din = hram_data_out;
 		else if (vram_sel) cpu_din = vram_data_out;
 
+		else if (wram_0_sel) cpu_din = wram0_data_out;
+		else if (wram_n_group_sel) cpu_din = wramN_data_out;
+
 		else if (bios_rom_sel) cpu_din = rom_data_out;
 		else if (game_rom_sel) cpu_din = game_rom_data_out;
-		else cpu_din = 8'hFF;
+		else cpu_din = 8'hCC;
 
 	end else cpu_din = 8'hFF;
 
-end
-
-always @(*) begin
-	wramN_data_out = wramN_q_a[wram_sel];
 end
 
 always @(negedge cpu_mreq_n) begin

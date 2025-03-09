@@ -28,7 +28,7 @@ module tv80_mcode
   // Outputs
   MCycles, TStates, Prefix, Inc_PC, Inc_WZ, IncDec_16, Read_To_Reg, 
   Read_To_Acc, Set_BusA_To, Set_BusB_To, ALU_Op, Save_ALU, PreserveC, 
-  Arith16, Set_Addr_To, IORQ, Jump, JumpE, JumpXY, Call, RstP, LDZ, 
+  Arith16, Set_Addr_To, IORQ, WILL_IORQ, Jump, JumpE, JumpXY, Call, RstP, LDZ, 
   LDW, LDSPHL, Special_LD, ExchangeDH, ExchangeRp, ExchangeAF, 
   ExchangeRS, I_DJNZ, I_CPL, I_CCF, I_SCF, I_RETN, I_BT, I_BC, I_BTR, 
   I_RLD, I_RRD, I_INRC, SetDI, SetEI, IMode, Halt, NoRead, Write, 
@@ -68,6 +68,7 @@ module tv80_mcode
   output                Arith16                 ;
   output [2:0]          Set_Addr_To             ; // aNone,aXY,aIOA,aSP,aBC,aDE,aZI
   output                IORQ                    ;
+  output                WILL_IORQ               ; // Will ask for IORQ on next clock
   output                Jump                    ;
   output                JumpE                   ;
   output                JumpXY                  ;
@@ -116,6 +117,7 @@ module tv80_mcode
   reg                   Arith16                 ;
   reg [2:0]             Set_Addr_To             ; // aNone,aXY,aIOA,aSP,aBC,aDE,aZI
   reg                   IORQ                    ;
+  reg                   WILL_IORQ                    ;
   reg                   Jump                    ;
   reg                   JumpE                   ;
   reg                   JumpXY                  ;
@@ -229,6 +231,7 @@ module tv80_mcode
       PreserveC = 1'b0;
       Arith16 = 1'b0;
       IORQ = 1'b0;
+      WILL_IORQ = 1'b0;
       Set_Addr_To = aNone;
       Jump = 1'b0;
       JumpE = 1'b0;
@@ -1200,7 +1203,8 @@ module tv80_mcode
                               MCycle[0] :
                                 begin
                                   Set_Addr_To = aBC;
-                                  Set_BusB_To   = 4'b0111;
+                                  Set_BusB_To = 4'b0111;
+                                  WILL_IORQ = 1'b1;
                                 end
                               MCycle[1] :
                                 begin
@@ -1242,7 +1246,10 @@ module tv80_mcode
                             MCycles = 3'b010;
                             case (1'b1) // MCycle
                               MCycle[0] :
-                                Set_Addr_To = aBC;
+                                begin
+                                  Set_Addr_To = aBC;
+                                  WILL_IORQ = 1'b1;
+                                end
                               MCycle[1] :
                                 begin
                                   Read_To_Acc = 1'b1;
@@ -1687,6 +1694,7 @@ module tv80_mcode
                           begin
                             Inc_PC = 1'b1;
                             Set_Addr_To = aIOA;
+                            WILL_IORQ = 1'b1;
                           end
                         
                         MCycle[2] :
@@ -1712,6 +1720,7 @@ module tv80_mcode
                             Inc_PC = 1'b1;
                             Set_Addr_To = aIOA;
                             Set_BusB_To = 4'b0111;
+                            WILL_IORQ = 1'b1;
                           end
                         
                         MCycle[2] :
@@ -2430,8 +2439,10 @@ module tv80_mcode
                   // IN r,(C)
                   MCycles = 3'b010;
                   case (1'b1) // MCycle
-                    MCycle[0] :
+                    MCycle[0] : begin
+                      WILL_IORQ = 1'b1;
                       Set_Addr_To = aBC;
+                    end
                     
                     MCycle[1] :
                       begin
@@ -2458,6 +2469,7 @@ module tv80_mcode
                       begin
                         Set_Addr_To = aBC;
                         Set_BusB_To[2:0]        = IR[5:3];
+                        WILL_IORQ = 1'b1;
                         if (IR[5:3] == 3'b110 ) 
                           begin
                             Set_BusB_To[3] = 1'b1;
@@ -2487,6 +2499,7 @@ module tv80_mcode
                         Read_To_Reg = 1'b1;
                         Save_ALU = 1'b1;
                         ALU_Op = 4'b0010;
+                        WILL_IORQ = 1'b1;
                       end
                     
                     MCycle[1] :
@@ -2541,6 +2554,7 @@ module tv80_mcode
                       begin
                         Set_BusB_To = 4'b0110;
                         Set_Addr_To = aBC;
+                        WILL_IORQ = 1'b1;
                         if (IR[3] == 1'b0 ) 
                           begin
                             IncDec_16 = 4'b0110;

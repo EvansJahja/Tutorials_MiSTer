@@ -76,6 +76,8 @@ int clockSpeed = 24; // This is not used, just a reminder for the dividers below
 SimClock clk_sys(1); // 12mhz
 SimClock clk_pix(1); // 6mhz
 
+// #define TRACE
+
 #ifdef TRACE
 VerilatedVcdC* m_trace; // for tracing
 #endif
@@ -119,7 +121,7 @@ int verilate() {
 			if (m_trace) {
 				bool ppuen = top->rootp->top__DOT__soc__DOT__ppu__DOT__lcd_ppu_en > 0;
 				//if (main_time >= 1024000 && ppuen)
-			    //m_trace->dump(main_time);
+			    m_trace->dump(main_time);
 			}
 #endif
 
@@ -281,7 +283,11 @@ int main(int argc, char** argv, char** env) {
 				}
                 ImGui::End();
 
-                ImGui::Begin("RAM Editor");
+                ImGui::Begin("HRAM");
+				{
+					static MemoryEditor mem_edit;
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__hram__DOT__mem.data(), 0x7e, 0xff80);
+				}
                 ImGui::End();
 
 				ImGui::Begin("WRAM0");
@@ -337,6 +343,11 @@ int main(int argc, char** argv, char** env) {
                 ImGui::Text("E       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__E);
                 ImGui::Text("H       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__H);
                 ImGui::Text("L       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__L);
+
+                ImGui::Spacing();
+                ImGui::Separator();
+                ImGui::Text("WRAM");
+                ImGui::Text("wram_sel %d", top->rootp-> top__DOT__soc__DOT__wram_sel);
 
                 ImGui::Spacing();
                 ImGui::Separator();

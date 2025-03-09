@@ -323,6 +323,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__LDZ;
     CData/*0:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__LDW;
     CData/*0:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__LDSPHL;
+    CData/*0:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__will_iorq;
     CData/*2:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Special_LD;
     CData/*0:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ExchangeAF;
     CData/*0:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ExchangeRS;
@@ -358,6 +359,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Arith16;
     CData/*2:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Set_Addr_To;
     CData/*0:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__IORQ;
+    CData/*0:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__WILL_IORQ;
     CData/*0:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__Jump;
     CData/*0:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__JumpE;
     CData/*0:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__JumpXY;
@@ -565,9 +567,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ACC;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
+    CData/*0:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Auto_Wait_t1;
+    CData/*0:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Auto_Wait_t2;
     CData/*0:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IntE_FF1;
     CData/*0:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IntE_FF2;
-    CData/*0:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Auto_Wait_t1;
     CData/*6:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__tstate;
     CData/*2:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Pre_XY_F_M;
     CData/*6:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle;
@@ -762,9 +765,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__vga__DOT__fb__DOT__widthad_a = 0x00000010U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__Mode = 3U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__T2Write = 1U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__IOWait = 0U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__IOWait = 1U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Mode = 3U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IOWait = 0U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IOWait = 1U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_C = 4U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_N = 6U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Flag_P = 0U;
