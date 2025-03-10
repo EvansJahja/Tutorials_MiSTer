@@ -1,6 +1,6 @@
 
 #include "Vtop.h"
-#include "verilated_vcd_c.h"
+#include "verilated_fst_c.h"
 #include "imgui.h"
 #ifndef _MSC_VER
 #include <stdio.h>
@@ -76,10 +76,10 @@ int clockSpeed = 24; // This is not used, just a reminder for the dividers below
 SimClock clk_sys(1); // 12mhz
 SimClock clk_pix(1); // 6mhz
 
-// #define TRACE
+#define TRACE
 
 #ifdef TRACE
-VerilatedVcdC* m_trace; // for tracing
+VerilatedFstC* m_trace; // for tracing
 #endif
 
 void resetSim() {
@@ -197,9 +197,9 @@ int main(int argc, char** argv, char** env) {
 #ifdef TRACE
 	if (!m_trace) {
 		Verilated::traceEverOn(true);
-		m_trace = new VerilatedVcdC();
+		m_trace = new VerilatedFstC();
 		top->trace(m_trace, 99);
-		m_trace->open("trace.vcd");
+		m_trace->open("trace.fst");
 	}
 #endif
 

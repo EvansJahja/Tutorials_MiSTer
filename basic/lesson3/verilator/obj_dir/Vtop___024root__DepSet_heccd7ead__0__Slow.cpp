@@ -1443,7 +1443,7 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
         = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_4_4) 
            & (7U == (IData)(vlSelfRef.top__DOT__soc__DOT__wram_sel)));
     if (vlSelfRef.top__DOT__soc__DOT__cpu_rd_n) {
-        vlSelfRef.top__DOT__soc__DOT__cpu_din = 0xffU;
+        vlSelfRef.top__DOT__soc__DOT__cpu_din = 0x76U;
     } else if (vlSelfRef.top__DOT__soc__DOT__io_sel) {
         if ((0x70U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) {
             vlSelfRef.top__DOT__soc__DOT__cpu_din = vlSelfRef.top__DOT__soc__DOT__io_svbk;
@@ -1472,7 +1472,7 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                                                       : 
                                                      ((IData)(vlSelfRef.top__DOT__soc__DOT__game_rom_sel)
                                                        ? (IData)(vlSelfRef.top__DOT__soc__DOT__game_rom_data_out)
-                                                       : 0xccU))))));
+                                                       : 0x76U))))));
     }
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__reset_n 
         = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__reset_n;

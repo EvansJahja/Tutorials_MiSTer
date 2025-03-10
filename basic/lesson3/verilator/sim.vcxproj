@@ -42,6 +42,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnableManifest>true</VcpkgEnableManifest>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\EvansGrace02\Documents\Workspace\MiSTer\learn\Tutorials_MiSTer\basic\lesson3\verilator\obj_dir;C:\Users\EvansGrace02\Documents\Workspace\MiSTer\learn\Tutorials_MiSTer\basic\lesson3\verilator\sim\imgui;.\;..\..;sim\;C:\msys64\mingw64\share\verilator\include\vltstd;C:\msys64\mingw64\share\verilator\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -89,6 +95,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_fst_c.cpp" />
     <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_threads.cpp" />
     <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_timing.cpp" />
     <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_vcd_c.cpp" />

@@ -407,7 +407,8 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__0(Vtv80s___024root* vlSe
                                                      & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To))
                                                      ? (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__RegBusC)
                                                      : 
-                                                    ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i)
+                                                    (((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i) 
+                                                      | (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq))
                                                       ? 
                                                      (0xff00U 
                                                       | (0xffU 
@@ -1525,6 +1526,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__PreserveC = 0U;
     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Arith16 = 0U;
     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i = 0U;
+    vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 0U;
     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 7U;
     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Jump = 0U;
     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__JumpE = 0U;
@@ -1695,6 +1697,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                             if ((1U 
                                                  & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
+                                                vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                             } else if (
                                                        (2U 
                                                         & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
@@ -1724,6 +1727,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                         if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                                             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To = 7U;
+                                            vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                         } else if (
                                                    (2U 
                                                     & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
@@ -2056,6 +2060,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycles_d = 2U;
                                         if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
+                                            vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                         } else if (
                                                    (2U 
                                                     & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
@@ -2082,6 +2087,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                     if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To = 7U;
+                                        vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                     } else if ((2U 
                                                 & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                         vlSelfRef.tv80s__DOT__write = 1U;
@@ -2411,6 +2417,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                             if ((1U 
                                                  & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
+                                                vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                             } else if (
                                                        (2U 
                                                         & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
@@ -2440,6 +2447,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                         if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                                             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To = 7U;
+                                            vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                         } else if (
                                                    (2U 
                                                     & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
@@ -2759,6 +2767,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycles_d = 2U;
                                         if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
+                                            vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                         } else if (
                                                    (2U 
                                                     & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
@@ -2785,6 +2794,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                     if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To = 7U;
+                                        vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                     } else if ((2U 
                                                 & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                         vlSelfRef.tv80s__DOT__write = 1U;
@@ -3107,6 +3117,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                             if ((1U 
                                                  & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
+                                                vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                             } else if (
                                                        (2U 
                                                         & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
@@ -3136,6 +3147,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                         if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                                             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To = 7U;
+                                            vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                         } else if (
                                                    (2U 
                                                     & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
@@ -3467,6 +3479,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycles_d = 2U;
                                         if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
+                                            vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                         } else if (
                                                    (2U 
                                                     & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
@@ -3493,6 +3506,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                     if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To = 7U;
+                                        vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                     } else if ((2U 
                                                 & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                         vlSelfRef.tv80s__DOT__write = 1U;
@@ -3823,6 +3837,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycles_d = 2U;
                                     if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
+                                        vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                     } else if ((2U 
                                                 & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Read_To_Acc = 1U;
@@ -3846,6 +3861,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                 if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To = 7U;
+                                    vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                 } else if ((2U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                     vlSelfRef.tv80s__DOT__write = 1U;
                                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i = 1U;
@@ -4168,6 +4184,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycles_d = 2U;
                                 if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
+                                    vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                 } else if ((2U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Read_To_Acc = 1U;
                                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i = 1U;
@@ -4190,6 +4207,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                             if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To = 7U;
+                                vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                             } else if ((2U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                 vlSelfRef.tv80s__DOT__write = 1U;
                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i = 1U;
@@ -5866,6 +5884,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                             } else if ((2U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To = 6U;
                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
+                                vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IncDec_16 
                                     = ((8U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR))
                                         ? 0xeU : 6U);
@@ -5889,6 +5908,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Read_To_Reg = 1U;
                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Save_ALU = 1U;
                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__ALU_Op = 2U;
+                                vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                             } else if ((2U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i = 1U;
                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To = 6U;
@@ -6081,6 +6101,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                                 = ((8U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To)) 
                                    | (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                             >> 3U)));
+                            vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                             if ((6U == (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                               >> 3U)))) {
                                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To 
@@ -6093,6 +6114,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                     } else {
                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycles_d = 2U;
                         if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
+                            vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                         } else if ((2U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i = 1U;
@@ -6214,6 +6236,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                             = ((8U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To)) 
                                | (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                         >> 3U)));
+                        vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                         if ((6U == (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                           >> 3U)))) {
                             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To 
@@ -6226,6 +6249,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                 } else {
                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycles_d = 2U;
                     if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
+                        vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                     } else if ((2U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i = 1U;
@@ -6371,6 +6395,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                             = ((8U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To)) 
                                | (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                         >> 3U)));
+                        vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                         if ((6U == (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                           >> 3U)))) {
                             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To 
@@ -6383,6 +6408,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                 } else {
                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycles_d = 2U;
                     if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
+                        vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                     } else if ((2U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i = 1U;
@@ -6517,6 +6543,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                         = ((8U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To)) 
                            | (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                     >> 3U)));
+                    vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                     if ((6U == (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                       >> 3U)))) {
                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To 
@@ -6529,6 +6556,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
             } else {
                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycles_d = 2U;
                 if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
+                    vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                 } else if ((2U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i = 1U;
@@ -6659,6 +6687,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                             = ((8U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To)) 
                                | (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                         >> 3U)));
+                        vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                         if ((6U == (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                           >> 3U)))) {
                             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To 
@@ -6671,6 +6700,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                 } else {
                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycles_d = 2U;
                     if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
+                        vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                     } else if ((2U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i = 1U;
@@ -6790,6 +6820,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                         = ((8U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To)) 
                            | (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                     >> 3U)));
+                    vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                     if ((6U == (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                       >> 3U)))) {
                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To 
@@ -6802,6 +6833,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
             } else {
                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycles_d = 2U;
                 if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
+                    vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                 } else if ((2U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i = 1U;
@@ -6924,6 +6956,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                         = ((8U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To)) 
                            | (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                     >> 3U)));
+                    vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                     if ((6U == (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                       >> 3U)))) {
                         vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To 
@@ -6936,6 +6969,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
             } else {
                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycles_d = 2U;
                 if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
+                    vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
                 } else if ((2U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i = 1U;
@@ -7053,6 +7087,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
                     = ((8U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To)) 
                        | (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                 >> 3U)));
+                vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                 if ((6U == (7U & ((IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__IR) 
                                   >> 3U)))) {
                     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_BusB_To 
@@ -7065,6 +7100,7 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
         } else {
             vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycles_d = 2U;
             if ((1U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
+                vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq = 1U;
                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To = 0U;
             } else if ((2U & (IData)(vlSelfRef.tv80s__DOT__i_tv80_core__DOT__mcycle))) {
                 vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i = 1U;
@@ -7111,6 +7147,8 @@ VL_INLINE_OPT void Vtv80s___024root___nba_sequent__TOP__3(Vtv80s___024root* vlSe
         = vlSelfRef.tv80s__DOT__i_tv80_core__DOT__PreserveC;
     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__Arith16 
         = vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Arith16;
+    vlSelfRef.tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__WILL_IORQ 
+        = vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq;
     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__Jump 
         = vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Jump;
     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__JumpXY 

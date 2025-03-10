@@ -206,9 +206,9 @@ always @(*) begin
 
 		else if (bios_rom_sel) cpu_din = rom_data_out;
 		else if (game_rom_sel) cpu_din = game_rom_data_out;
-		else cpu_din = 8'hCC;
+		else cpu_din = 8'h76; // HLT
 
-	end else cpu_din = 8'hFF;
+	end else cpu_din = 8'h76; // HLT
 
 end
 

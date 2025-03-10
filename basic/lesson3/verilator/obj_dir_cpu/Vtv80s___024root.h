@@ -162,6 +162,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtv80s___024root final : public VerilatedModu
     CData/*0:0*/ tv80s__DOT__i_tv80_core__DOT__LDZ;
     CData/*0:0*/ tv80s__DOT__i_tv80_core__DOT__LDW;
     CData/*0:0*/ tv80s__DOT__i_tv80_core__DOT__LDSPHL;
+    CData/*0:0*/ tv80s__DOT__i_tv80_core__DOT__will_iorq;
     CData/*2:0*/ tv80s__DOT__i_tv80_core__DOT__Special_LD;
     CData/*0:0*/ tv80s__DOT__i_tv80_core__DOT__ExchangeAF;
     CData/*0:0*/ tv80s__DOT__i_tv80_core__DOT__ExchangeRS;
@@ -197,6 +198,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtv80s___024root final : public VerilatedModu
     CData/*0:0*/ tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__Arith16;
     CData/*2:0*/ tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__Set_Addr_To;
     CData/*0:0*/ tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__IORQ;
+    CData/*0:0*/ tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__WILL_IORQ;
     CData/*0:0*/ tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__Jump;
     CData/*0:0*/ tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__JumpE;
     CData/*0:0*/ tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__JumpXY;
@@ -272,11 +274,11 @@ class alignas(VL_CACHE_LINE_BYTES) Vtv80s___024root final : public VerilatedModu
     CData/*7:0*/ tv80s__DOT__i_tv80_core__DOT__i_reg__DOT__E;
     CData/*7:0*/ tv80s__DOT__i_tv80_core__DOT__i_reg__DOT__H;
     CData/*7:0*/ tv80s__DOT__i_tv80_core__DOT__i_reg__DOT__L;
-    CData/*0:0*/ __Vdly__tv80s__DOT__i_tv80_core__DOT__Alternate;
     CData/*1:0*/ __Vdly__tv80s__DOT__i_tv80_core__DOT__XY_State;
     CData/*7:0*/ __Vdly__tv80s__DOT__i_tv80_core__DOT__IR;
     CData/*7:0*/ __Vdly__tv80s__DOT__i_tv80_core__DOT__ACC;
     CData/*7:0*/ __Vdly__tv80s__DOT__i_tv80_core__DOT__F;
+    CData/*0:0*/ __Vdly__tv80s__DOT__i_tv80_core__DOT__Alternate;
     CData/*6:0*/ __Vdly__tv80s__DOT__i_tv80_core__DOT__tstate;
     CData/*6:0*/ __Vdly__tv80s__DOT__i_tv80_core__DOT__mcycle;
     CData/*0:0*/ __Vdly__tv80s__DOT__i_tv80_core__DOT__IntCycle;

@@ -170,6 +170,8 @@ VL_ATTR_COLD void Vtv80s___024root___stl_sequent__TOP__0(Vtv80s___024root* vlSel
         = vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Set_Addr_To;
     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__IORQ 
         = vlSelfRef.tv80s__DOT__i_tv80_core__DOT__iorq_i;
+    vlSelfRef.tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__WILL_IORQ 
+        = vlSelfRef.tv80s__DOT__i_tv80_core__DOT__will_iorq;
     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__Jump 
         = vlSelfRef.tv80s__DOT__i_tv80_core__DOT__Jump;
     vlSelfRef.tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__JumpE 
@@ -1317,6 +1319,7 @@ VL_ATTR_COLD void Vtv80s___024root___ctor_var_reset(Vtv80s___024root* vlSelf) {
     vlSelf->tv80s__DOT__i_tv80_core__DOT__LDW = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__LDSPHL = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__iorq_i = 0;
+    vlSelf->tv80s__DOT__i_tv80_core__DOT__will_iorq = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__Special_LD = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__ExchangeDH = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__ExchangeRp = 0;
@@ -1361,6 +1364,7 @@ VL_ATTR_COLD void Vtv80s___024root___ctor_var_reset(Vtv80s___024root* vlSelf) {
     vlSelf->tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__Arith16 = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__Set_Addr_To = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__IORQ = 0;
+    vlSelf->tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__WILL_IORQ = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__Jump = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__JumpE = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__i_mcode__DOT__JumpXY = 0;
@@ -1448,13 +1452,13 @@ VL_ATTR_COLD void Vtv80s___024root___ctor_var_reset(Vtv80s___024root* vlSelf) {
     vlSelf->tv80s__DOT__i_tv80_core__DOT__i_reg__DOT__L = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__i_reg__DOT__IX = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__i_reg__DOT__IY = 0;
-    vlSelf->__Vdly__tv80s__DOT__i_tv80_core__DOT__Alternate = 0;
     vlSelf->__Vdly__tv80s__DOT__i_tv80_core__DOT__PC = 0;
     vlSelf->__Vdly__tv80s__DOT__i_tv80_core__DOT__XY_State = 0;
     vlSelf->__Vdly__tv80s__DOT__i_tv80_core__DOT__IR = 0;
     vlSelf->__Vdly__tv80s__DOT__i_tv80_core__DOT__ACC = 0;
     vlSelf->__Vdly__tv80s__DOT__i_tv80_core__DOT__F = 0;
     vlSelf->__Vdly__tv80s__DOT__i_tv80_core__DOT__SP = 0;
+    vlSelf->__Vdly__tv80s__DOT__i_tv80_core__DOT__Alternate = 0;
     vlSelf->__Vdly__tv80s__DOT__i_tv80_core__DOT__tstate = 0;
     vlSelf->__Vdly__tv80s__DOT__i_tv80_core__DOT__mcycle = 0;
     vlSelf->__Vdly__tv80s__DOT__i_tv80_core__DOT__IntCycle = 0;

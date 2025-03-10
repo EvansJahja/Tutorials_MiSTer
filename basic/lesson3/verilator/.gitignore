@@ -1,4 +1,7 @@
 *.vcd
 *.gbc
+*.fst
+*.fst.hier
 game_rom.hex
 gbc.hex
+vcpkg_installed 
