@@ -70,19 +70,21 @@ void Vtop___024root___eval_triggers__act(Vtop___024root* vlSelf) {
                                           & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__wram_0__DOT__clock_b__0))));
     vlSelfRef.__VactTriggered.set(0x11U, ((IData)(vlSelfRef.top__DOT__soc__DOT__hram__DOT__clock_b) 
                                           & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__hram__DOT__clock_b__0))));
-    vlSelfRef.__VactTriggered.set(0x12U, ((IData)(vlSelfRef.top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__clock_b) 
+    vlSelfRef.__VactTriggered.set(0x12U, ((IData)(vlSelfRef.top__DOT__soc__DOT__xram__DOT__clock_b) 
+                                          & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__xram__DOT__clock_b__0))));
+    vlSelfRef.__VactTriggered.set(0x13U, ((IData)(vlSelfRef.top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__clock_b) 
                                           & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__clock_b__0))));
-    vlSelfRef.__VactTriggered.set(0x13U, ((IData)(vlSelfRef.top__DOT__soc__DOT__wram___BRA__2__KET____DOT__wram_N__DOT__clock_b) 
+    vlSelfRef.__VactTriggered.set(0x14U, ((IData)(vlSelfRef.top__DOT__soc__DOT__wram___BRA__2__KET____DOT__wram_N__DOT__clock_b) 
                                           & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__wram___BRA__2__KET____DOT__wram_N__DOT__clock_b__0))));
-    vlSelfRef.__VactTriggered.set(0x14U, ((IData)(vlSelfRef.top__DOT__soc__DOT__wram___BRA__3__KET____DOT__wram_N__DOT__clock_b) 
+    vlSelfRef.__VactTriggered.set(0x15U, ((IData)(vlSelfRef.top__DOT__soc__DOT__wram___BRA__3__KET____DOT__wram_N__DOT__clock_b) 
                                           & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__wram___BRA__3__KET____DOT__wram_N__DOT__clock_b__0))));
-    vlSelfRef.__VactTriggered.set(0x15U, ((IData)(vlSelfRef.top__DOT__soc__DOT__wram___BRA__4__KET____DOT__wram_N__DOT__clock_b) 
+    vlSelfRef.__VactTriggered.set(0x16U, ((IData)(vlSelfRef.top__DOT__soc__DOT__wram___BRA__4__KET____DOT__wram_N__DOT__clock_b) 
                                           & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__wram___BRA__4__KET____DOT__wram_N__DOT__clock_b__0))));
-    vlSelfRef.__VactTriggered.set(0x16U, ((IData)(vlSelfRef.top__DOT__soc__DOT__wram___BRA__5__KET____DOT__wram_N__DOT__clock_b) 
+    vlSelfRef.__VactTriggered.set(0x17U, ((IData)(vlSelfRef.top__DOT__soc__DOT__wram___BRA__5__KET____DOT__wram_N__DOT__clock_b) 
                                           & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__wram___BRA__5__KET____DOT__wram_N__DOT__clock_b__0))));
-    vlSelfRef.__VactTriggered.set(0x17U, ((IData)(vlSelfRef.top__DOT__soc__DOT__wram___BRA__6__KET____DOT__wram_N__DOT__clock_b) 
+    vlSelfRef.__VactTriggered.set(0x18U, ((IData)(vlSelfRef.top__DOT__soc__DOT__wram___BRA__6__KET____DOT__wram_N__DOT__clock_b) 
                                           & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__wram___BRA__6__KET____DOT__wram_N__DOT__clock_b__0))));
-    vlSelfRef.__VactTriggered.set(0x18U, ((IData)(vlSelfRef.top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__clock_b) 
+    vlSelfRef.__VactTriggered.set(0x19U, ((IData)(vlSelfRef.top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__clock_b) 
                                           & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__clock_b__0))));
     vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__cpu_clock__0 
         = vlSelfRef.top__DOT__soc__DOT__cpu_clock;
@@ -119,6 +121,8 @@ void Vtop___024root___eval_triggers__act(Vtop___024root* vlSelf) {
         = vlSelfRef.top__DOT__soc__DOT__wram_0__DOT__clock_b;
     vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__hram__DOT__clock_b__0 
         = vlSelfRef.top__DOT__soc__DOT__hram__DOT__clock_b;
+    vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__xram__DOT__clock_b__0 
+        = vlSelfRef.top__DOT__soc__DOT__xram__DOT__clock_b;
     vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__clock_b__0 
         = vlSelfRef.top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__clock_b;
     vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__wram___BRA__2__KET____DOT__wram_N__DOT__clock_b__0 

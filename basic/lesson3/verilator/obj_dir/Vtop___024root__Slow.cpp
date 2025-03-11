@@ -26,6 +26,7 @@ constexpr CData/*7:0*/ Vtop___024root::top__DOT__soc__DOT__wram_0__DOT__init_fil
 constexpr CData/*7:0*/ Vtop___024root::top__DOT__soc__DOT__vram_0__DOT__init_file;
 constexpr CData/*7:0*/ Vtop___024root::top__DOT__soc__DOT__vram_1__DOT__init_file;
 constexpr CData/*7:0*/ Vtop___024root::top__DOT__soc__DOT__hram__DOT__init_file;
+constexpr CData/*7:0*/ Vtop___024root::top__DOT__soc__DOT__xram__DOT__init_file;
 constexpr CData/*7:0*/ Vtop___024root::top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__init_file;
 constexpr CData/*7:0*/ Vtop___024root::top__DOT__soc__DOT__wram___BRA__2__KET____DOT__wram_N__DOT__init_file;
 constexpr CData/*7:0*/ Vtop___024root::top__DOT__soc__DOT__wram___BRA__3__KET____DOT__wram_N__DOT__init_file;
@@ -78,7 +79,7 @@ constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__rom__DOT__width_a;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__rom__DOT__widthad_a;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__game_rom__DOT__width_a;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__game_rom__DOT__widthad_a;
-constexpr VlWide<3>/*95:0*/ Vtop___024root::top__DOT__soc__DOT__game_rom__DOT__init_file;
+constexpr VlWide<3>/*71:0*/ Vtop___024root::top__DOT__soc__DOT__game_rom__DOT__init_file;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__wram_0__DOT__width_a;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__wram_0__DOT__widthad_a;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__vram_0__DOT__width_a;
@@ -87,6 +88,8 @@ constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__vram_1__DOT__width_a
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__vram_1__DOT__widthad_a;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__hram__DOT__width_a;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__hram__DOT__widthad_a;
+constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__xram__DOT__width_a;
+constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__xram__DOT__widthad_a;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__width_a;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__widthad_a;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__wram___BRA__2__KET____DOT__wram_N__DOT__width_a;

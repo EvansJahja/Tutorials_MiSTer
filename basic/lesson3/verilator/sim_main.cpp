@@ -76,7 +76,7 @@ int clockSpeed = 24; // This is not used, just a reminder for the dividers below
 SimClock clk_sys(1); // 12mhz
 SimClock clk_pix(1); // 6mhz
 
-#define TRACE
+// #define TRACE
 
 #ifdef TRACE
 VerilatedFstC* m_trace; // for tracing
@@ -124,6 +124,25 @@ int verilate() {
 			    m_trace->dump(main_time);
 			}
 #endif
+
+			// Debug log
+			static char char_buffer[1024] = {};
+			static int char_ptr = 0;
+			static int char_console_timeout = 10000;
+
+			if (top->rootp->top__DOT__soc__DOT__T80x__DOT__A == 0xFF01 && top->rootp->top__DOT__soc__DOT__cpu_wr_n == 0 && clk_sys.clk) {
+				char c = top->rootp->top__DOT__soc__DOT__T80x__DOT__dout;
+				char_buffer[char_ptr++] = top->rootp->top__DOT__soc__DOT__T80x__DOT__dout;
+				char_console_timeout = 10000;
+			} 
+			if (0 == char_console_timeout && char_ptr > 0) {
+				console.AddLog("%s", char_buffer);
+				char_ptr = 0;
+				char_console_timeout = 10000;
+				memset(char_buffer, 0, 1024);
+			} 
+			if (char_console_timeout > 0 && clk_sys.clk)
+				char_console_timeout--;
 
 			if (clk_sys.clk) { bus.AfterEval(); }
 		}
@@ -293,21 +312,56 @@ int main(int argc, char** argv, char** env) {
 				ImGui::Begin("WRAM0");
 				{
 					static MemoryEditor mem_edit;
-					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__wram_0__DOT__mem.data(), 4096, 0);
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__wram_0__DOT__mem.data(), 0x1000, 0xc000);
 				}
 				ImGui::End();
 
 				ImGui::Begin("WRAM1");
 				{
 					static MemoryEditor mem_edit;
-					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__mem.data(), 4096, 0);
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__mem.data(), 0x1000, 0xd000);
 				}
 				ImGui::End();
 
 				ImGui::Begin("WRAM2");
 				{
 					static MemoryEditor mem_edit;
-					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__wram___BRA__2__KET____DOT__wram_N__DOT__mem.data(), 4096, 0);
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__wram___BRA__2__KET____DOT__wram_N__DOT__mem.data(), 0x1000, 0xd000);
+				}
+				ImGui::End();
+
+				ImGui::Begin("WRAM3");
+				{
+					static MemoryEditor mem_edit;
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__wram___BRA__3__KET____DOT__wram_N__DOT__mem.data(), 0x1000, 0xd000);
+				}
+				ImGui::End();
+
+				ImGui::Begin("WRAM4");
+				{
+					static MemoryEditor mem_edit;
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__wram___BRA__4__KET____DOT__wram_N__DOT__mem.data(), 0x1000, 0xd000);
+				}
+				ImGui::End();
+
+				ImGui::Begin("WRAM5");
+				{
+					static MemoryEditor mem_edit;
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__wram___BRA__5__KET____DOT__wram_N__DOT__mem.data(), 0x1000, 0xd000);
+				}
+				ImGui::End();
+
+				ImGui::Begin("WRAM6");
+				{
+					static MemoryEditor mem_edit;
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__wram___BRA__6__KET____DOT__wram_N__DOT__mem.data(), 0x1000, 0xd000);
+				}
+				ImGui::End();
+
+				ImGui::Begin("WRAM7");
+				{
+					static MemoryEditor mem_edit;
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__mem.data(), 0x1000, 0xd000);
 				}
 				ImGui::End();
 
@@ -325,6 +379,13 @@ int main(int argc, char** argv, char** env) {
 				}
                 ImGui::End();
 
+                ImGui::Begin("XRAM");
+                {
+					static MemoryEditor mem_edit;
+					mem_edit.DrawContents(top->rootp->top__DOT__soc__DOT__xram__DOT__mem.data(), 0x2000, 0xA000);
+				}
+                ImGui::End();
+
 
                 ImGui::Begin("CPU Registers");
                 ImGui::Spacing();
@@ -339,6 +400,8 @@ int main(int argc, char** argv, char** env) {
                 ImGui::Text("Flag[N]       0x%02X", (top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F>>6) & 1);
                 ImGui::Text("Flag[H]       0x%02X", (top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F>>5) & 1);
                 ImGui::Text("Flag[CY]      0x%02X", (top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F>>4) & 1);
+                ImGui::Text("B       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__B);
+                ImGui::Text("C       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__C);
                 ImGui::Text("D       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__D);
                 ImGui::Text("E       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__E);
                 ImGui::Text("H       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__H);
@@ -357,6 +420,10 @@ int main(int argc, char** argv, char** env) {
                 ImGui::Text("SP      0x%04X", top->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__SP);
 */
                 ImGui::End();
+
+                ImGui::Begin("IO");
+                ImGui::Text("Wram_Sel		  %d", top->rootp->top__DOT__soc__DOT__wram_sel);
+				ImGui::End();
 
                 ImGui::Begin("PPU");
                 ImGui::Text("PPU EN		  %d", top->rootp->top__DOT__soc__DOT__ppu__DOT__lcd_ppu_en);

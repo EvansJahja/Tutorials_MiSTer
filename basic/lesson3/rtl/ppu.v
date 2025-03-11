@@ -38,12 +38,6 @@ reg [7:0] pixel_buf_l;
 reg [7:0] tile_id;
 reg [7:0] tile_attr;
 
-wire tile_bank;
-wire tile_bank_vram;
-
-assign tile_bank = tile_attr[3];
-assign tile_bank_vram = vram1_data[3];
-
 reg [1:0] tick;
 
 reg [7:0] tileX;
@@ -68,28 +62,33 @@ always @(posedge clk, negedge lcd_ppu_en) begin
                 vram0_addr <= 'h9800 + (LX >> 3) + ((LY >> 3) * 'h20);
                 vram1_addr <= 'h9800 + (LX >> 3) + ((LY >> 3) * 'h20);
             end
+
+
+            // Get BG Tile and BG Attr
             8'd2: begin
                 tile_id <= vram0_data;
                 tile_attr <= vram1_data;
                 // the base address depends on tile id and lcdc.4
-                if (tile_bank_vram == 1'b0)
-                    vram0_addr <= 'h8000 + (vram0_data << 4) + (tileY*2);
+                // tile address is determined by BG attribute in bank 1
+                if (vram1_data[3] == 1'b0)
+                    vram0_addr <= 'h9000 + (vram0_data << 4) + (tileY*2);
                 else
-                    vram1_addr <= 'h8000 + (vram0_data << 4) + (tileY*2);
+                    vram1_addr <= 'h9000 + (vram0_data << 4) + (tileY*2);
             end
 
+            // We have BG Tile, let's get character
             8'd4: begin
-                if (tile_bank == 1'b0) begin
+                if (tile_attr[3] == 1'b0) begin
                     pixel_buf_h <= vram0_data;
                     vram0_addr <= 'h8000 + (vram0_data << 4) + (tileY*2) + 1;
                 end else begin
                     pixel_buf_h <= vram1_data;
-                    vram1_addr <= 'h8000 + (vram0_data << 4) + (tileY*2) + 1;
+                    vram1_addr <= 'h8000 + (vram1_data << 4) + (tileY*2) + 1;
                 end
             end
 
             8'd6: begin
-                if (tile_bank == 1'b0)
+                if (tile_attr[3] == 1'b0)
                     pixel_buf_l <= vram0_data;
                 else
                     pixel_buf_l <= vram1_data;

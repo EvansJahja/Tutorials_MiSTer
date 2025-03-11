@@ -152,6 +152,7 @@ wire [7:0] wram0_data_out;
 wire [7:0] wramN_data_out;
 wire [7:0] hram_data_out;
 assign wramN_data_out = wramN_q_a[wram_sel];
+wire [7:0] xram_data_out;
 
 wire [7:0] wramN_q_a[1:7];
 
@@ -164,7 +165,7 @@ reg [7:0] io_scx;
 reg [7:0] io_scy;
 reg [7:0] io_bios_disable;
 wire [2:0] wram_sel;
-assign wram_sel = io_svbk[2:0];
+assign wram_sel = io_svbk[2:0] == 3'd0 ? 3'd1 : io_svbk[2:0];
 
 reg [7:0] io_bgp;
 wire [1:0] bgp_id3;
@@ -180,12 +181,14 @@ wire wram_0_sel = cpu_addr[15:0] >= 16'hC000 && cpu_addr[15:0] <= 16'hCFFF;
 // CGB rom is split into 0x0000-0x00ff and 0x0200-0x8ff
 wire bios_rom_sel = io_bios_disable == 8'd0 && (cpu_addr[15:0] <= 16'h00ff || (cpu_addr[15:0] >= 16'h0200 && cpu_addr[15:0] <= 16'h08FF)) ;
 
-wire game_rom_sel = cpu_addr[15:0] <= 16'h3fff ;
+wire game_rom_sel = cpu_addr[15:0] <= 16'h3fff || (cpu_addr[15:0] >= 16'h4000 && cpu_addr[15:0] <= 16'h7fff);
 
 // any of the wram_n is selected
 wire wram_n_group_sel = cpu_addr[15:0] >= 16'hD000 && cpu_addr[15:0] <= 16'hDFFF;
 
 assign {bgp_id3, bgp_id2, bgp_id1, bgp_id0} = io_bgp;
+
+wire xram_sel = cpu_addr[15:0] >= 16'hA000 && cpu_addr[15:0] <= 16'hBFFF;
 
 
 always @(*) begin
@@ -194,12 +197,13 @@ always @(*) begin
 			case (cpu_addr[7:0])
 				8'h70: cpu_din = io_svbk;
 				8'h47: cpu_din = io_bgp;
-				8'h0f: cpu_din = 8'd1; // force vblank to 1
+				8'h0f: cpu_din = ppu_LY > 8'd160 ? 8'd1 : 8'd0;
 				8'h44: cpu_din = ppu_LY;
 			endcase
 		end
 		else if (hram_sel) cpu_din = hram_data_out;
 		else if (vram_sel) cpu_din = vram_data_out;
+		else if (xram_sel) cpu_din = xram_data_out;
 
 		else if (wram_0_sel) cpu_din = wram0_data_out;
 		else if (wram_n_group_sel) cpu_din = wramN_data_out;
@@ -243,10 +247,10 @@ dpram #( .init_file("gbc.hex"),.widthad_a(12),.width_a(8)) rom
 
 );
 
-dpram #( .init_file("game_rom.hex"),.widthad_a(21),.width_a(8)) game_rom
+dpram #( .init_file("bully.hex"),.widthad_a(22),.width_a(8)) game_rom
 (
         .clock_a(cpu_clock),
-        .address_a(cpu_addr[13:0]),
+        .address_a(cpu_addr[14:0]),
         .wren_a(1'b0),
         .q_a(game_rom_data_out),
 
@@ -318,6 +322,18 @@ dpram #( .widthad_a(7),.width_a(8)) hram
         .address_a(cpu_addr[6:0]),
         .q_a(hram_data_out),
         .wren_a(!cpu_wr_n && hram_sel),
+        .data_a(cpu_dout),
+
+        .wren_b(1'b0)
+);
+
+// External RAM
+dpram #( .widthad_a(13),.width_a(8)) xram
+(
+        .clock_a(cpu_clock),
+        .address_a(cpu_addr[12:0]),
+        .q_a(xram_data_out),
+        .wren_a(!cpu_wr_n && xram_sel),
         .data_a(cpu_dout),
 
         .wren_b(1'b0)
