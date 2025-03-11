@@ -167,8 +167,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__lcd_ppu_en;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__window_tile_map;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__window_en;
-    CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__bg_window_tile;
-    CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__bg_tile_map;
+    CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__bg_char_data_sel;
+    CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__bg_code_area_sel;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__obj_size;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__obj_en;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__bg_win_prio;
@@ -570,9 +570,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__q_b;
     CData/*0:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__byteena_a;
     CData/*0:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__byteena_b;
+    CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__tile_id;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__tile_attr;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_h;
-    CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_l;
     CData/*2:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__mode;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__step;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__LX;

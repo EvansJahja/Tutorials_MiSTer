@@ -5,57 +5,6 @@
 #include "Vtop__pch.h"
 #include "Vtop___024root.h"
 
-VL_INLINE_OPT void Vtop___024root___nba_comb__TOP__0(Vtop___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___nba_comb__TOP__0\n"); );
-    auto& vlSelfRef = std::ref(*vlSelf).get();
-    // Body
-    vlSelfRef.top__DOT__soc__DOT__vram_data_out = (
-                                                   (1U 
-                                                    & (IData)(vlSelfRef.top__DOT__soc__DOT__io_vbk))
-                                                    ? (IData)(vlSelfRef.top__DOT__soc__DOT__vram1_data_out)
-                                                    : (IData)(vlSelfRef.top__DOT__soc__DOT__vram0_data_out));
-    vlSelfRef.top__DOT__soc__DOT__wramN_data_out = 
-        ((6U >= (7U & ((IData)(vlSelfRef.top__DOT__soc__DOT__wram_sel) 
-                       - (IData)(1U)))) ? vlSelfRef.top__DOT__soc__DOT__wramN_q_a
-         [(7U & ((IData)(vlSelfRef.top__DOT__soc__DOT__wram_sel) 
-                 - (IData)(1U)))] : 0xffU);
-}
-
-VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__21(Vtop___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___nba_sequent__TOP__21\n"); );
-    auto& vlSelfRef = std::ref(*vlSelf).get();
-    // Body
-    vlSelfRef.top__DOT__soc__DOT____Vcellinp__ppu__lcd_ppu_en 
-        = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_lcdc) 
-                 >> 7U));
-    vlSelfRef.top__DOT__soc__DOT__ppu__DOT__lcd_ppu_en 
-        = vlSelfRef.top__DOT__soc__DOT____Vcellinp__ppu__lcd_ppu_en;
-}
-
-VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__22(Vtop___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___nba_sequent__TOP__22\n"); );
-    auto& vlSelfRef = std::ref(*vlSelf).get();
-    // Body
-    vlSelfRef.top__DOT__soc__DOT__ppu_vram0_addr = vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram0_addr;
-    vlSelfRef.top__DOT__soc__DOT__ppu_vram1_addr = vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram1_addr;
-    vlSelfRef.top__DOT__soc__DOT__ppu__DOT__vram0_addr 
-        = vlSelfRef.top__DOT__soc__DOT__ppu_vram0_addr;
-    vlSelfRef.top__DOT__soc__DOT__vram_0__DOT__address_b 
-        = (0x1fffU & ((IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram0_addr) 
-                      >> 0U));
-    vlSelfRef.top__DOT__soc__DOT__ppu__DOT__vram1_addr 
-        = vlSelfRef.top__DOT__soc__DOT__ppu_vram1_addr;
-    vlSelfRef.top__DOT__soc__DOT__vram_1__DOT__address_b 
-        = (0x1fffU & ((IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram1_addr) 
-                      >> 0U));
-}
-
 VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__23(Vtop___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;

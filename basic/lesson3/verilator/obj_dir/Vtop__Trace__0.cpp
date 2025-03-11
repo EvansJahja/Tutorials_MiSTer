@@ -437,8 +437,8 @@ void Vtop___024root__trace_chg_0_sub_0(Vtop___024root* vlSelf, VerilatedFst::Buf
     bufp->chgBit(oldp+410,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__lcd_ppu_en));
     bufp->chgBit(oldp+411,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__window_tile_map));
     bufp->chgBit(oldp+412,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__window_en));
-    bufp->chgBit(oldp+413,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__bg_window_tile));
-    bufp->chgBit(oldp+414,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__bg_tile_map));
+    bufp->chgBit(oldp+413,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__bg_char_data_sel));
+    bufp->chgBit(oldp+414,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__bg_code_area_sel));
     bufp->chgBit(oldp+415,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__obj_size));
     bufp->chgBit(oldp+416,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__obj_en));
     bufp->chgBit(oldp+417,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__bg_win_prio));

@@ -37,8 +37,8 @@ ppu ppu (
     .lcd_ppu_en(io_lcdc[7]),
     .window_tile_map(io_lcdc[6]),
     .window_en(io_lcdc[5]),
-    .bg_window_tile(io_lcdc[4]),
-    .bg_tile_map(io_lcdc[3]),
+    .bg_char_data_sel(io_lcdc[4]),
+    .bg_code_area_sel(io_lcdc[3]),
     .obj_size(io_lcdc[2]),
     .obj_en(io_lcdc[1]),
     .bg_win_prio(io_lcdc[0]),
@@ -197,6 +197,8 @@ always @(*) begin
 			case (cpu_addr[7:0])
 				8'h70: cpu_din = io_svbk;
 				8'h47: cpu_din = io_bgp;
+				// VBLank
+				//8'h0f: cpu_din = 8'd0;
 				8'h0f: cpu_din = ppu_LY > 8'd160 ? 8'd1 : 8'd0;
 				8'h44: cpu_din = ppu_LY;
 			endcase

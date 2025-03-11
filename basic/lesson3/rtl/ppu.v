@@ -5,8 +5,8 @@ module ppu (
     input lcd_ppu_en,
     input window_tile_map,
     input window_en,
-    input bg_window_tile,
-    input bg_tile_map,
+    input bg_char_data_sel,
+    input bg_code_area_sel,
     input obj_size,
     input obj_en,
     input bg_win_prio,
@@ -63,35 +63,68 @@ always @(posedge clk, negedge lcd_ppu_en) begin
                 vram1_addr <= 'h9800 + (LX >> 3) + ((LY >> 3) * 'h20);
             end
 
-
             // Get BG Tile and BG Attr
             8'd2: begin
                 tile_id <= vram0_data;
                 tile_attr <= vram1_data;
-                // the base address depends on tile id and lcdc.4
-                // tile address is determined by BG attribute in bank 1
-                if (vram1_data[3] == 1'b0)
-                    vram0_addr <= 'h9000 + (vram0_data << 4) + (tileY*2);
-                else
-                    vram1_addr <= 'h9000 + (vram0_data << 4) + (tileY*2);
+                if (vram0_data < 255)
+                    if (vram0_data >= 128)
+                        if (vram1_data[3] == 1'b0)
+                            vram0_addr <= 'h8800 + (vram0_data[7:0] << 4) + (tileY*2);
+                        else
+                            vram1_addr <= 'h8800 + (vram0_data[7:0] << 4) + (tileY*2);
+                    else //vram depends on bg_char_data_sel
+                        if (bg_char_data_sel == 1'b0)
+                            if (vram1_data[3] == 1'b0)
+                                vram0_addr <= 'h9000 + (vram0_data[7:0] << 4) + (tileY*2);
+                            else
+                                vram1_addr <= 'h9000 + (vram0_data[7:0] << 4) + (tileY*2);
+                        else
+                            if (vram1_data[3] == 1'b0)
+                                vram0_addr <= 'h8000 + (vram0_data[7:0] << 4) + (tileY*2);
+                            else
+                                vram1_addr <= 'h8000 + (vram0_data[7:0] << 4) + (tileY*2);
             end
 
             // We have BG Tile, let's get character
             8'd4: begin
-                if (tile_attr[3] == 1'b0) begin
+                if (tile_attr[3] == 1'b0)
                     pixel_buf_h <= vram0_data;
-                    vram0_addr <= 'h8000 + (vram0_data << 4) + (tileY*2) + 1;
-                end else begin
+                else
                     pixel_buf_h <= vram1_data;
-                    vram1_addr <= 'h8000 + (vram1_data << 4) + (tileY*2) + 1;
-                end
+
+                if (tile_id < 255)
+                    if (tile_id >= 128)
+                        if (tile_attr[3] == 1'b0)
+                            vram0_addr <= 'h8800 + (tile_id[7:0] << 4) + (tileY*2)+1;
+                        else
+                            vram1_addr <= 'h8800 + (tile_id[7:0] << 4) + (tileY*2)+1;
+                    else //vram depends on bg_char_data_sel
+                        if (bg_char_data_sel == 1'b0)
+                            if (tile_attr[3] == 1'b0)
+                                vram0_addr <= 'h9000 + (tile_id[7:0] << 4) + (tileY*2)+1;
+                            else
+                                vram1_addr <= 'h9000 + (tile_id[7:0] << 4) + (tileY*2)+1;
+                        else
+                            if (tile_attr[3] == 1'b0)
+                                vram0_addr <= 'h8800 + (tile_id[7:0] << 4) + (tileY*2)+1;
+                            else
+                                vram1_addr <= 'h8800 + (tile_id[7:0] << 4) + (tileY*2)+1;
+
+
+                // if (tile_attr[3] == 1'b0) begin
+                //     vram0_addr <= 'h9000 + (vram0_data << 4) + (tileY*2) + 1;
+                // end else begin
+                //     pixel_buf_h <= vram1_data;
+                //     vram1_addr <= 'h9000 + (vram1_data << 4) + (tileY*2) + 1;
+                // end
             end
 
             8'd6: begin
-                if (tile_attr[3] == 1'b0)
-                    pixel_buf_l <= vram0_data;
-                else
-                    pixel_buf_l <= vram1_data;
+                // if (tile_attr[3] == 1'b0)
+                //     pixel_buf_l <= vram0_data;
+                // else
+                //     pixel_buf_l <= vram1_data;
                 fb_wr <= 1'b1;
                 mode <= 3'd1;
             end

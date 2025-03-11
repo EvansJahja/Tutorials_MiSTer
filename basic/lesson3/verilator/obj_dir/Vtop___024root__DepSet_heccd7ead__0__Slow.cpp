@@ -222,10 +222,10 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
     vlSelfRef.top__DOT__soc__DOT__ppu__DOT__window_en 
         = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_lcdc) 
                  >> 5U));
-    vlSelfRef.top__DOT__soc__DOT__ppu__DOT__bg_window_tile 
+    vlSelfRef.top__DOT__soc__DOT__ppu__DOT__bg_char_data_sel 
         = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_lcdc) 
                  >> 4U));
-    vlSelfRef.top__DOT__soc__DOT__ppu__DOT__bg_tile_map 
+    vlSelfRef.top__DOT__soc__DOT__ppu__DOT__bg_code_area_sel 
         = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_lcdc) 
                  >> 3U));
     vlSelfRef.top__DOT__soc__DOT__ppu__DOT__obj_size 
@@ -1918,8 +1918,8 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__soc__DOT__ppu__DOT__lcd_ppu_en = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__window_tile_map = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__window_en = 0;
-    vlSelf->top__DOT__soc__DOT__ppu__DOT__bg_window_tile = 0;
-    vlSelf->top__DOT__soc__DOT__ppu__DOT__bg_tile_map = 0;
+    vlSelf->top__DOT__soc__DOT__ppu__DOT__bg_char_data_sel = 0;
+    vlSelf->top__DOT__soc__DOT__ppu__DOT__bg_code_area_sel = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__obj_size = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__obj_en = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__bg_win_prio = 0;
@@ -2460,9 +2460,9 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     }
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu_vram0_addr = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu_vram1_addr = 0;
+    vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__tile_id = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__tile_attr = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_h = 0;
-    vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_l = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__mode = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__step = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__LX = 0;

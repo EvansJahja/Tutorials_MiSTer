@@ -485,8 +485,8 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declBit(c+411,0,"lcd_ppu_en",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
     tracep->declBit(c+412,0,"window_tile_map",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
     tracep->declBit(c+413,0,"window_en",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+414,0,"bg_window_tile",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
-    tracep->declBit(c+415,0,"bg_tile_map",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->declBit(c+414,0,"bg_char_data_sel",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
+    tracep->declBit(c+415,0,"bg_code_area_sel",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
     tracep->declBit(c+416,0,"obj_size",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
     tracep->declBit(c+417,0,"obj_en",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
     tracep->declBit(c+418,0,"bg_win_prio",-1, VerilatedTraceSigDirection::INPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1);
@@ -1293,8 +1293,8 @@ VL_ATTR_COLD void Vtop___024root__trace_full_0_sub_0(Vtop___024root* vlSelf, Ver
     bufp->fullBit(oldp+411,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__lcd_ppu_en));
     bufp->fullBit(oldp+412,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__window_tile_map));
     bufp->fullBit(oldp+413,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__window_en));
-    bufp->fullBit(oldp+414,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__bg_window_tile));
-    bufp->fullBit(oldp+415,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__bg_tile_map));
+    bufp->fullBit(oldp+414,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__bg_char_data_sel));
+    bufp->fullBit(oldp+415,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__bg_code_area_sel));
     bufp->fullBit(oldp+416,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__obj_size));
     bufp->fullBit(oldp+417,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__obj_en));
     bufp->fullBit(oldp+418,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__bg_win_prio));
