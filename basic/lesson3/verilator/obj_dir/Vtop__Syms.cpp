@@ -28,6 +28,7 @@ Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* mode
     // Setup scopes
     __Vscope_TOP.configure(this, name(), "TOP", "TOP", "<null>", 0, VerilatedScope::SCOPE_OTHER);
     __Vscope_top.configure(this, name(), "top", "top", "<null>", 0, VerilatedScope::SCOPE_OTHER);
+    __Vscope_top__soc.configure(this, name(), "top.soc", "soc", "<null>", -9, VerilatedScope::SCOPE_OTHER);
     // Setup export functions
     for (int __Vfinal = 0; __Vfinal < 2; ++__Vfinal) {
         __Vscope_TOP.varInsert(__Vfinal,"VGA_B", &(TOP.VGA_B), false, VLVT_UINT8,VLVD_OUT|VLVF_PUB_RW,1 ,7,0);

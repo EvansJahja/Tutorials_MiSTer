@@ -76,7 +76,7 @@ int clockSpeed = 24; // This is not used, just a reminder for the dividers below
 SimClock clk_sys(1); // 12mhz
 SimClock clk_pix(1); // 6mhz
 
-// #define TRACE
+#define TRACE
 
 #ifdef TRACE
 VerilatedFstC* m_trace; // for tracing

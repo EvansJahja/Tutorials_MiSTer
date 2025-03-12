@@ -30,6 +30,20 @@ wire [13:0] ppu_vram0_addr;
 wire [7:0]  ppu_vram0_data;
 wire [13:0] ppu_vram1_addr;
 wire [7:0]  ppu_vram1_data;
+reg [9:0] rom_bank;
+
+// Game rom address, which is way bigger than what the CPU can address.
+wire [22:0] game_rom_addr;
+assign game_rom_addr[13:0] = cpu_addr[13:0];
+//Assumes MBC3
+always @* begin
+	// 		game_rom_addr[22:12] = 10'b0;
+	if (cpu_addr[15:14] == 2'b00)
+			game_rom_addr[22:14] = 9'b0;
+	else
+			game_rom_addr[22:14] = rom_bank;
+end
+
 
 ppu ppu (
 	.clk(cpu_clock),
@@ -89,8 +103,11 @@ vga vga (
 reg [7:0] cpu_reset_cnt = 8'h00;
 wire cpu_reset = (cpu_reset_cnt != 7);
 always @(posedge cpu_clock)
-	if(cpu_reset_cnt != 7)
+	if(cpu_reset_cnt != 7) begin
 		cpu_reset_cnt <= cpu_reset_cnt + 8'd1;
+		rom_bank = 1;
+	end
+
 
 // CPU control signals
 wire cpu_clock = clk_sys;
@@ -190,6 +207,14 @@ assign {bgp_id3, bgp_id2, bgp_id1, bgp_id0} = io_bgp;
 
 wire xram_sel = cpu_addr[15:0] >= 16'hA000 && cpu_addr[15:0] <= 16'hBFFF;
 
+// MBC3
+wire mbc3_ram_and_timer_en			= cpu_addr[15:13] == 3'b000;
+wire mbc3_rom_bank_number 			= cpu_addr[15:13] == 3'b001;
+wire mbc3_ram_bank_number_or_rtc 	= cpu_addr[15:13] == 3'b010;
+wire mbc3_latch_clock_data		 	= cpu_addr[15:13] == 3'b011;
+wire mbc3_rtc_register			 	= cpu_addr[15:13] == 3'b101;
+
+
 
 always @(*) begin
 	if (!cpu_rd_n ) begin
@@ -220,16 +245,23 @@ end
 
 always @(negedge cpu_mreq_n) begin
 	// IO Register Writes
-	if (cpu_addr[15:8] == 8'hFF && !cpu_wr_n) begin
-		case (cpu_addr[7:0])
-			8'h40: io_lcdc <= cpu_dout;
-			8'h42: io_scy <= cpu_dout;
-			8'h43: io_scx <= cpu_dout;
-			8'h47: io_bgp <= cpu_dout;
-			8'h4F: io_vbk <= cpu_dout;
-			8'h50: io_bios_disable <= cpu_dout;
-			8'h70: io_svbk <= cpu_dout;
-		endcase
+	if (!cpu_wr_n) begin
+		if (cpu_addr[15:8] == 8'hFF) begin
+			case (cpu_addr[7:0])
+				8'h40: io_lcdc <= cpu_dout;
+				8'h42: io_scy <= cpu_dout;
+				8'h43: io_scx <= cpu_dout;
+				8'h47: io_bgp <= cpu_dout;
+				8'h4F: io_vbk <= cpu_dout;
+				8'h50: io_bios_disable <= cpu_dout;
+				8'h70: io_svbk <= cpu_dout;
+			endcase
+		end
+
+		if (mbc3_rom_bank_number) begin
+			$strobe("Loading bank %d", rom_bank);
+			rom_bank <= cpu_dout;
+		end
 	end
 end
 
@@ -249,10 +281,11 @@ dpram #( .init_file("gbc.hex"),.widthad_a(12),.width_a(8)) rom
 
 );
 
-dpram #( .init_file("bully.hex"),.widthad_a(22),.width_a(8)) game_rom
+dpram #( .init_file("game_rom.hex"),.widthad_a(22),.width_a(8)) game_rom
 (
         .clock_a(cpu_clock),
-        .address_a(cpu_addr[14:0]),
+        .address_a(game_rom_addr),
+        //.address_a(cpu_addr[14:0]),
         .wren_a(1'b0),
         .q_a(game_rom_data_out),
 

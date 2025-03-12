@@ -92,6 +92,24 @@ VL_INLINE_OPT void Vtop___024root___nba_comb__TOP__1(Vtop___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___nba_comb__TOP__1\n"); );
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
+    vlSelfRef.top__DOT__soc__DOT__game_rom_addr = (
+                                                   (((0U 
+                                                      == 
+                                                      (3U 
+                                                       & ((IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr) 
+                                                          >> 0xeU)))
+                                                      ? 0U
+                                                      : 
+                                                     (0x1ffU 
+                                                      & (IData)(vlSelfRef.top__DOT__soc__DOT__rom_bank))) 
+                                                    << 0xeU) 
+                                                   | (0x3fffU 
+                                                      & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)));
+    vlSelfRef.top__DOT__soc__DOT____Vcellinp__game_rom__address_a 
+        = ((((0U == (3U & ((IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr) 
+                           >> 0xeU))) ? 0U : (0xffU 
+                                              & (IData)(vlSelfRef.top__DOT__soc__DOT__rom_bank))) 
+            << 0xeU) | (0x3fffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)));
     vlSelfRef.top__DOT__soc__DOT__bios_rom_sel = ((0U 
                                                    == (IData)(vlSelfRef.top__DOT__soc__DOT__io_bios_disable)) 
                                                   & ((0xffU 
@@ -102,31 +120,33 @@ VL_INLINE_OPT void Vtop___024root___nba_comb__TOP__1(Vtop___024root* vlSelf) {
                                                            >= (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))));
     vlSelfRef.top__DOT__soc__DOT____Vcellinp__vram_0__wren_a 
         = ((IData)(vlSelfRef.top__DOT__soc__DOT__vram0_sel) 
-           & (IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_4_4));
+           & (IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_0_7));
     vlSelfRef.top__DOT__soc__DOT____Vcellinp__vram_1__wren_a 
         = ((IData)(vlSelfRef.top__DOT__soc__DOT__io_vbk) 
-           & (IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_4_4));
+           & (IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_0_7));
     vlSelfRef.top__DOT__soc__DOT____Vcellinp__wram___BRA__1__KET____DOT__wram_N__wren_a 
-        = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_4_5) 
+        = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_0_8) 
            & (1U == (IData)(vlSelfRef.top__DOT__soc__DOT__wram_sel)));
     vlSelfRef.top__DOT__soc__DOT____Vcellinp__wram___BRA__2__KET____DOT__wram_N__wren_a 
-        = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_4_5) 
+        = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_0_8) 
            & (2U == (IData)(vlSelfRef.top__DOT__soc__DOT__wram_sel)));
     vlSelfRef.top__DOT__soc__DOT____Vcellinp__wram___BRA__3__KET____DOT__wram_N__wren_a 
-        = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_4_5) 
+        = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_0_8) 
            & (3U == (IData)(vlSelfRef.top__DOT__soc__DOT__wram_sel)));
     vlSelfRef.top__DOT__soc__DOT____Vcellinp__wram___BRA__4__KET____DOT__wram_N__wren_a 
-        = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_4_5) 
+        = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_0_8) 
            & (4U == (IData)(vlSelfRef.top__DOT__soc__DOT__wram_sel)));
     vlSelfRef.top__DOT__soc__DOT____Vcellinp__wram___BRA__5__KET____DOT__wram_N__wren_a 
-        = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_4_5) 
+        = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_0_8) 
            & (5U == (IData)(vlSelfRef.top__DOT__soc__DOT__wram_sel)));
     vlSelfRef.top__DOT__soc__DOT____Vcellinp__wram___BRA__6__KET____DOT__wram_N__wren_a 
-        = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_4_5) 
+        = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_0_8) 
            & (6U == (IData)(vlSelfRef.top__DOT__soc__DOT__wram_sel)));
     vlSelfRef.top__DOT__soc__DOT____Vcellinp__wram___BRA__7__KET____DOT__wram_N__wren_a 
-        = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_4_5) 
+        = ((IData)(vlSelfRef.top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_0_8) 
            & (7U == (IData)(vlSelfRef.top__DOT__soc__DOT__wram_sel)));
+    vlSelfRef.top__DOT__soc__DOT__game_rom__DOT__address_a 
+        = vlSelfRef.top__DOT__soc__DOT____Vcellinp__game_rom__address_a;
     vlSelfRef.top__DOT__soc__DOT__vram_0__DOT__wren_a 
         = vlSelfRef.top__DOT__soc__DOT____Vcellinp__vram_0__wren_a;
     vlSelfRef.top__DOT__soc__DOT__vram_1__DOT__wren_a 
@@ -983,6 +1003,7 @@ VL_ATTR_COLD void Vtop___024root___dump_triggers__nba(Vtop___024root* vlSelf);
 #ifdef VL_DEBUG
 VL_ATTR_COLD void Vtop___024root___dump_triggers__act(Vtop___024root* vlSelf);
 #endif  // VL_DEBUG
+VL_ATTR_COLD void Vtop___024root___eval_postponed(Vtop___024root* vlSelf);
 
 void Vtop___024root___eval(Vtop___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
@@ -1043,6 +1064,7 @@ void Vtop___024root___eval(Vtop___024root* vlSelf) {
             __VnbaContinue = 1U;
         }
     }
+    Vtop___024root___eval_postponed(vlSelf);
 }
 
 #ifdef VL_DEBUG
