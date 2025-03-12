@@ -58,6 +58,7 @@ SimVideo video(VGA_WIDTH, VGA_HEIGHT, VGA_ROTATE);
 // ------------------
 int initialReset = 48;
 bool run_enable = 0;
+bool trace_enable = 0;
 int batchSize = 25000000 / 100;
 bool single_step = 0;
 bool multi_step = 0;
@@ -118,9 +119,7 @@ int verilate() {
 			top->eval();
 			
 #ifdef TRACE
-			if (m_trace) {
-				bool ppuen = top->rootp->top__DOT__soc__DOT__ppu__DOT__lcd_ppu_en > 0;
-				//if (main_time >= 1024000 && ppuen)
+			if (m_trace && trace_enable) {
 			    m_trace->dump(main_time);
 			}
 #endif
@@ -266,6 +265,7 @@ int main(int argc, char** argv, char** env) {
 		if (ImGui::Button("START")) { run_enable = 1; } ImGui::SameLine();
 		if (ImGui::Button("STOP")) { run_enable = 0; } ImGui::SameLine();
 		ImGui::Checkbox("RUN", &run_enable);
+		ImGui::Checkbox("TRACE", &trace_enable);
 		ImGui::SliderInt("Batch size", &batchSize, 1, 1000000);
 
 		if (single_step == 1) { single_step = 0; }
@@ -406,6 +406,10 @@ int main(int argc, char** argv, char** env) {
                 ImGui::Text("E       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__E);
                 ImGui::Text("H       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__H);
                 ImGui::Text("L       0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_reg__DOT__L);
+                ImGui::Separator();
+                ImGui::Text("Interrupts");
+                ImGui::Text("IE      0x%02X", top->rootp->top__DOT__soc__DOT__io_IE);
+                ImGui::Text("IF      0x%02X", top->rootp->top__DOT__soc__DOT__io_IF);
 
                 ImGui::Spacing();
                 ImGui::Separator();

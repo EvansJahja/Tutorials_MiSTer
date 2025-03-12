@@ -117,33 +117,20 @@ wire [7:0] cpu_dout;
 wire cpu_rd_n;
 wire cpu_wr_n;
 wire cpu_mreq_n;
-
-// include Z80 CPU
-/*
-T80s T80s (
-	.RESET_n  ( !cpu_reset    ),
-	.CLK    ( cpu_clock     ),
-	.WAIT_n   ( 1'b1          ),
-	.INT_n    ( 1'b1          ),
-	.NMI_n    ( 1'b1          ),
-	.BUSRQ_n  ( 1'b1          ),
-	.MREQ_n   ( cpu_mreq_n    ),
-	.RD_n     ( cpu_rd_n      ), 
-	.WR_n     ( cpu_wr_n      ),
-	.A        ( cpu_addr      ),
-	.DI       ( cpu_din       ),
-	.DO       ( cpu_dout      )
-);
-*/
+wire cpu_iorq_n;
+reg cpu_int_n;
 
 tv80s #(.Mode(3), .IOWait(1)) T80x  (
 	.reset_n   ( !cpu_reset    ),
 	.clk       ( cpu_clock     ),
 	.wait_n    ( 1'b1          ),
-	.int_n     ( 1'b1          ),
-	.nmi_n     ( 1'b1          ),
+	//.int_n     ( cpu_int_n     ),
+	.int_n (1'b1),
+	.nmi_n     ( cpu_int_n          ),
+	//.nmi_n     ( 1'b1          ),
 	.busrq_n   ( 1'b1          ),
 	.mreq_n    ( cpu_mreq_n    ),
+	.iorq_n    ( cpu_iorq_n	   ),
 	.rd_n      ( cpu_rd_n      ), 
 	.wr_n      ( cpu_wr_n      ),
 	.A         ( cpu_addr      ),
@@ -181,6 +168,16 @@ reg [7:0] io_svbk;
 reg [7:0] io_scx;
 reg [7:0] io_scy;
 reg [7:0] io_bios_disable;
+
+// Interrupts
+reg [7:0] io_IF;
+reg [7:0] io_IE;
+parameter INT_VBLANK = 0;
+parameter INT_LCDC = 1;
+parameter INT_IMER_OVERFLOW = 2;
+parameter INT_IO_COMPLETE = 3;
+parameter INT_OUCH_NEG = 4;
+
 wire [2:0] wram_sel;
 assign wram_sel = io_svbk[2:0] == 3'd0 ? 3'd1 : io_svbk[2:0];
 
@@ -215,9 +212,20 @@ wire mbc3_latch_clock_data		 	= cpu_addr[15:13] == 3'b011;
 wire mbc3_rtc_register			 	= cpu_addr[15:13] == 3'b101;
 
 
+// Interrupt
+always @(*) begin
+	io_IF = 8'd0;
+	cpu_int_n = 1'b1;
+	if (ppu_LY > 8'd160)
+		begin
+			io_IF = 8'd1;
+			cpu_int_n = 1'b0;
+		end
+
+end
 
 always @(*) begin
-	if (!cpu_rd_n ) begin
+	if (!cpu_rd_n) begin
 		if (io_sel) begin
 			case (cpu_addr[7:0])
 				8'h70: cpu_din = io_svbk;
@@ -226,6 +234,8 @@ always @(*) begin
 				//8'h0f: cpu_din = 8'd0;
 				8'h0f: cpu_din = ppu_LY > 8'd160 ? 8'd1 : 8'd0;
 				8'h44: cpu_din = ppu_LY;
+				8'hF0: cpu_din = io_IF;
+				8'hFF: cpu_din = io_IE;
 			endcase
 		end
 		else if (hram_sel) cpu_din = hram_data_out;
@@ -239,7 +249,12 @@ always @(*) begin
 		else if (game_rom_sel) cpu_din = game_rom_data_out;
 		else cpu_din = 8'h76; // HLT
 
-	end else cpu_din = 8'h76; // HLT
+	end 
+	else if (!cpu_iorq_n) begin
+		cpu_din = 8'h01;
+	end
+	
+	else cpu_din = 8'h76; // HLT
 
 end
 
@@ -255,6 +270,7 @@ always @(negedge cpu_mreq_n) begin
 				8'h4F: io_vbk <= cpu_dout;
 				8'h50: io_bios_disable <= cpu_dout;
 				8'h70: io_svbk <= cpu_dout;
+				8'hFF: io_IE <= cpu_dout;
 			endcase
 		end
 

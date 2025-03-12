@@ -100,6 +100,7 @@
     <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_timing.cpp" />
     <ClCompile Include="..\..\..\..\..\..\..\..\..\..\msys64\mingw64\share\verilator\include\verilated_vcd_c.cpp" />
     <ClCompile Include="obj_dir\Vtop.cpp" />
+    <ClCompile Include="obj_dir\Vtop__ConstPool_0.cpp" />
     <ClCompile Include="obj_dir\Vtop__Dpi.cpp" />
     <ClCompile Include="obj_dir\Vtop__Syms.cpp" />
     <ClCompile Include="obj_dir\Vtop__TraceDecls__0__Slow.cpp" />

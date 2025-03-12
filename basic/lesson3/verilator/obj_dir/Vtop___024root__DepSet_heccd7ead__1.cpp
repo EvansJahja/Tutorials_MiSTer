@@ -173,6 +173,22 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__24(Vtop___024root* vlSelf)
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___nba_sequent__TOP__24\n"); );
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
+    vlSelfRef.top__DOT__soc__DOT__cpu_int_n = 1U;
+    if ((0xa0U < (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_LY))) {
+        vlSelfRef.top__DOT__soc__DOT__cpu_int_n = 0U;
+    }
+    vlSelfRef.top__DOT__soc__DOT__T80x__DOT__nmi_n 
+        = vlSelfRef.top__DOT__soc__DOT__cpu_int_n;
+    vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__nmi_n 
+        = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__nmi_n;
+}
+
+VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__25(Vtop___024root* vlSelf) {
+    (void)vlSelf;  // Prevent unused variable warning
+    Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___nba_sequent__TOP__25\n"); );
+    auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Body
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ACC 
         = vlSelfRef.__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ACC;
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__PC 
@@ -252,7 +268,9 @@ VL_INLINE_OPT void Vtop___024root___nba_comb__TOP__2(Vtop___024root* vlSelf) {
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if (vlSelfRef.top__DOT__soc__DOT__cpu_rd_n) {
-        vlSelfRef.top__DOT__soc__DOT__cpu_din = 0x76U;
+        vlSelfRef.top__DOT__soc__DOT__cpu_din = ((IData)(vlSelfRef.top__DOT__soc__DOT__cpu_iorq_n)
+                                                  ? 0x76U
+                                                  : 1U);
     } else if (vlSelfRef.top__DOT__soc__DOT__io_sel) {
         if ((0x70U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) {
             vlSelfRef.top__DOT__soc__DOT__cpu_din = vlSelfRef.top__DOT__soc__DOT__io_svbk;
@@ -264,6 +282,10 @@ VL_INLINE_OPT void Vtop___024root___nba_comb__TOP__2(Vtop___024root* vlSelf) {
                   ? 1U : 0U);
         } else if ((0x44U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) {
             vlSelfRef.top__DOT__soc__DOT__cpu_din = vlSelfRef.top__DOT__soc__DOT__ppu_LY;
+        } else if ((0xf0U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) {
+            vlSelfRef.top__DOT__soc__DOT__cpu_din = vlSelfRef.top__DOT__soc__DOT__io_IF;
+        } else if ((0xffU == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) {
+            vlSelfRef.top__DOT__soc__DOT__cpu_din = vlSelfRef.top__DOT__soc__DOT__io_IE;
         }
     } else {
         vlSelfRef.top__DOT__soc__DOT__cpu_din = ((IData)(vlSelfRef.top__DOT__soc__DOT__hram_sel)

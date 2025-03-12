@@ -112,6 +112,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ top__DOT__soc__DOT__cpu_dout;
     CData/*0:0*/ top__DOT__soc__DOT__cpu_rd_n;
     CData/*0:0*/ top__DOT__soc__DOT__cpu_wr_n;
+    CData/*0:0*/ top__DOT__soc__DOT__cpu_iorq_n;
+    CData/*0:0*/ top__DOT__soc__DOT__cpu_int_n;
     CData/*7:0*/ top__DOT__soc__DOT__rom_data_out;
     CData/*7:0*/ top__DOT__soc__DOT__game_rom_data_out;
     CData/*7:0*/ top__DOT__soc__DOT__vram_data_out;
@@ -128,6 +130,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ top__DOT__soc__DOT__io_scx;
     CData/*7:0*/ top__DOT__soc__DOT__io_scy;
     CData/*7:0*/ top__DOT__soc__DOT__io_bios_disable;
+    CData/*7:0*/ top__DOT__soc__DOT__io_IF;
+    CData/*7:0*/ top__DOT__soc__DOT__io_IE;
     CData/*2:0*/ top__DOT__soc__DOT__wram_sel;
     CData/*7:0*/ top__DOT__soc__DOT__io_bgp;
     CData/*1:0*/ top__DOT__soc__DOT__bgp_id3;
@@ -783,6 +787,11 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     static constexpr CData/*7:0*/ top__DOT__soc__DOT__wram___BRA__5__KET____DOT__wram_N__DOT__init_file = 0U;
     static constexpr CData/*7:0*/ top__DOT__soc__DOT__wram___BRA__6__KET____DOT__wram_N__DOT__init_file = 0U;
     static constexpr CData/*7:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__init_file = 0U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__INT_VBLANK = 0U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__INT_LCDC = 1U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__INT_IMER_OVERFLOW = 2U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__INT_IO_COMPLETE = 3U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__INT_OUCH_NEG = 4U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__vga__DOT__H = 0x00000300U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__vga__DOT__HFP = 0x00000018U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__vga__DOT__HS = 0x00000050U;

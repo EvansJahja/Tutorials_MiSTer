@@ -34,6 +34,11 @@ constexpr CData/*7:0*/ Vtop___024root::top__DOT__soc__DOT__wram___BRA__4__KET___
 constexpr CData/*7:0*/ Vtop___024root::top__DOT__soc__DOT__wram___BRA__5__KET____DOT__wram_N__DOT__init_file;
 constexpr CData/*7:0*/ Vtop___024root::top__DOT__soc__DOT__wram___BRA__6__KET____DOT__wram_N__DOT__init_file;
 constexpr CData/*7:0*/ Vtop___024root::top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__init_file;
+constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__INT_VBLANK;
+constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__INT_LCDC;
+constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__INT_IMER_OVERFLOW;
+constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__INT_IO_COMPLETE;
+constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__INT_OUCH_NEG;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__vga__DOT__H;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__vga__DOT__HFP;
 constexpr IData/*31:0*/ Vtop___024root::top__DOT__soc__DOT__vga__DOT__HS;
