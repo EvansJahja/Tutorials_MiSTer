@@ -118,6 +118,7 @@ module tv80_core (/*AUTOARG*/
   reg [7:0]     IR;             // Instruction register
   reg [1:0]     ISet;           // Instruction set selector
   reg [15:0]    RegBusA_r;
+  reg           reset_4x;       // Offset reset by 4x
 
   reg [15:0]    ID16;
   reg [7:0]     Save_Mux;
@@ -459,10 +460,16 @@ module tv80_core (/*AUTOARG*/
                         end 
                       else if (Halt_FF == 1'b1 || (IntCycle == 1'b1 && IStatus == 2'b10) || NMICycle == 1'b1 ) 
                         begin
-                          IR <= #1 8'b00000000;
-			  TmpAddr[7:0] <= #1 dinst; // Special M1 vector fetch
+                          TmpAddr[7:0] <= #1 dinst; // Special M1 vector fetch
                         end 
-                      else 
+                      else if (IntCycle == 1'b1 && IStatus == 2'b00 ) 
+                        begin
+                          IR <= #1 8'b11111111;
+                          reset_4x <= 1;
+                          TmpAddr[15:8] <= 8'd0;
+                          TmpAddr[7:0] <= dinst;
+                        end
+                      else
                         begin
                           IR <= #1 dinst;
                         end
@@ -688,7 +695,13 @@ module tv80_core (/*AUTOARG*/
                         end
                       if (RstP == 1'b1 ) 
                         begin
-                          TmpAddr <= #1 { 10'h0, IR[5:3], 3'h0 };
+                          // In GBC, we use some trick to place reset vector into TmpAddr. This is marked by setting reset_4x
+                          if (Mode == 3 && reset_4x)
+                            begin
+                              reset_4x <= 1'b0;
+                            end
+                          else
+                            TmpAddr <= #1 { 10'h0, IR[5:3], 3'h0 };
                           //TmpAddr <= #1 (others =>1'b0);
                           //TmpAddr[5:3] <= #1 IR[5:3];
                         end

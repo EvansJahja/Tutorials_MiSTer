@@ -287,6 +287,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__RegWEL;
     CData/*7:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR;
     CData/*1:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ISet;
+    CData/*0:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__reset_4x;
     CData/*7:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Save_Mux;
     CData/*6:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__tstate;
     CData/*6:0*/ top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle;
@@ -588,6 +589,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__LX;
     CData/*1:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__XY_State;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR;
+    CData/*0:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__reset_4x;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ACC;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
     CData/*0:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Auto_Wait_t1;

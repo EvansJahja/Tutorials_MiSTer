@@ -124,9 +124,9 @@ tv80s #(.Mode(3), .IOWait(1)) T80x  (
 	.reset_n   ( !cpu_reset    ),
 	.clk       ( cpu_clock     ),
 	.wait_n    ( 1'b1          ),
-	//.int_n     ( cpu_int_n     ),
-	.int_n (1'b1),
-	.nmi_n     ( cpu_int_n          ),
+	.int_n     ( cpu_int_n     ),
+	//.int_n (1'b1),
+	//.nmi_n     ( cpu_int_n          ),
 	//.nmi_n     ( 1'b1          ),
 	.busrq_n   ( 1'b1          ),
 	.mreq_n    ( cpu_mreq_n    ),
@@ -216,7 +216,7 @@ wire mbc3_rtc_register			 	= cpu_addr[15:13] == 3'b101;
 always @(*) begin
 	io_IF = 8'd0;
 	cpu_int_n = 1'b1;
-	if (ppu_LY > 8'd160)
+	if (ppu_LY == 8'd160)
 		begin
 			io_IF = 8'd1;
 			cpu_int_n = 1'b0;
@@ -224,8 +224,12 @@ always @(*) begin
 
 end
 
+
 always @(*) begin
-	if (!cpu_rd_n) begin
+	if (!cpu_iorq_n && cpu_rd_n) begin
+		cpu_din = 8'h40; // VBlank
+	end
+	else if (!cpu_rd_n) begin
 		if (io_sel) begin
 			case (cpu_addr[7:0])
 				8'h70: cpu_din = io_svbk;
@@ -250,9 +254,6 @@ always @(*) begin
 		else cpu_din = 8'h76; // HLT
 
 	end 
-	else if (!cpu_iorq_n) begin
-		cpu_din = 8'h01;
-	end
 	
 	else cpu_din = 8'h76; // HLT
 

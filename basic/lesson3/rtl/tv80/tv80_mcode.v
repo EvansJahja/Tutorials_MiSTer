@@ -259,10 +259,13 @@ module tv80_mcode
       I_INRC = 1'b0;
       SetDI = 1'b0;
       SetEI = 1'b0;
-      IMode = 2'b11;
       Halt = 1'b0;
       NoRead = 1'b0;
       Write = 1'b0;
+      if (Mode == 3) // Gameboy
+        IMode = 2'b00; 
+      else
+        IMode = 2'b11;
       
       case (ISet)
         2'b00  :
