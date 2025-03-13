@@ -212,14 +212,18 @@ wire mbc3_latch_clock_data		 	= cpu_addr[15:13] == 3'b011;
 wire mbc3_rtc_register			 	= cpu_addr[15:13] == 3'b101;
 
 
+reg vblank_FF;
 // Interrupt
-always @(*) begin
-	io_IF = 8'd0;
-	cpu_int_n = 1'b1;
-	if (ppu_LY == 8'd160)
+always @(posedge clk_sys) begin
+	io_IF <= 8'd0;
+	cpu_int_n <= 1'b1;
+	if (ppu_LY == 8'd143)
+		vblank_FF <= 1'b1;
+	if (ppu_LY == 8'd144 && vblank_FF)
 		begin
-			io_IF = 8'd1;
-			cpu_int_n = 1'b0;
+			vblank_FF <= 1'b0;
+			io_IF <= 8'd1;
+			cpu_int_n <= 1'b0;
 		end
 
 end

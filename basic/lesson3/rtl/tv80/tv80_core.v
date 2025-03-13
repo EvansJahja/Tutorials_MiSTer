@@ -1242,15 +1242,23 @@ module tv80_core (/*AUTOARG*/
                         (I_BTR && (~ IR[4] || F[Flag_Z]));
               if (tstate[2] ) 
                 begin
-                  if (SetEI == 1'b1 ) 
+                  if (Mode == 3 && SetEI == 1'b1 && I_RETN == 1'b1 )
                     begin
-                      if (!NMICycle)
-                        IntE_FF1 <= #1 1'b1;
+                      IntE_FF1 <= #1 1'b1;
                       IntE_FF2 <= #1 1'b1;
                     end
-                  if (I_RETN == 1'b1 ) 
+                  else
                     begin
-                      IntE_FF1 <= #1 IntE_FF2;
+                      if (SetEI == 1'b1 ) 
+                        begin
+                          if (!NMICycle)
+                            IntE_FF1 <= #1 1'b1;
+                          IntE_FF2 <= #1 1'b1;
+                        end
+                      if (I_RETN == 1'b1 ) 
+                        begin
+                          IntE_FF1 <= #1 IntE_FF2;
+                        end
                     end
                 end
               if (tstate[3] ) 

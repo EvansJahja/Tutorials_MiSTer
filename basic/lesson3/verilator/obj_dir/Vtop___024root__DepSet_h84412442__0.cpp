@@ -36,12 +36,12 @@ void Vtop___024root___eval_triggers__act(Vtop___024root* vlSelf) {
     // Body
     vlSelfRef.__VactTriggered.set(0U, ((IData)(vlSelfRef.top__DOT__soc__DOT__cpu_clock) 
                                        & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__cpu_clock__0))));
-    vlSelfRef.__VactTriggered.set(1U, ((~ (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_mreq_n)) 
-                                       & (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__cpu_mreq_n__0)));
-    vlSelfRef.__VactTriggered.set(2U, ((~ (IData)(vlSelfRef.top__DOT__soc__DOT____Vcellinp__ppu__lcd_ppu_en)) 
-                                       & (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT____Vcellinp__ppu__lcd_ppu_en__0)));
-    vlSelfRef.__VactTriggered.set(3U, ((IData)(vlSelfRef.clk_sys) 
+    vlSelfRef.__VactTriggered.set(1U, ((IData)(vlSelfRef.clk_sys) 
                                        & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__clk_sys__0))));
+    vlSelfRef.__VactTriggered.set(2U, ((~ (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_mreq_n)) 
+                                       & (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__cpu_mreq_n__0)));
+    vlSelfRef.__VactTriggered.set(3U, ((~ (IData)(vlSelfRef.top__DOT__soc__DOT____Vcellinp__ppu__lcd_ppu_en)) 
+                                       & (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT____Vcellinp__ppu__lcd_ppu_en__0)));
     vlSelfRef.__VactTriggered.set(4U, ((IData)(vlSelfRef.top__DOT__soc__DOT__fb_clk) 
                                        & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__fb_clk__0))));
     vlSelfRef.__VactTriggered.set(5U, ((~ (IData)(vlSelfRef.top__DOT__soc__DOT____Vcellinp__T80x__reset_n)) 
@@ -88,11 +88,11 @@ void Vtop___024root___eval_triggers__act(Vtop___024root* vlSelf) {
                                           & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__clock_b__0))));
     vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__cpu_clock__0 
         = vlSelfRef.top__DOT__soc__DOT__cpu_clock;
+    vlSelfRef.__Vtrigprevexpr___TOP__clk_sys__0 = vlSelfRef.clk_sys;
     vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__cpu_mreq_n__0 
         = vlSelfRef.top__DOT__soc__DOT__cpu_mreq_n;
     vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT____Vcellinp__ppu__lcd_ppu_en__0 
         = vlSelfRef.top__DOT__soc__DOT____Vcellinp__ppu__lcd_ppu_en;
-    vlSelfRef.__Vtrigprevexpr___TOP__clk_sys__0 = vlSelfRef.clk_sys;
     vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT__fb_clk__0 
         = vlSelfRef.top__DOT__soc__DOT__fb_clk;
     vlSelfRef.__Vtrigprevexpr___TOP__top__DOT__soc__DOT____Vcellinp__T80x__reset_n__0 

@@ -151,6 +151,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ top__DOT__soc__DOT__mbc3_ram_bank_number_or_rtc;
     CData/*0:0*/ top__DOT__soc__DOT__mbc3_latch_clock_data;
     CData/*0:0*/ top__DOT__soc__DOT__mbc3_rtc_register;
+    CData/*0:0*/ top__DOT__soc__DOT__vblank_FF;
     CData/*0:0*/ top__DOT__soc__DOT____Vcellinp__wram_0__wren_a;
     CData/*0:0*/ top__DOT__soc__DOT____Vcellinp__vram_0__wren_a;
     CData/*0:0*/ top__DOT__soc__DOT____Vcellinp__vram_1__wren_a;
@@ -581,12 +582,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__q_b;
     CData/*0:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__byteena_a;
     CData/*0:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__byteena_b;
+    CData/*0:0*/ __Vdly__top__DOT__soc__DOT__vblank_FF;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__tile_id;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__tile_attr;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_h;
     CData/*2:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__mode;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__step;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__LX;
+    CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu_LY;
     CData/*1:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__XY_State;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR;
     CData/*0:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__reset_4x;
@@ -628,9 +631,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ __VstlFirstIteration;
     CData/*0:0*/ __VicoFirstIteration;
     CData/*0:0*/ __Vtrigprevexpr___TOP__top__DOT__soc__DOT__cpu_clock__0;
+    CData/*0:0*/ __Vtrigprevexpr___TOP__clk_sys__0;
     CData/*0:0*/ __Vtrigprevexpr___TOP__top__DOT__soc__DOT__cpu_mreq_n__0;
     CData/*0:0*/ __Vtrigprevexpr___TOP__top__DOT__soc__DOT____Vcellinp__ppu__lcd_ppu_en__0;
-    CData/*0:0*/ __Vtrigprevexpr___TOP__clk_sys__0;
     CData/*0:0*/ __Vtrigprevexpr___TOP__top__DOT__soc__DOT__fb_clk__0;
     CData/*0:0*/ __Vtrigprevexpr___TOP__top__DOT__soc__DOT____Vcellinp__T80x__reset_n__0;
     CData/*7:0*/ __Vtrigprevexpr___TOP__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F__0;
