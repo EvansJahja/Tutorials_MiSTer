@@ -238,10 +238,8 @@ always @(*) begin
 			case (cpu_addr[7:0])
 				8'h70: cpu_din = io_svbk;
 				8'h47: cpu_din = io_bgp;
-				// VBLank
-				//8'h0f: cpu_din = 8'd0;
-				//8'h0f: cpu_din = ppu_LY > 8'd160 ? 8'd1 : 8'd0;
-				//8'h44: cpu_din = ppu_LY;
+				8'h0f: cpu_din = ppu_LY >= 8'd144 ? 8'd1 : 8'd0;
+				8'h44: cpu_din = ppu_LY;
 				8'hF0: cpu_din = io_IF;
 				8'hFF: cpu_din = io_IE;
 			endcase

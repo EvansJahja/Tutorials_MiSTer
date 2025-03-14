@@ -1510,6 +1510,12 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
             vlSelfRef.top__DOT__soc__DOT__cpu_din = vlSelfRef.top__DOT__soc__DOT__io_svbk;
         } else if ((0x47U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) {
             vlSelfRef.top__DOT__soc__DOT__cpu_din = vlSelfRef.top__DOT__soc__DOT__io_bgp;
+        } else if ((0xfU == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) {
+            vlSelfRef.top__DOT__soc__DOT__cpu_din = 
+                ((0x90U <= (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_LY))
+                  ? 1U : 0U);
+        } else if ((0x44U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) {
+            vlSelfRef.top__DOT__soc__DOT__cpu_din = vlSelfRef.top__DOT__soc__DOT__ppu_LY;
         } else if ((0xf0U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) {
             vlSelfRef.top__DOT__soc__DOT__cpu_din = vlSelfRef.top__DOT__soc__DOT__io_IF;
         } else if ((0xffU == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) {
