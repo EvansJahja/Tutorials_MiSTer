@@ -37,7 +37,7 @@ assign fb_clk = clk;
 reg [2:0] mode;
 
 
-reg [7:0] step;
+reg [15:0] step;
 reg [7:0] pixel_buf_h;
 reg [7:0] pixel_buf_l;
 reg [7:0] tmp_pixel;
@@ -186,28 +186,52 @@ always @(posedge clk, negedge lcd_ppu_en) begin
                     LX <= LX + 1;
                 end
                 else begin
-                    mode <= 3'd0;
                     tileX <= 0;
-                    step <= 8'd0;
+                    step <= 16'd0;
+                    mode <= 3'd2;
                     if (LX >= 8'd160) begin
                         LX <= 0;
                         LY <= LY + 1;
                         tileY <= tileY + 1;
-                    end else begin
-                        mode <= 3'd2;
-                    end
-                end
+                    end                end
             end else begin
                 tileY <= 0;
                 mode <= 3'd0;
+                step <= 0;
             end
         end
         if(mode == 3'd2) begin
-            if (step == 8'hFF) begin
-                mode <= 3'd0;
+            if (step == 16'hFF) begin
+                if (LY >= 8'd144)
+                    begin
+                        LX <= 8'd0;
+                        step <= 16'd0;
+                        mode <= 3'd3;
+                    end
+                else
+                    mode <= 3'd0;
                 step <= 0;
             end else 
                 step <= step + 1;
+        end
+
+        if(mode == 3'd3) begin
+            if (step <= 456)
+                step <= step + 1;
+            else
+                begin
+                    step <= 16'd0;
+                    if (LY < 153)
+                        LY <= LY + 1;
+                    else
+                        begin
+                            LY <= 8'd0;
+                            mode <= 3'd0;
+                            step <= 16'd0;
+                        end
+                end
+
+
         end
 
     end

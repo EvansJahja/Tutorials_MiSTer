@@ -203,7 +203,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__LY;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__LX;
     CData/*2:0*/ top__DOT__soc__DOT__ppu__DOT__mode;
-    CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__step;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__pixel_buf_h;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__pixel_buf_l;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__tmp_pixel;
@@ -603,8 +602,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_h;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_l;
     CData/*2:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__mode;
-    CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__step;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__LX;
+    CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu_LY;
     CData/*1:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__XY_State;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR;
     CData/*0:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__reset_4x;
@@ -680,6 +679,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     SData/*14:0*/ top__DOT__soc__DOT__ppu__DOT__fb_addr;
     SData/*13:0*/ top__DOT__soc__DOT__ppu__DOT__vram0_addr;
     SData/*13:0*/ top__DOT__soc__DOT__ppu__DOT__vram1_addr;
+    SData/*15:0*/ top__DOT__soc__DOT__ppu__DOT__step;
     SData/*15:0*/ top__DOT__soc__DOT__ppu__DOT__bg_code_area;
     SData/*14:0*/ top__DOT__soc__DOT__vga__DOT__fb_addr;
     SData/*9:0*/ top__DOT__soc__DOT__vga__DOT__h_cnt;
@@ -732,6 +732,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     SData/*11:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__address_b;
     SData/*13:0*/ __Vdly__top__DOT__soc__DOT__ppu_vram0_addr;
     SData/*13:0*/ __Vdly__top__DOT__soc__DOT__ppu_vram1_addr;
+    SData/*15:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__step;
     SData/*15:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__PC;
     SData/*15:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__TmpAddr;
     SData/*15:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__SP;

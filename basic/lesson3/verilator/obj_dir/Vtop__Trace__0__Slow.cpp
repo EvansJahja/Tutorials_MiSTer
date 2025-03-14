@@ -525,7 +525,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declBus(c+446,0,"LY",-1, VerilatedTraceSigDirection::OUTPUT, VerilatedTraceSigKind::WIRE, VerilatedTraceSigType::LOGIC, false,-1, 7,0);
     tracep->declBus(c+447,0,"LX",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 7,0);
     tracep->declBus(c+448,0,"mode",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 2,0);
-    tracep->declBus(c+449,0,"step",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 7,0);
+    tracep->declBus(c+449,0,"step",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 15,0);
     tracep->declBus(c+450,0,"pixel_buf_h",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 7,0);
     tracep->declBus(c+451,0,"pixel_buf_l",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 7,0);
     tracep->declBus(c+452,0,"tmp_pixel",-1, VerilatedTraceSigDirection::NONE, VerilatedTraceSigKind::VAR, VerilatedTraceSigType::LOGIC, false,-1, 7,0);
@@ -1363,7 +1363,7 @@ VL_ATTR_COLD void Vtop___024root__trace_full_0_sub_0(Vtop___024root* vlSelf, Ver
     bufp->fullCData(oldp+446,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__LY),8);
     bufp->fullCData(oldp+447,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__LX),8);
     bufp->fullCData(oldp+448,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__mode),3);
-    bufp->fullCData(oldp+449,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__step),8);
+    bufp->fullSData(oldp+449,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__step),16);
     bufp->fullCData(oldp+450,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__pixel_buf_h),8);
     bufp->fullCData(oldp+451,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__pixel_buf_l),8);
     bufp->fullCData(oldp+452,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tmp_pixel),8);

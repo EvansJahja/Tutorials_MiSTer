@@ -472,7 +472,7 @@ void Vtop___024root__trace_chg_0_sub_0(Vtop___024root* vlSelf, VerilatedFst::Buf
     bufp->chgCData(oldp+445,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__LY),8);
     bufp->chgCData(oldp+446,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__LX),8);
     bufp->chgCData(oldp+447,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__mode),3);
-    bufp->chgCData(oldp+448,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__step),8);
+    bufp->chgSData(oldp+448,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__step),16);
     bufp->chgCData(oldp+449,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__pixel_buf_h),8);
     bufp->chgCData(oldp+450,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__pixel_buf_l),8);
     bufp->chgCData(oldp+451,(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tmp_pixel),8);

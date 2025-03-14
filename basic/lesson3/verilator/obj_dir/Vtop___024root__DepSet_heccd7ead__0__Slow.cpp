@@ -2589,6 +2589,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__mode = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__step = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__LX = 0;
+    vlSelf->__Vdly__top__DOT__soc__DOT__ppu_LY = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__PC = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__XY_State = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR = 0;
