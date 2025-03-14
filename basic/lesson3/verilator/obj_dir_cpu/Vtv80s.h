@@ -13,7 +13,7 @@
 
 class Vtv80s__Syms;
 class Vtv80s___024root;
-class VerilatedVcdC;
+class VerilatedFstC;
 
 // This class is the main interface to the Verilated model
 class alignas(VL_CACHE_LINE_BYTES) Vtv80s VL_NOT_FINAL : public VerilatedModel {

@@ -18,7 +18,7 @@ Vtv80s__Syms::Vtv80s__Syms(VerilatedContext* contextp, const char* namep, Vtv80s
     , TOP{this, namep}
 {
         // Check resources
-        Verilated::stackCheck(267);
+        Verilated::stackCheck(269);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-9);
     _vm_contextp__->timeprecision(-12);

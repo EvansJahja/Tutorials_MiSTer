@@ -1255,6 +1255,7 @@ VL_ATTR_COLD void Vtv80s___024root___ctor_var_reset(Vtv80s___024root* vlSelf) {
     vlSelf->tv80s__DOT__i_tv80_core__DOT__IR = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__ISet = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__RegBusA_r = 0;
+    vlSelf->tv80s__DOT__i_tv80_core__DOT__reset_4x = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__ID16 = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__Save_Mux = 0;
     vlSelf->tv80s__DOT__i_tv80_core__DOT__tstate = 0;

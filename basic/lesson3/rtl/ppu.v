@@ -86,7 +86,6 @@ always @(posedge clk, negedge lcd_ppu_en) begin
                                 vram1_addr <= 'h8000 + (vram0_data[7:0] << 4) + (tileY*2);
             end
 
-            // We have BG Tile, let's get character
             8'd4: begin
                 if (tile_attr[3] == 1'b0)
                     pixel_buf_h <= vram0_data;
@@ -107,9 +106,9 @@ always @(posedge clk, negedge lcd_ppu_en) begin
                                 vram1_addr <= 'h9000 + (tile_id[7:0] << 4) + (tileY*2)+1;
                         else
                             if (tile_attr[3] == 1'b0)
-                                vram0_addr <= 'h8800 + (tile_id[7:0] << 4) + (tileY*2)+1;
+                                vram0_addr <= 'h8000 + (tile_id[7:0] << 4) + (tileY*2)+1;
                             else
-                                vram1_addr <= 'h8800 + (tile_id[7:0] << 4) + (tileY*2)+1;
+                                vram1_addr <= 'h8000 + (tile_id[7:0] << 4) + (tileY*2)+1;
 
 
                 // if (tile_attr[3] == 1'b0) begin
@@ -121,10 +120,10 @@ always @(posedge clk, negedge lcd_ppu_en) begin
             end
 
             8'd6: begin
-                // if (tile_attr[3] == 1'b0)
-                //     pixel_buf_l <= vram0_data;
-                // else
-                //     pixel_buf_l <= vram1_data;
+                if (tile_attr[3] == 1'b0)
+                     pixel_buf_l <= vram0_data;
+                else
+                     pixel_buf_l <= vram1_data;
                 fb_wr <= 1'b1;
                 mode <= 3'd1;
             end

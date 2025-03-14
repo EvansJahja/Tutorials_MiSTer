@@ -1,19 +1,19 @@
 #pragma once
 
-#include "verilated_vcd_c.h"
+#include "verilated_fst_c.h"
 
 #define ROM(X) const int N = X ## _len; unsigned char* rom = X;
 
 #ifdef TRACE
 #define STEP() \
-	top->wait_n = 1; \
-	top->int_n = 1; \
-	top->nmi_n = 1; \
-	top->busrq_n = 1; \
-	top->reset_n = i > 3; \
-	top->di = rom[top->A % N]; \
-	top->clk = !top->clk; \
-	top->eval(); \
+	top.wait_n = 1; \
+	top.int_n = 1; \
+	top.nmi_n = 1; \
+	top.busrq_n = 1; \
+	top.reset_n = i > 3; \
+	top.di = rom[top.A % N]; \
+	top.clk = !top.clk; \
+	top.eval(); \
 	m_trace->dump(i); \
 	i++;
 #else
@@ -31,10 +31,10 @@
 
 #ifdef TRACE
 #define TEST_BEGIN(X) \
-	VerilatedVcdC *m_trace = new VerilatedVcdC(); \
+	VerilatedFstC *m_trace = new VerilatedFstC(); \
 	ctx->traceEverOn(true); \
-	top->trace(m_trace, 99); \
-	m_trace->open(#X ".vcd");
+	top.trace(m_trace, 99); \
+	m_trace->open(#X ".fst");
 #else
 #define TEST_BEGIN(X)
 #endif

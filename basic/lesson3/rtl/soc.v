@@ -174,7 +174,7 @@ reg [7:0] io_IF;
 reg [7:0] io_IE;
 parameter INT_VBLANK = 0;
 parameter INT_LCDC = 1;
-parameter INT_IMER_OVERFLOW = 2;
+parameter INT_TIMER_OVERFLOW = 2;
 parameter INT_IO_COMPLETE = 3;
 parameter INT_OUCH_NEG = 4;
 
@@ -240,8 +240,8 @@ always @(*) begin
 				8'h47: cpu_din = io_bgp;
 				// VBLank
 				//8'h0f: cpu_din = 8'd0;
-				8'h0f: cpu_din = ppu_LY > 8'd160 ? 8'd1 : 8'd0;
-				8'h44: cpu_din = ppu_LY;
+				//8'h0f: cpu_din = ppu_LY > 8'd160 ? 8'd1 : 8'd0;
+				//8'h44: cpu_din = ppu_LY;
 				8'hF0: cpu_din = io_IF;
 				8'hFF: cpu_din = io_IE;
 			endcase
@@ -302,7 +302,7 @@ dpram #( .init_file("gbc.hex"),.widthad_a(12),.width_a(8)) rom
 
 );
 
-dpram #( .init_file("game_rom.hex"),.widthad_a(22),.width_a(8)) game_rom
+dpram #( .init_file("fairylake.hex"),.widthad_a(22),.width_a(8)) game_rom
 (
         .clock_a(cpu_clock),
         .address_a(game_rom_addr),

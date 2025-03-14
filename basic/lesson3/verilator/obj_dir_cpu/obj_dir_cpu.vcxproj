@@ -83,6 +83,15 @@
     <NMakeOutput>obj_dir_cpu.exe</NMakeOutput>
     <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
   </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnableManifest>true</VcpkgEnableManifest>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\EvansGrace02\Documents\Workspace\MiSTer\learn\Tutorials_MiSTer\basic\lesson3\verilator\zlib;.\;..\..;sim\;C:\msys64\mingw64\share\verilator\include\vltstd;C:\msys64\mingw64\share\verilator\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>

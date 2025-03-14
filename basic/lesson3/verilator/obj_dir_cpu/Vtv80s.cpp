@@ -2,7 +2,7 @@
 // DESCRIPTION: Verilator output: Model implementation (design independent parts)
 
 #include "Vtv80s__pch.h"
-#include "verilated_vcd_c.h"
+#include "verilated_fst_c.h"
 
 //============================================================
 // Constructors
@@ -121,11 +121,11 @@ std::unique_ptr<VerilatedTraceConfig> Vtv80s::traceConfig() const {
 //============================================================
 // Trace configuration
 
-void Vtv80s___024root__trace_decl_types(VerilatedVcd* tracep);
+void Vtv80s___024root__trace_decl_types(VerilatedFst* tracep);
 
-void Vtv80s___024root__trace_init_top(Vtv80s___024root* vlSelf, VerilatedVcd* tracep);
+void Vtv80s___024root__trace_init_top(Vtv80s___024root* vlSelf, VerilatedFst* tracep);
 
-VL_ATTR_COLD static void trace_init(void* voidSelf, VerilatedVcd* tracep, uint32_t code) {
+VL_ATTR_COLD static void trace_init(void* voidSelf, VerilatedFst* tracep, uint32_t code) {
     // Callback from tracep->open()
     Vtv80s___024root* const __restrict vlSelf VL_ATTR_UNUSED = static_cast<Vtv80s___024root*>(voidSelf);
     Vtv80s__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
@@ -140,13 +140,13 @@ VL_ATTR_COLD static void trace_init(void* voidSelf, VerilatedVcd* tracep, uint32
     tracep->popPrefix();
 }
 
-VL_ATTR_COLD void Vtv80s___024root__trace_register(Vtv80s___024root* vlSelf, VerilatedVcd* tracep);
+VL_ATTR_COLD void Vtv80s___024root__trace_register(Vtv80s___024root* vlSelf, VerilatedFst* tracep);
 
 VL_ATTR_COLD void Vtv80s::traceBaseModel(VerilatedTraceBaseC* tfp, int levels, int options) {
     (void)levels; (void)options;
-    VerilatedVcdC* const stfp = dynamic_cast<VerilatedVcdC*>(tfp);
+    VerilatedFstC* const stfp = dynamic_cast<VerilatedFstC*>(tfp);
     if (VL_UNLIKELY(!stfp)) {
-        vl_fatal(__FILE__, __LINE__, __FILE__,"'Vtv80s::trace()' called on non-VerilatedVcdC object;"
+        vl_fatal(__FILE__, __LINE__, __FILE__,"'Vtv80s::trace()' called on non-VerilatedFstC object;"
             " use --trace-fst with VerilatedFst object, and --trace with VerilatedVcd object");
     }
     stfp->spTrace()->addModel(this);

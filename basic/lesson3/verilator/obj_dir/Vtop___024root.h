@@ -586,6 +586,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__tile_id;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__tile_attr;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_h;
+    CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_l;
     CData/*2:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__mode;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__step;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__LX;
@@ -794,7 +795,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     static constexpr CData/*7:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__init_file = 0U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__INT_VBLANK = 0U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__INT_LCDC = 1U;
-    static constexpr IData/*31:0*/ top__DOT__soc__DOT__INT_IMER_OVERFLOW = 2U;
+    static constexpr IData/*31:0*/ top__DOT__soc__DOT__INT_TIMER_OVERFLOW = 2U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__INT_IO_COMPLETE = 3U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__INT_OUCH_NEG = 4U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__vga__DOT__H = 0x00000300U;
@@ -842,8 +843,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__rom__DOT__widthad_a = 0x0000000cU;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__game_rom__DOT__width_a = 8U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__game_rom__DOT__widthad_a = 0x00000016U;
-    static constexpr VlWide<3>/*95:0*/ top__DOT__soc__DOT__game_rom__DOT__init_file = {{
-        0x2e686578, 0x5f726f6d, 0x67616d65
+    static constexpr VlWide<4>/*103:0*/ top__DOT__soc__DOT__game_rom__DOT__init_file = {{
+        0x2e686578, 0x6c616b65, 0x61697279, 0x00000066
     }};
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__wram_0__DOT__width_a = 8U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__wram_0__DOT__widthad_a = 0x0000000cU;

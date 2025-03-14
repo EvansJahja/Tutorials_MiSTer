@@ -113,6 +113,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtv80s___024root final : public VerilatedModu
     CData/*0:0*/ tv80s__DOT__i_tv80_core__DOT__RegWEL;
     CData/*7:0*/ tv80s__DOT__i_tv80_core__DOT__IR;
     CData/*1:0*/ tv80s__DOT__i_tv80_core__DOT__ISet;
+    CData/*0:0*/ tv80s__DOT__i_tv80_core__DOT__reset_4x;
     CData/*7:0*/ tv80s__DOT__i_tv80_core__DOT__Save_Mux;
     CData/*6:0*/ tv80s__DOT__i_tv80_core__DOT__tstate;
     CData/*6:0*/ tv80s__DOT__i_tv80_core__DOT__mcycle;
