@@ -166,6 +166,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ top__DOT__soc__DOT____Vstrobe2;
     CData/*0:0*/ top__DOT__soc__DOT____Vstrobe3;
     CData/*0:0*/ top__DOT__soc__DOT____Vstrobe4;
+    CData/*0:0*/ top__DOT__soc__DOT____Vstrobe5;
     CData/*7:0*/ top__DOT__soc__DOT____Vcellout__wram___BRA__1__KET____DOT__wram_N__q_a;
     CData/*0:0*/ top__DOT__soc__DOT____Vcellinp__wram___BRA__1__KET____DOT__wram_N__wren_a;
     CData/*7:0*/ top__DOT__soc__DOT____Vcellout__wram___BRA__2__KET____DOT__wram_N__q_a;
@@ -184,7 +185,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ top__DOT__soc__DOT____VdfgRegularize_hc3a4b302_0_8;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__clk;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__lcd_ppu_en;
-    CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__window_tile_map;
+    CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__window_code_area_sel;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__window_en;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__bg_char_data_sel;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__bg_code_area_sel;
@@ -213,6 +214,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__tileX;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__tileY;
     CData/*1:0*/ top__DOT__soc__DOT__ppu__DOT__pixel;
+    CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__bg_code_area_flag;
     CData/*0:0*/ top__DOT__soc__DOT__vga__DOT__pclk;
     CData/*0:0*/ top__DOT__soc__DOT__vga__DOT__fb_clk;
     CData/*0:0*/ top__DOT__soc__DOT__vga__DOT__fb_wr;
@@ -678,6 +680,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     SData/*14:0*/ top__DOT__soc__DOT__ppu__DOT__fb_addr;
     SData/*13:0*/ top__DOT__soc__DOT__ppu__DOT__vram0_addr;
     SData/*13:0*/ top__DOT__soc__DOT__ppu__DOT__vram1_addr;
+    SData/*15:0*/ top__DOT__soc__DOT__ppu__DOT__bg_code_area;
     SData/*14:0*/ top__DOT__soc__DOT__vga__DOT__fb_addr;
     SData/*9:0*/ top__DOT__soc__DOT__vga__DOT__h_cnt;
     SData/*9:0*/ top__DOT__soc__DOT__vga__DOT__v_cnt;
@@ -857,7 +860,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__game_rom__DOT__width_a = 8U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__game_rom__DOT__widthad_a = 0x00000016U;
     static constexpr VlWide<4>/*103:0*/ top__DOT__soc__DOT__game_rom__DOT__init_file = {{
-        0x2e686578, 0x63696432, 0x67622d61, 0x00000063
+        0x2e686578, 0x6c616b65, 0x61697279, 0x00000066
     }};
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__wram_0__DOT__width_a = 8U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__wram_0__DOT__widthad_a = 0x0000000cU;

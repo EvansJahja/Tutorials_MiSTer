@@ -51,7 +51,7 @@ ppu ppu (
 	.clk(cpu_clock),
 
     .lcd_ppu_en(io_lcdc[7]),
-    .window_tile_map(io_lcdc[6]),
+    .window_code_area_sel(io_lcdc[6]),
     .window_en(io_lcdc[5]),
     .bg_char_data_sel(io_lcdc[4]),
     .bg_code_area_sel(io_lcdc[3]),
@@ -237,7 +237,7 @@ always @(posedge clk_sys) begin
 					cpu_int_n <= 1'b0;
 				end
 		end
-	if (io_IE[1])
+	else if (io_IE[1])
 		if (ppu_LY == io_lcd_lyc)
 			begin
 					io_IF <= 8'd2;
@@ -250,17 +250,24 @@ end
 always @(*) begin
 	if (!cpu_iorq_n && cpu_rd_n) begin
 		if (io_IF[0])
-			cpu_din = 8'h40; // VBlank
+			begin
+				$display("INT Vblank");
+				cpu_din = 8'h40; // VBlank
+			end
 		else if (io_IF[1])
-		begin
-			cpu_din = 8'h48; // STAT
-		end
+			begin
+				$display("INT STAT");
+				cpu_din = 8'h48; // STAT
+			end
 	end
 	else if (!cpu_rd_n) begin
 		if (io_sel) begin
 			case (cpu_addr[7:0])
 				8'h70: cpu_din = io_svbk;
-				8'h40: cpu_din = io_lcdc;
+				8'h40: begin
+					$strobe("Set LCDC %x", io_lcdc);
+					cpu_din = io_lcdc;
+				end
 				8'h41: cpu_din = io_lcd_stat;
 				8'h42: cpu_din = io_scy;
 				8'h43: cpu_din = io_scx;
@@ -346,7 +353,7 @@ dpram #( .init_file("gbc.hex"),.widthad_a(12),.width_a(8)) rom
 
 );
 
-dpram #( .init_file("cgb-acid2.hex"),.widthad_a(22),.width_a(8)) game_rom
+dpram #( .init_file("fairylake.hex"),.widthad_a(22),.width_a(8)) game_rom
 (
         .clock_a(cpu_clock),
         .address_a(game_rom_addr),

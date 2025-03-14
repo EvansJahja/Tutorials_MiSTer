@@ -81,7 +81,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__20(Vtop___024root* vlSelf)
         = (1U & (~ (IData)(vlSelfRef.top__DOT__soc__DOT__io_dmg_compat)));
     vlSelfRef.top__DOT__soc__DOT__ppu__DOT__scx = vlSelfRef.top__DOT__soc__DOT__io_scx;
     vlSelfRef.top__DOT__soc__DOT__ppu__DOT__scy = vlSelfRef.top__DOT__soc__DOT__io_scy;
-    vlSelfRef.top__DOT__soc__DOT__ppu__DOT__window_tile_map 
+    vlSelfRef.top__DOT__soc__DOT__ppu__DOT__window_code_area_sel 
         = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_lcdc) 
                  >> 6U));
     vlSelfRef.top__DOT__soc__DOT__ppu__DOT__window_en 
@@ -1260,9 +1260,11 @@ VL_INLINE_OPT void Vtop___024root___nba_comb__TOP__2(Vtop___024root* vlSelf) {
     // Body
     if (((~ (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_iorq_n)) 
          & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_rd_n))) {
-        if ((1U & (IData)(vlSelfRef.top__DOT__soc__DOT__io_IF))) {
+        if (VL_UNLIKELY((1U & (IData)(vlSelfRef.top__DOT__soc__DOT__io_IF)))) {
+            VL_WRITEF_NX("INT Vblank\n",0);
             vlSelfRef.top__DOT__soc__DOT__cpu_din = 0x40U;
-        } else if ((2U & (IData)(vlSelfRef.top__DOT__soc__DOT__io_IF))) {
+        } else if (VL_UNLIKELY((2U & (IData)(vlSelfRef.top__DOT__soc__DOT__io_IF)))) {
+            VL_WRITEF_NX("INT STAT\n",0);
             vlSelfRef.top__DOT__soc__DOT__cpu_din = 0x48U;
         }
     } else if (vlSelfRef.top__DOT__soc__DOT__cpu_rd_n) {
@@ -1276,24 +1278,29 @@ VL_INLINE_OPT void Vtop___024root___nba_comb__TOP__2(Vtop___024root* vlSelf) {
                | (0x44U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) 
               | (0x45U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) 
              | (0x47U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr))))) {
-            vlSelfRef.top__DOT__soc__DOT__cpu_din = 
-                ((0x70U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))
-                  ? (IData)(vlSelfRef.top__DOT__soc__DOT__io_svbk)
-                  : ((0x40U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))
-                      ? (IData)(vlSelfRef.top__DOT__soc__DOT__io_lcdc)
-                      : ((0x41U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))
-                          ? (IData)(vlSelfRef.top__DOT__soc__DOT__io_lcd_stat)
-                          : ((0x42U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))
-                              ? (IData)(vlSelfRef.top__DOT__soc__DOT__io_scy)
-                              : ((0x43U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))
-                                  ? (IData)(vlSelfRef.top__DOT__soc__DOT__io_scx)
-                                  : ((0x44U == (0xffU 
-                                                & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))
-                                      ? (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_LY)
-                                      : ((0x45U == 
-                                          (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))
-                                          ? (IData)(vlSelfRef.top__DOT__soc__DOT__io_lcd_lyc)
-                                          : (IData)(vlSelfRef.top__DOT__soc__DOT__io_bgp))))))));
+            if ((0x70U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) {
+                vlSelfRef.top__DOT__soc__DOT__cpu_din 
+                    = vlSelfRef.top__DOT__soc__DOT__io_svbk;
+            } else if ((0x40U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) {
+                vlSelfRef.top__DOT__soc__DOT____Vstrobe0 = 1U;
+                vlSelfRef.top__DOT__soc__DOT__cpu_din 
+                    = vlSelfRef.top__DOT__soc__DOT__io_lcdc;
+            } else {
+                vlSelfRef.top__DOT__soc__DOT__cpu_din 
+                    = ((0x41U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))
+                        ? (IData)(vlSelfRef.top__DOT__soc__DOT__io_lcd_stat)
+                        : ((0x42U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))
+                            ? (IData)(vlSelfRef.top__DOT__soc__DOT__io_scy)
+                            : ((0x43U == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))
+                                ? (IData)(vlSelfRef.top__DOT__soc__DOT__io_scx)
+                                : ((0x44U == (0xffU 
+                                              & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))
+                                    ? (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_LY)
+                                    : ((0x45U == (0xffU 
+                                                  & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))
+                                        ? (IData)(vlSelfRef.top__DOT__soc__DOT__io_lcd_lyc)
+                                        : (IData)(vlSelfRef.top__DOT__soc__DOT__io_bgp))))));
+            }
         } else if ((0xfU == (0xffU & (IData)(vlSelfRef.top__DOT__soc__DOT__cpu_addr)))) {
             vlSelfRef.top__DOT__soc__DOT__cpu_din = 
                 ((0x90U <= (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_LY))

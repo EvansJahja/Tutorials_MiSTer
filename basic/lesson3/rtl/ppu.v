@@ -3,7 +3,7 @@ module ppu (
     input  clk,
     // LCDC
     input lcd_ppu_en,
-    input window_tile_map,
+    input window_code_area_sel,
     input window_en,
     input bg_char_data_sel,
     input bg_code_area_sel,
@@ -52,6 +52,10 @@ reg [7:0] tileY;
 
 reg [1:0] pixel;
 
+reg bg_code_area_flag = 0;
+
+wire [15:0] bg_code_area = bg_code_area_flag ? 16'h9c00 : 16'h9800;
+
 // Draw BG
 always @(posedge clk, negedge lcd_ppu_en) begin
     if (!lcd_ppu_en) begin
@@ -66,9 +70,9 @@ always @(posedge clk, negedge lcd_ppu_en) begin
         if(mode == 3'd0) begin
             case(step)
             8'd0: begin
-                vram0_addr <= 'h9800 + ((LX+scx) >> 3) + (((LY+scy) >> 3) * 'h20);
+                vram0_addr <= bg_code_area + ((LX+scx) >> 3) + (((LY+scy) >> 3) * 'h20);
                 if (gbc_mode)
-                    vram1_addr <= 'h9800 + ((LX+scx) >> 3) + (((LY+scy) >> 3) * 'h20);
+                    vram1_addr <= bg_code_area + ((LX+scx) >> 3) + (((LY+scy) >> 3) * 'h20);
             end
 
             // Get BG Tile and BG Attr
@@ -130,14 +134,6 @@ always @(posedge clk, negedge lcd_ppu_en) begin
                                 vram0_addr <= 'h8000 + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2)+1;
                             else
                                 vram1_addr <= 'h8000 + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2)+1;
-
-
-                // if (tile_attr[3] == 1'b0) begin
-                //     vram0_addr <= 'h9000 + (vram0_data << 4) + (tileY*2) + 1;
-                // end else begin
-                //     pixel_buf_h <= vram1_data;
-                //     vram1_addr <= 'h9000 + (vram1_data << 4) + (tileY*2) + 1;
-                // end
             end
 
             8'd6: begin
@@ -211,42 +207,5 @@ always @(posedge clk, negedge lcd_ppu_en) begin
 
     end
 end
-
-// I want to try drawing tile at 8190, it is 16 bytes.
-// each row is two bytes (LL HH). HH is mostly 0 for now so let's ignore it.
-// one byte = 8 bit  = 8 pixel
-// always @(posedge clk) begin
-//     if (!lcd_ppu_en) begin
-//         step <= 0;
-//         LX <= 0;
-//         LY <= 0;
-//         fb_wr <= 1'b0;
-//     end else begin
-//         if (LY < 8) begin
-//             vram0_addr <= 'h8190 + LY * 2;
-//             pixel_buf <= vram0_data[7:0];
-// 
-//             // Draw
-//             if (step >= 3) begin
-//                     fb_wr <= 1'b1;
-//                     fb_addr <= 15'd160*LY+LX;
-//                     if (pixel_buf[7 - LX])
-//                         fb_data <= 8'b01001010;
-//                     else
-//                         fb_data <= 8'b11111111;
-//                     if (LX < 7)
-//                         LX <= LX + 1;
-//                     else begin
-//                         LX <= 0;
-//                         LY <= LY + 1;
-//                         step <= 0;
-//                     end
-//             end else begin
-//                 fb_wr <= 1'b0;
-//                 step <= step + 1;
-//             end
-//         end 
-//     end
-// end
 
 endmodule

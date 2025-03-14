@@ -411,6 +411,9 @@ int main(int argc, char** argv, char** env) {
                 ImGui::Text("IE      0x%02X", top->rootp->top__DOT__soc__DOT__io_IE);
                 ImGui::Text("IF      0x%02X", top->rootp->top__DOT__soc__DOT__io_IF);
 
+                ImGui::Text("HALT    0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Halt);
+                ImGui::Text("STOP    0x%02X", top->rootp->top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__stop);
+
                 ImGui::Spacing();
                 ImGui::Separator();
                 ImGui::Text("WRAM");
