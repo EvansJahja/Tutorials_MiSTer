@@ -31,7 +31,11 @@ VL_ATTR_COLD void Vtop___024root___eval_postponed__TOP(Vtop___024root* vlSelf) {
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if (VL_UNLIKELY(vlSelfRef.top__DOT__soc__DOT____Vstrobe0)) {
-        VL_WRITEF_NX("Loading bank %4#\n",0,10,vlSelfRef.top__DOT__soc__DOT__rom_bank);
+        VL_WRITEF_NX("written to ff4c: %x\n",0,1,vlSelfRef.top__DOT__soc__DOT__io_dmg_compat);
         vlSelfRef.top__DOT__soc__DOT____Vstrobe0 = 0U;
+    }
+    if (VL_UNLIKELY(vlSelfRef.top__DOT__soc__DOT____Vstrobe1)) {
+        VL_WRITEF_NX("Loading bank %4#\n",0,10,vlSelfRef.top__DOT__soc__DOT__rom_bank);
+        vlSelfRef.top__DOT__soc__DOT____Vstrobe1 = 0U;
     }
 }

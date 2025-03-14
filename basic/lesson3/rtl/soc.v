@@ -32,6 +32,8 @@ wire [13:0] ppu_vram1_addr;
 wire [7:0]  ppu_vram1_data;
 reg [9:0] rom_bank;
 
+reg io_dmg_compat;
+
 // Game rom address, which is way bigger than what the CPU can address.
 wire [22:0] game_rom_addr;
 assign game_rom_addr[13:0] = cpu_addr[13:0];
@@ -67,7 +69,7 @@ ppu ppu (
 	.vram1_addr(ppu_vram1_addr),
 	.vram1_data(ppu_vram1_data),
 
-	.gbc_mode(1'b0),
+	.gbc_mode(!io_dmg_compat),
 
 	.LY(ppu_LY)
 
@@ -272,6 +274,10 @@ always @(negedge cpu_mreq_n) begin
 				8'h42: io_scy <= cpu_dout;
 				8'h43: io_scx <= cpu_dout;
 				8'h47: io_bgp <= cpu_dout;
+				8'h4c: begin
+					io_dmg_compat <= cpu_dout[2];
+					$strobe("written to ff4c: %x", io_dmg_compat);
+				end
 				8'h4F: io_vbk <= cpu_dout;
 				8'h50: io_bios_disable <= cpu_dout;
 				8'h70: io_svbk <= cpu_dout;
