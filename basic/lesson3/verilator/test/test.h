@@ -34,7 +34,8 @@
 	VerilatedFstC *m_trace = new VerilatedFstC(); \
 	ctx->traceEverOn(true); \
 	top.trace(m_trace, 99); \
-	m_trace->open(#X ".fst");
+	Verilated::mkdir("trace"); \
+	m_trace->open("trace/" #X ".fst");
 #else
 #define TEST_BEGIN(X)
 #endif
