@@ -275,7 +275,7 @@ int main(int argc, char** argv, char** env) {
 		if (ImGui::Button("Multi Step")) { run_enable = 0; multi_step = 1; }
 		ImGui::SameLine();
 
-		ImGui::SliderInt("Step amount", &multi_step_amount, 8, 1024000);
+		ImGui::SliderInt("Step amount", &multi_step_amount, 8, 1024000000, "%d", ImGuiSliderFlags_Logarithmic);
 
 		ImGui::SliderInt("Rotate", &video.output_rotate, -1, 1); ImGui::SameLine();
 		ImGui::Checkbox("Flip V", &video.output_vflip);

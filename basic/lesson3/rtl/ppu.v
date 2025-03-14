@@ -181,19 +181,22 @@ always @(posedge clk, negedge lcd_ppu_en) begin
                     fb_data <= 8'b00000000;
                 endcase
 
-                if (tileX < 8) begin
-                    tileX <= tileX + 1;
-                    LX <= LX + 1;
-                end
-                else begin
-                    tileX <= 0;
-                    step <= 16'd0;
-                    mode <= 3'd2;
-                    if (LX >= 8'd160) begin
-                        LX <= 0;
-                        LY <= LY + 1;
-                        tileY <= tileY + 1;
-                    end                end
+                if (tileX < 8)
+                    begin
+                        tileX <= tileX + 1;
+                        LX <= LX + 1;
+                    end
+                else
+                    begin
+                        tileX <= 0;
+                        step <= 16'd0;
+                        mode <= 3'd2;
+                        if (LX >= 8'd160) begin
+                            LX <= 0;
+                            LY <= LY + 1;
+                            tileY <= tileY + 1;
+                        end
+                    end
             end else begin
                 tileY <= 0;
                 mode <= 3'd0;
