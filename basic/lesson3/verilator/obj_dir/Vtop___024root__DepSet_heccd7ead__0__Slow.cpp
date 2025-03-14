@@ -110,6 +110,7 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     VL_READMEM_N(true, 8, 4194304, 0, VL_CVT_PACK_STR_NW(4, __Vtemp_1)
                  ,  &(vlSelfRef.top__DOT__soc__DOT__game_rom__DOT__mem)
                  , 0, ~0ULL);
+    vlSelfRef.top__DOT__soc__DOT__ppu__DOT__gbc_mode = 0U;
     vlSelfRef.top__DOT__soc__DOT__vga__DOT__fb__DOT__wren_a = 0U;
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__wait_n = 1U;
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__busrq_n = 1U;
@@ -1990,6 +1991,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__soc__DOT__ppu__DOT__obj_size = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__obj_en = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__bg_win_prio = 0;
+    vlSelf->top__DOT__soc__DOT__ppu__DOT__gbc_mode = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__fb_clk = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__fb_wr = 0;
     vlSelf->top__DOT__soc__DOT__ppu__DOT__fb_addr = 0;
@@ -2528,9 +2530,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     }
     vlSelf->__Vdly__top__DOT__soc__DOT__vblank_FF = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu_vram0_addr = 0;
-    vlSelf->__Vdly__top__DOT__soc__DOT__ppu_vram1_addr = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__tile_id = 0;
-    vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__tile_attr = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_h = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_l = 0;
     vlSelf->__Vdly__top__DOT__soc__DOT__ppu__DOT__mode = 0;
@@ -2559,9 +2559,6 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->__VdlyVal__top__DOT__soc__DOT__vram_0__DOT__mem__v0 = 0;
     vlSelf->__VdlyDim0__top__DOT__soc__DOT__vram_0__DOT__mem__v0 = 0;
     vlSelf->__VdlySet__top__DOT__soc__DOT__vram_0__DOT__mem__v0 = 0;
-    vlSelf->__VdlyVal__top__DOT__soc__DOT__vram_1__DOT__mem__v0 = 0;
-    vlSelf->__VdlyDim0__top__DOT__soc__DOT__vram_1__DOT__mem__v0 = 0;
-    vlSelf->__VdlySet__top__DOT__soc__DOT__vram_1__DOT__mem__v0 = 0;
     vlSelf->__VdlyVal__top__DOT__soc__DOT__hram__DOT__mem__v0 = 0;
     vlSelf->__VdlyDim0__top__DOT__soc__DOT__hram__DOT__mem__v0 = 0;
     vlSelf->__VdlySet__top__DOT__soc__DOT__hram__DOT__mem__v0 = 0;

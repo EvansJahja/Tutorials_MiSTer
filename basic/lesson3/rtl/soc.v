@@ -67,8 +67,10 @@ ppu ppu (
 	.vram1_addr(ppu_vram1_addr),
 	.vram1_data(ppu_vram1_data),
 
+	.gbc_mode(1'b0),
 
 	.LY(ppu_LY)
+
 
 );
 

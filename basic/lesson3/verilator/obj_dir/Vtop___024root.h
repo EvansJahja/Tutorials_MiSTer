@@ -183,6 +183,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__obj_size;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__obj_en;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__bg_win_prio;
+    CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__gbc_mode;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__fb_clk;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__fb_wr;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__fb_data;
@@ -584,7 +585,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__byteena_b;
     CData/*0:0*/ __Vdly__top__DOT__soc__DOT__vblank_FF;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__tile_id;
-    CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__tile_attr;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_h;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_l;
     CData/*2:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__mode;
@@ -608,8 +608,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ __VdlySet__top__DOT__soc__DOT__wram_0__DOT__mem__v0;
     CData/*7:0*/ __VdlyVal__top__DOT__soc__DOT__vram_0__DOT__mem__v0;
     CData/*0:0*/ __VdlySet__top__DOT__soc__DOT__vram_0__DOT__mem__v0;
-    CData/*7:0*/ __VdlyVal__top__DOT__soc__DOT__vram_1__DOT__mem__v0;
-    CData/*0:0*/ __VdlySet__top__DOT__soc__DOT__vram_1__DOT__mem__v0;
     CData/*7:0*/ __VdlyVal__top__DOT__soc__DOT__hram__DOT__mem__v0;
     CData/*6:0*/ __VdlyDim0__top__DOT__soc__DOT__hram__DOT__mem__v0;
     CData/*0:0*/ __VdlySet__top__DOT__soc__DOT__hram__DOT__mem__v0;
@@ -717,13 +715,11 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     SData/*11:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__address_a;
     SData/*11:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__address_b;
     SData/*13:0*/ __Vdly__top__DOT__soc__DOT__ppu_vram0_addr;
-    SData/*13:0*/ __Vdly__top__DOT__soc__DOT__ppu_vram1_addr;
     SData/*15:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__PC;
     SData/*15:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__TmpAddr;
     SData/*15:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__SP;
     SData/*11:0*/ __VdlyDim0__top__DOT__soc__DOT__wram_0__DOT__mem__v0;
     SData/*12:0*/ __VdlyDim0__top__DOT__soc__DOT__vram_0__DOT__mem__v0;
-    SData/*12:0*/ __VdlyDim0__top__DOT__soc__DOT__vram_1__DOT__mem__v0;
     SData/*12:0*/ __VdlyDim0__top__DOT__soc__DOT__xram__DOT__mem__v0;
     SData/*11:0*/ __VdlyDim0__top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__mem__v0;
     SData/*11:0*/ __VdlyDim0__top__DOT__soc__DOT__wram___BRA__2__KET____DOT__wram_N__DOT__mem__v0;

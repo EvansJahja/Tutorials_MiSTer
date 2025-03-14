@@ -12,6 +12,8 @@ module ppu (
     input bg_win_prio,
     // end
 
+    input gbc_mode,
+
     // connect to VGA frame buffer 
     output fb_clk,
     output reg fb_wr,
@@ -60,52 +62,54 @@ always @(posedge clk, negedge lcd_ppu_en) begin
             case(step)
             8'd0: begin
                 vram0_addr <= 'h9800 + (LX >> 3) + ((LY >> 3) * 'h20);
-                vram1_addr <= 'h9800 + (LX >> 3) + ((LY >> 3) * 'h20);
+                if (gbc_mode)
+                    vram1_addr <= 'h9800 + (LX >> 3) + ((LY >> 3) * 'h20);
             end
 
             // Get BG Tile and BG Attr
             8'd2: begin
                 tile_id <= vram0_data;
-                tile_attr <= vram1_data;
+                if (gbc_mode)
+                    tile_attr <= vram1_data;
                 if (vram0_data < 255)
                     if (vram0_data >= 128)
-                        if (vram1_data[3] == 1'b0)
+                        if (!gbc_mode || vram1_data[3] == 1'b0)
                             vram0_addr <= 'h8800 + (vram0_data[7:0] << 4) + (tileY*2);
                         else
                             vram1_addr <= 'h8800 + (vram0_data[7:0] << 4) + (tileY*2);
                     else //vram depends on bg_char_data_sel
                         if (bg_char_data_sel == 1'b0)
-                            if (vram1_data[3] == 1'b0)
+                            if (!gbc_mode || vram1_data[3] == 1'b0)
                                 vram0_addr <= 'h9000 + (vram0_data[7:0] << 4) + (tileY*2);
                             else
                                 vram1_addr <= 'h9000 + (vram0_data[7:0] << 4) + (tileY*2);
                         else
-                            if (vram1_data[3] == 1'b0)
+                            if (!gbc_mode || vram1_data[3] == 1'b0)
                                 vram0_addr <= 'h8000 + (vram0_data[7:0] << 4) + (tileY*2);
                             else
                                 vram1_addr <= 'h8000 + (vram0_data[7:0] << 4) + (tileY*2);
             end
 
             8'd4: begin
-                if (tile_attr[3] == 1'b0)
+                if (!gbc_mode || tile_attr[3] == 1'b0)
                     pixel_buf_h <= vram0_data;
                 else
                     pixel_buf_h <= vram1_data;
 
                 if (tile_id < 255)
                     if (tile_id >= 128)
-                        if (tile_attr[3] == 1'b0)
+                        if (!gbc_mode || tile_attr[3] == 1'b0)
                             vram0_addr <= 'h8800 + (tile_id[7:0] << 4) + (tileY*2)+1;
                         else
                             vram1_addr <= 'h8800 + (tile_id[7:0] << 4) + (tileY*2)+1;
                     else //vram depends on bg_char_data_sel
                         if (bg_char_data_sel == 1'b0)
-                            if (tile_attr[3] == 1'b0)
+                            if (!gbc_mode || tile_attr[3] == 1'b0)
                                 vram0_addr <= 'h9000 + (tile_id[7:0] << 4) + (tileY*2)+1;
                             else
                                 vram1_addr <= 'h9000 + (tile_id[7:0] << 4) + (tileY*2)+1;
                         else
-                            if (tile_attr[3] == 1'b0)
+                            if (!gbc_mode || tile_attr[3] == 1'b0)
                                 vram0_addr <= 'h8000 + (tile_id[7:0] << 4) + (tileY*2)+1;
                             else
                                 vram1_addr <= 'h8000 + (tile_id[7:0] << 4) + (tileY*2)+1;
@@ -120,7 +124,7 @@ always @(posedge clk, negedge lcd_ppu_en) begin
             end
 
             8'd6: begin
-                if (tile_attr[3] == 1'b0)
+                if (!gbc_mode || tile_attr[3] == 1'b0)
                      pixel_buf_l <= vram0_data;
                 else
                      pixel_buf_l <= vram1_data;
