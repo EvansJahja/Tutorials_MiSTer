@@ -56,6 +56,8 @@ reg bg_code_area_flag = 0;
 
 wire [15:0] bg_code_area = bg_code_area_flag ? 16'h9c00 : 16'h9800;
 
+
+
 // Draw BG
 always @(posedge clk, negedge lcd_ppu_en) begin
     if (!lcd_ppu_en) begin
@@ -81,23 +83,24 @@ always @(posedge clk, negedge lcd_ppu_en) begin
                 if (gbc_mode)
                     tile_attr <= vram1_data;
                 if (vram0_data < 255)
-                    if (vram0_data >= 128)
-                        // Flip if tile_attr[6] (FlipY)
-                        if (!gbc_mode || vram1_data[3] == 1'b0)
-                            vram0_addr <= 'h8800 + (vram0_data[7:0] << 4) + ((vram1_data[6] ? 7-tileY : tileY)*2);
-                        else
-                            vram1_addr <= 'h8800 + (vram0_data[7:0] << 4) + ((vram1_data[6] ? 7-tileY : tileY)*2);
-                    else //vram depends on bg_char_data_sel
-                        if (bg_char_data_sel == 1'b0)
-                            if (!gbc_mode || vram1_data[3] == 1'b0)
-                                vram0_addr <= 'h9000 + (vram0_data[7:0] << 4) + ((vram1_data[6] ? 7-tileY : tileY)*2);
-                            else
-                                vram1_addr <= 'h9000 + (vram0_data[7:0] << 4) + ((vram1_data[6] ? 7-tileY : tileY)*2);
-                        else
-                            if (!gbc_mode || vram1_data[3] == 1'b0)
-                                vram0_addr <= 'h8000 + (vram0_data[7:0] << 4) + ((vram1_data[6] ? 7-tileY : tileY)*2);
-                            else
-                                vram1_addr <= 'h8000 + (vram0_data[7:0] << 4) + ((vram1_data[6] ? 7-tileY : tileY)*2);
+                    if (!gbc_mode || vram1_data[3] == 1'b0)
+                        vram0_addr <= load_tile(
+                                        .base_char_addr(get_base_char_addr(.tile_id(vram0_data[7:0]),.bg_char_data_sel(bg_char_data_sel))),
+                                        .tile_id(vram0_data[7:0]),
+                                        .tile_attr(vram1_data[7:0]),
+                                        .tileY(tileY),
+                                        .bit_plane(0),
+                                        .gbc_mode(gbc_mode)
+                                    );
+                    else
+                        vram1_addr <= load_tile(
+                                        .base_char_addr(get_base_char_addr(.tile_id(vram0_data[7:0]),.bg_char_data_sel(bg_char_data_sel))),
+                                        .tile_id(vram0_data[7:0]),
+                                        .tile_attr(vram1_data[7:0]),
+                                        .tileY(tileY),
+                                        .bit_plane(0),
+                                        .gbc_mode(gbc_mode)
+                                    );
             end
 
             8'd4: begin
@@ -118,22 +121,24 @@ always @(posedge clk, negedge lcd_ppu_en) begin
                     pixel_buf_h <= tmp_pixel;
 
                 if (tile_id < 255)
-                    if (tile_id >= 128)
-                        if (!gbc_mode || tile_attr[3] == 1'b0)
-                            vram0_addr <= 'h8800 + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2)+1;
-                        else
-                            vram1_addr <= 'h8800 + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2)+1;
-                    else //vram depends on bg_char_data_sel
-                        if (bg_char_data_sel == 1'b0)
-                            if (!gbc_mode || tile_attr[3] == 1'b0)
-                                vram0_addr <= 'h9000 + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2)+1;
-                            else
-                                vram1_addr <= 'h9000 + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2)+1;
-                        else
-                            if (!gbc_mode || tile_attr[3] == 1'b0)
-                                vram0_addr <= 'h8000 + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2)+1;
-                            else
-                                vram1_addr <= 'h8000 + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2)+1;
+                    if (!gbc_mode || tile_attr[3] == 1'b0)
+                        vram0_addr <= load_tile(
+                            .base_char_addr(get_base_char_addr(.tile_id(tile_id[7:0]),.bg_char_data_sel(bg_char_data_sel))),
+                            .tile_id(tile_id[7:0]),
+                            .tile_attr(tile_attr[7:0]),
+                            .tileY(tileY),
+                            .bit_plane(1),
+                            .gbc_mode(gbc_mode)
+                        );
+                    else
+                        vram1_addr <= load_tile(
+                            .base_char_addr(get_base_char_addr(.tile_id(tile_id[7:0]),.bg_char_data_sel(bg_char_data_sel))),
+                            .tile_id(tile_id[7:0]),
+                            .tile_attr(tile_attr[7:0]),
+                            .tileY(tileY),
+                            .bit_plane(1),
+                            .gbc_mode(gbc_mode)
+                        );
             end
 
             8'd6: begin
@@ -207,5 +212,33 @@ always @(posedge clk, negedge lcd_ppu_en) begin
 
     end
 end
+
+function [15:0] load_tile;
+    input [15:0] base_char_addr;
+    input [7:0] tile_id;
+    input [7:0] tile_attr;
+    input [7:0] tileY;
+    input bit_plane;
+    input gbc_mode;
+
+
+    begin
+        load_tile = base_char_addr + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2) + bit_plane;
+    end
+endfunction
+
+function [15:0] get_base_char_addr;
+    input [7:0] tile_id;
+    input bg_char_data_sel;
+    begin
+        if (tile_id >= 128)
+            get_base_char_addr = 16'h8800;
+        else
+            if (bg_char_data_sel == 1'b0)
+                get_base_char_addr = 16'h9000;
+            else
+                get_base_char_addr = 16'h8000;
+    end
+endfunction
 
 endmodule

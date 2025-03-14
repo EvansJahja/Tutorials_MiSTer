@@ -1041,66 +1041,66 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__15(Vtop___024root* vlSelf)
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___nba_sequent__TOP__15\n"); );
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
-    CData/*4:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__Vfuncout;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__Vfuncout = 0;
-    CData/*3:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__A;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__A = 0;
-    CData/*3:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__B;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__B = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__Sub;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__Sub = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__Carry_In;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__Carry_In = 0;
-    CData/*4:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__Vfuncout;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__Vfuncout = 0;
-    CData/*3:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__A;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__A = 0;
-    CData/*3:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__B;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__B = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__Sub;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__Sub = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__Carry_In;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__Carry_In = 0;
-    CData/*3:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__Vfuncout;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__Vfuncout = 0;
-    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__A;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__A = 0;
-    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__B;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__B = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__Sub;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__Sub = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__Carry_In;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__Carry_In = 0;
-    CData/*3:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__Vfuncout;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__Vfuncout = 0;
-    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__A;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__A = 0;
-    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__B;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__B = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__Sub;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__Sub = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__Carry_In;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__Carry_In = 0;
-    CData/*1:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__Vfuncout;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__Vfuncout = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__A;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__A = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__B;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__B = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__Sub;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__Sub = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__Carry_In;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__Carry_In = 0;
-    CData/*1:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__Vfuncout;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__Vfuncout = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__A;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__A = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__B;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__B = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__Sub;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__Sub = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__Carry_In;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__Carry_In = 0;
+    CData/*4:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__Vfuncout = 0;
+    CData/*3:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__A;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__A = 0;
+    CData/*3:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__B;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__B = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__Sub;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__Sub = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__Carry_In;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__Carry_In = 0;
+    CData/*4:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__Vfuncout = 0;
+    CData/*3:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__A;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__A = 0;
+    CData/*3:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__B;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__B = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__Sub;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__Sub = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__Carry_In;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__Carry_In = 0;
+    CData/*3:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__Vfuncout = 0;
+    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__A;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__A = 0;
+    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__B;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__B = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__Sub;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__Sub = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__Carry_In;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__Carry_In = 0;
+    CData/*3:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__Vfuncout = 0;
+    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__A;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__A = 0;
+    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__B;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__B = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__Sub;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__Sub = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__Carry_In;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__Carry_In = 0;
+    CData/*1:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__Vfuncout = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__A;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__A = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__B;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__B = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__Sub;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__Sub = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__Carry_In;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__Carry_In = 0;
+    CData/*1:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__Vfuncout = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__A;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__A = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__B;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__B = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__Sub;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__Sub = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__Carry_In;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__Carry_In = 0;
     // Body
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__BitMask 
         = ((0x20U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT____Vcellinp__i_alu__IR))
@@ -1116,131 +1116,131 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__15(Vtop___024root* vlSelf)
         = (IData)((1U == (5U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ALU_Op_r))));
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__HalfCarry_v 
         = (1U & (([&]() {
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__Carry_In 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__Carry_In 
                         = (1U & (((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ALU_Op_r) 
                                   >> 1U) ^ ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__UseCarry) 
                                             & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F) 
                                                >> 4U))));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__Sub 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__Sub 
                         = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ALU_Op_r) 
                                  >> 1U));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__B 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__B 
                         = (0xfU & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__BusB));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__A 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__A 
                         = (0xfU & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__BusA));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__Vfuncout 
-                        = (0x1fU & (((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__A) 
-                                     + (0xfU & ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__Sub)
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__Vfuncout 
+                        = (0x1fU & (((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__A) 
+                                     + (0xfU & ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__Sub)
                                                  ? 
-                                                (~ (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__B))
-                                                 : (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__B)))) 
-                                    + (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__Carry_In)));
-                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__26__Vfuncout)) 
+                                                (~ (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__B))
+                                                 : (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__B)))) 
+                                    + (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__Carry_In)));
+                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__34__Vfuncout)) 
                  >> 4U));
     VL_ASSIGNSEL_II(8,4,0U, vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Q_v, 
                     (0xfU & ([&]() {
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__Carry_In 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__Carry_In 
                         = (1U & (((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ALU_Op_r) 
                                   >> 1U) ^ ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__UseCarry) 
                                             & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F) 
                                                >> 4U))));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__Sub 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__Sub 
                         = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ALU_Op_r) 
                                  >> 1U));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__B 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__B 
                         = (0xfU & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__BusB));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__A 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__A 
                         = (0xfU & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__BusA));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__Vfuncout 
-                        = (0x1fU & (((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__A) 
-                                     + (0xfU & ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__Sub)
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__Vfuncout 
+                        = (0x1fU & (((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__A) 
+                                     + (0xfU & ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__Sub)
                                                  ? 
-                                                (~ (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__B))
-                                                 : (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__B)))) 
-                                    + (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__Carry_In)));
-                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__27__Vfuncout))));
+                                                (~ (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__B))
+                                                 : (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__B)))) 
+                                    + (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__Carry_In)));
+                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub4__35__Vfuncout))));
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Carry7_v 
         = (1U & (([&]() {
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__Carry_In 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__Carry_In 
                         = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__HalfCarry_v;
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__Sub 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__Sub 
                         = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ALU_Op_r) 
                                  >> 1U));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__B 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__B 
                         = (7U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__BusB) 
                                  >> 4U));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__A 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__A 
                         = (7U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__BusA) 
                                  >> 4U));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__Vfuncout 
-                        = (0xfU & (((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__A) 
-                                    + (7U & ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__Sub)
-                                              ? (~ (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__B))
-                                              : (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__B)))) 
-                                   + (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__Carry_In)));
-                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__28__Vfuncout)) 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__Vfuncout 
+                        = (0xfU & (((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__A) 
+                                    + (7U & ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__Sub)
+                                              ? (~ (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__B))
+                                              : (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__B)))) 
+                                   + (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__Carry_In)));
+                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__36__Vfuncout)) 
                  >> 3U));
     VL_ASSIGNSEL_II(8,3,4U, vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Q_v, 
                     (7U & ([&]() {
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__Carry_In 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__Carry_In 
                         = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__HalfCarry_v;
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__Sub 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__Sub 
                         = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ALU_Op_r) 
                                  >> 1U));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__B 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__B 
                         = (7U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__BusB) 
                                  >> 4U));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__A 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__A 
                         = (7U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__BusA) 
                                  >> 4U));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__Vfuncout 
-                        = (0xfU & (((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__A) 
-                                    + (7U & ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__Sub)
-                                              ? (~ (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__B))
-                                              : (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__B)))) 
-                                   + (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__Carry_In)));
-                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__29__Vfuncout))));
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__Vfuncout 
+                        = (0xfU & (((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__A) 
+                                    + (7U & ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__Sub)
+                                              ? (~ (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__B))
+                                              : (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__B)))) 
+                                   + (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__Carry_In)));
+                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub3__37__Vfuncout))));
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Carry_v 
         = (1U & (([&]() {
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__Carry_In 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__Carry_In 
                         = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Carry7_v;
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__Sub 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__Sub 
                         = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ALU_Op_r) 
                                  >> 1U));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__B 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__B 
                         = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__BusB) 
                                  >> 7U));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__A 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__A 
                         = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__BusA) 
                                  >> 7U));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__Vfuncout 
-                        = (3U & (((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__A) 
-                                  + (1U & ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__Sub)
-                                            ? (~ (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__B))
-                                            : (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__B)))) 
-                                 + (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__Carry_In)));
-                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__30__Vfuncout)) 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__Vfuncout 
+                        = (3U & (((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__A) 
+                                  + (1U & ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__Sub)
+                                            ? (~ (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__B))
+                                            : (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__B)))) 
+                                 + (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__Carry_In)));
+                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__38__Vfuncout)) 
                  >> 1U));
     VL_ASSIGNBIT_II(7U, vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Q_v, 
                     (1U & ([&]() {
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__Carry_In 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__Carry_In 
                         = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Carry7_v;
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__Sub 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__Sub 
                         = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__ALU_Op_r) 
                                  >> 1U));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__B 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__B 
                         = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__BusB) 
                                  >> 7U));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__A 
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__A 
                         = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__BusA) 
                                  >> 7U));
-                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__Vfuncout 
-                        = (3U & (((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__A) 
-                                  + (1U & ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__Sub)
-                                            ? (~ (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__B))
-                                            : (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__B)))) 
-                                 + (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__Carry_In)));
-                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__31__Vfuncout))));
+                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__Vfuncout 
+                        = (3U & (((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__A) 
+                                  + (1U & ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__Sub)
+                                            ? (~ (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__B))
+                                            : (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__B)))) 
+                                 + (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__Carry_In)));
+                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__AddSub1__39__Vfuncout))));
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__OverFlow_v 
         = ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Carry_v) 
            ^ (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_alu__DOT__Carry7_v));
@@ -1362,54 +1362,6 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___nba_sequent__TOP__17\n"); );
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__Vfuncout;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__Vfuncout = 0;
-    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__FF;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__FF = 0;
-    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__cc;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__cc = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__Vfuncout;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__Vfuncout = 0;
-    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__FF;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__FF = 0;
-    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__cc;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__cc = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__Vfuncout;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__Vfuncout = 0;
-    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__FF;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__FF = 0;
-    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__cc;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__cc = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__Vfuncout;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__Vfuncout = 0;
-    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__FF;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__FF = 0;
-    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__cc;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__cc = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__Vfuncout;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__Vfuncout = 0;
-    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__FF;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__FF = 0;
-    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__cc;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__cc = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__Vfuncout;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__Vfuncout = 0;
-    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__FF;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__FF = 0;
-    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__cc;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__cc = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__Vfuncout;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__Vfuncout = 0;
-    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__FF;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__FF = 0;
-    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__cc;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__cc = 0;
-    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__Vfuncout;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__Vfuncout = 0;
-    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__FF;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__FF = 0;
-    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__cc;
-    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__cc = 0;
     CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__Vfuncout;
     __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__Vfuncout = 0;
     CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__FF;
@@ -1506,6 +1458,54 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
     __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__FF = 0;
     CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__cc;
     __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__cc = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__Vfuncout = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__FF;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__FF = 0;
+    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__cc;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__cc = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__Vfuncout = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__FF;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__FF = 0;
+    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__cc;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__cc = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__Vfuncout = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__FF;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__FF = 0;
+    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__cc;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__cc = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__Vfuncout = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__FF;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__FF = 0;
+    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__cc;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__cc = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__Vfuncout = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__FF;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__FF = 0;
+    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__cc;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__cc = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__Vfuncout = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__FF;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__FF = 0;
+    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__cc;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__cc = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__Vfuncout = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__FF;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__FF = 0;
+    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__cc;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__cc = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__Vfuncout = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__FF;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__FF = 0;
+    CData/*2:0*/ __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__cc;
+    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__cc = 0;
     // Body
     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__DDD 
         = (7U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
@@ -1623,43 +1623,43 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__LDW = 1U;
                                             if (([&]() {
-                                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__cc 
+                                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__cc 
                                                             = 
                                                             (7U 
                                                              & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                                 >> 3U));
-                                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__FF 
+                                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__FF 
                                                             = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__Vfuncout 
+                                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__Vfuncout 
                                                             = 
                                                             ((1U 
                                                               & (~ 
-                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__cc) 
+                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__cc) 
                                                                   >> 2U))) 
                                                              && (1U 
                                                                  & ((2U 
-                                                                     & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__cc))
+                                                                     & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__cc))
                                                                      ? 
                                                                     ((1U 
-                                                                      & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__cc))
+                                                                      & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__cc))
                                                                       ? 
-                                                                     ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__FF) 
+                                                                     ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__FF) 
                                                                       >> 4U)
                                                                       : 
                                                                      (~ 
-                                                                      ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__FF) 
+                                                                      ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__FF) 
                                                                        >> 4U)))
                                                                      : 
                                                                     ((1U 
-                                                                      & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__cc))
+                                                                      & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__cc))
                                                                       ? 
-                                                                     ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__FF) 
+                                                                     ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__FF) 
                                                                       >> 7U)
                                                                       : 
                                                                      (~ 
-                                                                      ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__FF) 
+                                                                      ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__FF) 
                                                                        >> 7U))))));
-                                                    }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__2__Vfuncout))) {
+                                                    }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__Vfuncout))) {
                                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IncDec_16 = 0xfU;
                                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__tstates = 4U;
@@ -1755,43 +1755,43 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                                                 & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                                         if (([&]() {
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__cc 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__cc 
                                                         = 
                                                         (7U 
                                                          & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                             >> 3U));
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__FF 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__FF 
                                                         = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__Vfuncout 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__Vfuncout 
                                                         = 
                                                         ((1U 
                                                           & (~ 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__cc) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__cc) 
                                                               >> 2U))) 
                                                          && (1U 
                                                              & ((2U 
-                                                                 & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__cc))
+                                                                 & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__cc))
                                                                  ? 
                                                                 ((1U 
-                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__cc))
+                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__cc))
                                                                   ? 
-                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__FF) 
+                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__FF) 
                                                                   >> 4U)
                                                                   : 
                                                                  (~ 
-                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__FF) 
+                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__FF) 
                                                                    >> 4U)))
                                                                  : 
                                                                 ((1U 
-                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__cc))
+                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__cc))
                                                                   ? 
-                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__FF) 
+                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__FF) 
                                                                   >> 7U)
                                                                   : 
                                                                  (~ 
-                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__FF) 
+                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__FF) 
                                                                    >> 7U))))));
-                                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__3__Vfuncout))) {
+                                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__Vfuncout))) {
                                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Jump = 1U;
                                         }
                                     }
@@ -1875,43 +1875,43 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 3U;
                                 if ((1U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                                     if (([&]() {
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__cc 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__cc 
                                                     = 
                                                     (7U 
                                                      & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                         >> 3U));
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__FF 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__FF 
                                                     = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__Vfuncout 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__Vfuncout 
                                                     = 
                                                     ((1U 
                                                       & (~ 
-                                                         ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__cc) 
+                                                         ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__cc) 
                                                           >> 2U))) 
                                                      && (1U 
                                                          & ((2U 
-                                                             & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__cc))
+                                                             & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__cc))
                                                              ? 
                                                             ((1U 
-                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__cc))
+                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__cc))
                                                               ? 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__FF) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__FF) 
                                                               >> 4U)
                                                               : 
                                                              (~ 
-                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__FF) 
+                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__FF) 
                                                                >> 4U)))
                                                              : 
                                                             ((1U 
-                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__cc))
+                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__cc))
                                                               ? 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__FF) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__FF) 
                                                               >> 7U)
                                                               : 
                                                              (~ 
-                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__FF) 
+                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__FF) 
                                                                >> 7U))))));
-                                            }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__4__Vfuncout))) {
+                                            }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__Vfuncout))) {
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                                     } else {
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 1U;
@@ -1993,43 +1993,43 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__LDW = 1U;
                                     if (([&]() {
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__cc 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__cc 
                                                     = 
                                                     (7U 
                                                      & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                         >> 3U));
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__FF 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__FF 
                                                     = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__Vfuncout 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__Vfuncout 
                                                     = 
                                                     ((1U 
                                                       & (~ 
-                                                         ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__cc) 
+                                                         ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__cc) 
                                                           >> 2U))) 
                                                      && (1U 
                                                          & ((2U 
-                                                             & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__cc))
+                                                             & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__cc))
                                                              ? 
                                                             ((1U 
-                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__cc))
+                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__cc))
                                                               ? 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__FF) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__FF) 
                                                               >> 4U)
                                                               : 
                                                              (~ 
-                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__FF) 
+                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__FF) 
                                                                >> 4U)))
                                                              : 
                                                             ((1U 
-                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__cc))
+                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__cc))
                                                               ? 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__FF) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__FF) 
                                                               >> 7U)
                                                               : 
                                                              (~ 
-                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__FF) 
+                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__FF) 
                                                                >> 7U))))));
-                                            }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__5__Vfuncout))) {
+                                            }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__Vfuncout))) {
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IncDec_16 = 0xfU;
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__tstates = 4U;
@@ -2113,43 +2113,43 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                                 } else if ((4U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                                     if (([&]() {
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__cc 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__cc 
                                                     = 
                                                     (7U 
                                                      & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                         >> 3U));
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__FF 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__FF 
                                                     = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__Vfuncout 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__Vfuncout 
                                                     = 
                                                     ((1U 
                                                       & (~ 
-                                                         ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__cc) 
+                                                         ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__cc) 
                                                           >> 2U))) 
                                                      && (1U 
                                                          & ((2U 
-                                                             & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__cc))
+                                                             & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__cc))
                                                              ? 
                                                             ((1U 
-                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__cc))
+                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__cc))
                                                               ? 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__FF) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__FF) 
                                                               >> 4U)
                                                               : 
                                                              (~ 
-                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__FF) 
+                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__FF) 
                                                                >> 4U)))
                                                              : 
                                                             ((1U 
-                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__cc))
+                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__cc))
                                                               ? 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__FF) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__FF) 
                                                               >> 7U)
                                                               : 
                                                              (~ 
-                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__FF) 
+                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__FF) 
                                                                >> 7U))))));
-                                            }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__6__Vfuncout))) {
+                                            }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__Vfuncout))) {
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Jump = 1U;
                                     }
                                 }
@@ -2249,42 +2249,42 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 3U;
                             if ((1U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                                 if (([&]() {
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__cc 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__cc 
                                                 = (7U 
                                                    & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                       >> 3U));
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__FF 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__FF 
                                                 = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__Vfuncout 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__Vfuncout 
                                                 = (
                                                    (1U 
                                                     & (~ 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__cc) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__cc) 
                                                         >> 2U))) 
                                                    && (1U 
                                                        & ((2U 
-                                                           & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__cc))
+                                                           & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__cc))
                                                            ? 
                                                           ((1U 
-                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__cc))
+                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__cc))
                                                             ? 
-                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__FF) 
+                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__FF) 
                                                             >> 4U)
                                                             : 
                                                            (~ 
-                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__FF) 
+                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__FF) 
                                                              >> 4U)))
                                                            : 
                                                           ((1U 
-                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__cc))
+                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__cc))
                                                             ? 
-                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__FF) 
+                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__FF) 
                                                             >> 7U)
                                                             : 
                                                            (~ 
-                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__FF) 
+                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__FF) 
                                                              >> 7U))))));
-                                        }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__7__Vfuncout))) {
+                                        }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__Vfuncout))) {
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                                 } else {
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 1U;
@@ -2346,43 +2346,43 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__LDW = 1U;
                                         if (([&]() {
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__cc 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__cc 
                                                         = 
                                                         (7U 
                                                          & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                             >> 3U));
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__FF 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__FF 
                                                         = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__Vfuncout 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__Vfuncout 
                                                         = 
                                                         ((1U 
                                                           & (~ 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__cc) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__cc) 
                                                               >> 2U))) 
                                                          && (1U 
                                                              & ((2U 
-                                                                 & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__cc))
+                                                                 & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__cc))
                                                                  ? 
                                                                 ((1U 
-                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__cc))
+                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__cc))
                                                                   ? 
-                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__FF) 
+                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__FF) 
                                                                   >> 4U)
                                                                   : 
                                                                  (~ 
-                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__FF) 
+                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__FF) 
                                                                    >> 4U)))
                                                                  : 
                                                                 ((1U 
-                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__cc))
+                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__cc))
                                                                   ? 
-                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__FF) 
+                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__FF) 
                                                                   >> 7U)
                                                                   : 
                                                                  (~ 
-                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__FF) 
+                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__FF) 
                                                                    >> 7U))))));
-                                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__8__Vfuncout))) {
+                                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__Vfuncout))) {
                                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IncDec_16 = 0xfU;
                                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__tstates = 4U;
@@ -2475,43 +2475,43 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                                                 & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                                         if (([&]() {
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__cc 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__cc 
                                                         = 
                                                         (7U 
                                                          & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                             >> 3U));
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__FF 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__FF 
                                                         = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__Vfuncout 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__Vfuncout 
                                                         = 
                                                         ((1U 
                                                           & (~ 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__cc) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__cc) 
                                                               >> 2U))) 
                                                          && (1U 
                                                              & ((2U 
-                                                                 & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__cc))
+                                                                 & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__cc))
                                                                  ? 
                                                                 ((1U 
-                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__cc))
+                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__cc))
                                                                   ? 
-                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__FF) 
+                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__FF) 
                                                                   >> 4U)
                                                                   : 
                                                                  (~ 
-                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__FF) 
+                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__FF) 
                                                                    >> 4U)))
                                                                  : 
                                                                 ((1U 
-                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__cc))
+                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__cc))
                                                                   ? 
-                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__FF) 
+                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__FF) 
                                                                   >> 7U)
                                                                   : 
                                                                  (~ 
-                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__FF) 
+                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__FF) 
                                                                    >> 7U))))));
-                                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__9__Vfuncout))) {
+                                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__Vfuncout))) {
                                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Jump = 1U;
                                         }
                                     }
@@ -2589,42 +2589,42 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 3U;
                             if ((1U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                                 if (([&]() {
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__cc 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__cc 
                                                 = (7U 
                                                    & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                       >> 3U));
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__FF 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__FF 
                                                 = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__Vfuncout 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__Vfuncout 
                                                 = (
                                                    (1U 
                                                     & (~ 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__cc) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__cc) 
                                                         >> 2U))) 
                                                    && (1U 
                                                        & ((2U 
-                                                           & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__cc))
+                                                           & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__cc))
                                                            ? 
                                                           ((1U 
-                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__cc))
+                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__cc))
                                                             ? 
-                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__FF) 
+                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__FF) 
                                                             >> 4U)
                                                             : 
                                                            (~ 
-                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__FF) 
+                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__FF) 
                                                              >> 4U)))
                                                            : 
                                                           ((1U 
-                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__cc))
+                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__cc))
                                                             ? 
-                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__FF) 
+                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__FF) 
                                                             >> 7U)
                                                             : 
                                                            (~ 
-                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__FF) 
+                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__FF) 
                                                              >> 7U))))));
-                                        }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__10__Vfuncout))) {
+                                        }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__Vfuncout))) {
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                                 } else {
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 1U;
@@ -2702,42 +2702,42 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__LDW = 1U;
                                 if (([&]() {
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__cc 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__cc 
                                                 = (7U 
                                                    & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                       >> 3U));
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__FF 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__FF 
                                                 = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__Vfuncout 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__Vfuncout 
                                                 = (
                                                    (1U 
                                                     & (~ 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__cc) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__cc) 
                                                         >> 2U))) 
                                                    && (1U 
                                                        & ((2U 
-                                                           & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__cc))
+                                                           & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__cc))
                                                            ? 
                                                           ((1U 
-                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__cc))
+                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__cc))
                                                             ? 
-                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__FF) 
+                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__FF) 
                                                             >> 4U)
                                                             : 
                                                            (~ 
-                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__FF) 
+                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__FF) 
                                                              >> 4U)))
                                                            : 
                                                           ((1U 
-                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__cc))
+                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__cc))
                                                             ? 
-                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__FF) 
+                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__FF) 
                                                             >> 7U)
                                                             : 
                                                            (~ 
-                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__FF) 
+                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__FF) 
                                                              >> 7U))))));
-                                        }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__11__Vfuncout))) {
+                                        }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__Vfuncout))) {
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IncDec_16 = 0xfU;
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__tstates = 4U;
@@ -2820,43 +2820,43 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                                 } else if ((4U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                                     if (([&]() {
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__cc 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__cc 
                                                     = 
                                                     (7U 
                                                      & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                         >> 3U));
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__FF 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__FF 
                                                     = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__Vfuncout 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__Vfuncout 
                                                     = 
                                                     ((1U 
                                                       & (~ 
-                                                         ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__cc) 
+                                                         ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__cc) 
                                                           >> 2U))) 
                                                      && (1U 
                                                          & ((2U 
-                                                             & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__cc))
+                                                             & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__cc))
                                                              ? 
                                                             ((1U 
-                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__cc))
+                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__cc))
                                                               ? 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__FF) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__FF) 
                                                               >> 4U)
                                                               : 
                                                              (~ 
-                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__FF) 
+                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__FF) 
                                                                >> 4U)))
                                                              : 
                                                             ((1U 
-                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__cc))
+                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__cc))
                                                               ? 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__FF) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__FF) 
                                                               >> 7U)
                                                               : 
                                                              (~ 
-                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__FF) 
+                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__FF) 
                                                                >> 7U))))));
-                                            }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__12__Vfuncout))) {
+                                            }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__Vfuncout))) {
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Jump = 1U;
                                     }
                                 }
@@ -2949,41 +2949,41 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 3U;
                         if ((1U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                             if (([&]() {
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__cc 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__cc 
                                             = (7U & 
                                                ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                 >> 3U));
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__FF 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__FF 
                                             = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__Vfuncout 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__Vfuncout 
                                             = ((1U 
                                                 & (~ 
-                                                   ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__cc) 
+                                                   ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__cc) 
                                                     >> 2U))) 
                                                && (1U 
                                                    & ((2U 
-                                                       & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__cc))
+                                                       & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__cc))
                                                        ? 
                                                       ((1U 
-                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__cc))
+                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__cc))
                                                         ? 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__FF) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__FF) 
                                                         >> 4U)
                                                         : 
                                                        (~ 
-                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__FF) 
+                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__FF) 
                                                          >> 4U)))
                                                        : 
                                                       ((1U 
-                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__cc))
+                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__cc))
                                                         ? 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__FF) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__FF) 
                                                         >> 7U)
                                                         : 
                                                        (~ 
-                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__FF) 
+                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__FF) 
                                                          >> 7U))))));
-                                    }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__13__Vfuncout))) {
+                                    }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__Vfuncout))) {
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                             } else {
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 1U;
@@ -3046,43 +3046,43 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__LDW = 1U;
                                         if (([&]() {
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__cc 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__cc 
                                                         = 
                                                         (7U 
                                                          & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                             >> 3U));
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__FF 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__FF 
                                                         = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__Vfuncout 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__Vfuncout 
                                                         = 
                                                         ((1U 
                                                           & (~ 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__cc) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__cc) 
                                                               >> 2U))) 
                                                          && (1U 
                                                              & ((2U 
-                                                                 & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__cc))
+                                                                 & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__cc))
                                                                  ? 
                                                                 ((1U 
-                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__cc))
+                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__cc))
                                                                   ? 
-                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__FF) 
+                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__FF) 
                                                                   >> 4U)
                                                                   : 
                                                                  (~ 
-                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__FF) 
+                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__FF) 
                                                                    >> 4U)))
                                                                  : 
                                                                 ((1U 
-                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__cc))
+                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__cc))
                                                                   ? 
-                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__FF) 
+                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__FF) 
                                                                   >> 7U)
                                                                   : 
                                                                  (~ 
-                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__FF) 
+                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__FF) 
                                                                    >> 7U))))));
-                                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__14__Vfuncout))) {
+                                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__Vfuncout))) {
                                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IncDec_16 = 0xfU;
                                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__tstates = 4U;
@@ -3175,43 +3175,43 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                                                 & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                                         if (([&]() {
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__cc 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__cc 
                                                         = 
                                                         (7U 
                                                          & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                             >> 3U));
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__FF 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__FF 
                                                         = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__Vfuncout 
+                                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__Vfuncout 
                                                         = 
                                                         ((1U 
                                                           & (~ 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__cc) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__cc) 
                                                               >> 2U))) 
                                                          && (1U 
                                                              & ((2U 
-                                                                 & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__cc))
+                                                                 & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__cc))
                                                                  ? 
                                                                 ((1U 
-                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__cc))
+                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__cc))
                                                                   ? 
-                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__FF) 
+                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__FF) 
                                                                   >> 4U)
                                                                   : 
                                                                  (~ 
-                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__FF) 
+                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__FF) 
                                                                    >> 4U)))
                                                                  : 
                                                                 ((1U 
-                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__cc))
+                                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__cc))
                                                                   ? 
-                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__FF) 
+                                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__FF) 
                                                                   >> 7U)
                                                                   : 
                                                                  (~ 
-                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__FF) 
+                                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__FF) 
                                                                    >> 7U))))));
-                                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__15__Vfuncout))) {
+                                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__Vfuncout))) {
                                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Jump = 1U;
                                         }
                                     }
@@ -3301,42 +3301,42 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 3U;
                             if ((1U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                                 if (([&]() {
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__cc 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__cc 
                                                 = (7U 
                                                    & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                       >> 3U));
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__FF 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__FF 
                                                 = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__Vfuncout 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__Vfuncout 
                                                 = (
                                                    (1U 
                                                     & (~ 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__cc) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__cc) 
                                                         >> 2U))) 
                                                    && (1U 
                                                        & ((2U 
-                                                           & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__cc))
+                                                           & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__cc))
                                                            ? 
                                                           ((1U 
-                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__cc))
+                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__cc))
                                                             ? 
-                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__FF) 
+                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__FF) 
                                                             >> 4U)
                                                             : 
                                                            (~ 
-                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__FF) 
+                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__FF) 
                                                              >> 4U)))
                                                            : 
                                                           ((1U 
-                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__cc))
+                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__cc))
                                                             ? 
-                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__FF) 
+                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__FF) 
                                                             >> 7U)
                                                             : 
                                                            (~ 
-                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__FF) 
+                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__FF) 
                                                              >> 7U))))));
-                                        }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__16__Vfuncout))) {
+                                        }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__Vfuncout))) {
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                                 } else {
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 1U;
@@ -3414,42 +3414,42 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__LDW = 1U;
                                 if (([&]() {
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__cc 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__cc 
                                                 = (7U 
                                                    & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                       >> 3U));
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__FF 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__FF 
                                                 = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__Vfuncout 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__Vfuncout 
                                                 = (
                                                    (1U 
                                                     & (~ 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__cc) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__cc) 
                                                         >> 2U))) 
                                                    && (1U 
                                                        & ((2U 
-                                                           & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__cc))
+                                                           & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__cc))
                                                            ? 
                                                           ((1U 
-                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__cc))
+                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__cc))
                                                             ? 
-                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__FF) 
+                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__FF) 
                                                             >> 4U)
                                                             : 
                                                            (~ 
-                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__FF) 
+                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__FF) 
                                                              >> 4U)))
                                                            : 
                                                           ((1U 
-                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__cc))
+                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__cc))
                                                             ? 
-                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__FF) 
+                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__FF) 
                                                             >> 7U)
                                                             : 
                                                            (~ 
-                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__FF) 
+                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__FF) 
                                                              >> 7U))))));
-                                        }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__17__Vfuncout))) {
+                                        }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__Vfuncout))) {
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IncDec_16 = 0xfU;
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__tstates = 4U;
@@ -3532,43 +3532,43 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                                 } else if ((4U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                                     if (([&]() {
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__cc 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__cc 
                                                     = 
                                                     (7U 
                                                      & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                         >> 3U));
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__FF 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__FF 
                                                     = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__Vfuncout 
+                                                __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__Vfuncout 
                                                     = 
                                                     ((1U 
                                                       & (~ 
-                                                         ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__cc) 
+                                                         ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__cc) 
                                                           >> 2U))) 
                                                      && (1U 
                                                          & ((2U 
-                                                             & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__cc))
+                                                             & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__cc))
                                                              ? 
                                                             ((1U 
-                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__cc))
+                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__cc))
                                                               ? 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__FF) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__FF) 
                                                               >> 4U)
                                                               : 
                                                              (~ 
-                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__FF) 
+                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__FF) 
                                                                >> 4U)))
                                                              : 
                                                             ((1U 
-                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__cc))
+                                                              & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__cc))
                                                               ? 
-                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__FF) 
+                                                             ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__FF) 
                                                               >> 7U)
                                                               : 
                                                              (~ 
-                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__FF) 
+                                                              ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__FF) 
                                                                >> 7U))))));
-                                            }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__18__Vfuncout))) {
+                                            }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__26__Vfuncout))) {
                                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Jump = 1U;
                                     }
                                 }
@@ -3661,41 +3661,41 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 3U;
                         if ((1U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                             if (([&]() {
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__cc 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__cc 
                                             = (7U & 
                                                ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                 >> 3U));
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__FF 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__FF 
                                             = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__Vfuncout 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__Vfuncout 
                                             = ((1U 
                                                 & (~ 
-                                                   ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__cc) 
+                                                   ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__cc) 
                                                     >> 2U))) 
                                                && (1U 
                                                    & ((2U 
-                                                       & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__cc))
+                                                       & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__cc))
                                                        ? 
                                                       ((1U 
-                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__cc))
+                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__cc))
                                                         ? 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__FF) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__FF) 
                                                         >> 4U)
                                                         : 
                                                        (~ 
-                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__FF) 
+                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__FF) 
                                                          >> 4U)))
                                                        : 
                                                       ((1U 
-                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__cc))
+                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__cc))
                                                         ? 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__FF) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__FF) 
                                                         >> 7U)
                                                         : 
                                                        (~ 
-                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__FF) 
+                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__FF) 
                                                          >> 7U))))));
-                                    }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__19__Vfuncout))) {
+                                    }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__27__Vfuncout))) {
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                             } else {
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 1U;
@@ -3773,42 +3773,42 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__LDW = 1U;
                                 if (([&]() {
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__cc 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__cc 
                                                 = (7U 
                                                    & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                       >> 3U));
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__FF 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__FF 
                                                 = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__Vfuncout 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__Vfuncout 
                                                 = (
                                                    (1U 
                                                     & (~ 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__cc) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__cc) 
                                                         >> 2U))) 
                                                    && (1U 
                                                        & ((2U 
-                                                           & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__cc))
+                                                           & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__cc))
                                                            ? 
                                                           ((1U 
-                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__cc))
+                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__cc))
                                                             ? 
-                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__FF) 
+                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__FF) 
                                                             >> 4U)
                                                             : 
                                                            (~ 
-                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__FF) 
+                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__FF) 
                                                              >> 4U)))
                                                            : 
                                                           ((1U 
-                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__cc))
+                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__cc))
                                                             ? 
-                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__FF) 
+                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__FF) 
                                                             >> 7U)
                                                             : 
                                                            (~ 
-                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__FF) 
+                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__FF) 
                                                              >> 7U))))));
-                                        }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__20__Vfuncout))) {
+                                        }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__28__Vfuncout))) {
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IncDec_16 = 0xfU;
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__tstates = 4U;
@@ -3886,42 +3886,42 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                             } else if ((4U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                                 if (([&]() {
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__cc 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__cc 
                                                 = (7U 
                                                    & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                       >> 3U));
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__FF 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__FF 
                                                 = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__Vfuncout 
+                                            __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__Vfuncout 
                                                 = (
                                                    (1U 
                                                     & (~ 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__cc) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__cc) 
                                                         >> 2U))) 
                                                    && (1U 
                                                        & ((2U 
-                                                           & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__cc))
+                                                           & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__cc))
                                                            ? 
                                                           ((1U 
-                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__cc))
+                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__cc))
                                                             ? 
-                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__FF) 
+                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__FF) 
                                                             >> 4U)
                                                             : 
                                                            (~ 
-                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__FF) 
+                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__FF) 
                                                              >> 4U)))
                                                            : 
                                                           ((1U 
-                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__cc))
+                                                            & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__cc))
                                                             ? 
-                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__FF) 
+                                                           ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__FF) 
                                                             >> 7U)
                                                             : 
                                                            (~ 
-                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__FF) 
+                                                            ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__FF) 
                                                              >> 7U))))));
-                                        }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__21__Vfuncout))) {
+                                        }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__29__Vfuncout))) {
                                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Jump = 1U;
                                 }
                             }
@@ -4003,41 +4003,41 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                         vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 3U;
                         if ((1U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                             if (([&]() {
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__cc 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__cc 
                                             = (7U & 
                                                ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                 >> 3U));
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__FF 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__FF 
                                             = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__Vfuncout 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__Vfuncout 
                                             = ((1U 
                                                 & (~ 
-                                                   ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__cc) 
+                                                   ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__cc) 
                                                     >> 2U))) 
                                                && (1U 
                                                    & ((2U 
-                                                       & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__cc))
+                                                       & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__cc))
                                                        ? 
                                                       ((1U 
-                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__cc))
+                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__cc))
                                                         ? 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__FF) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__FF) 
                                                         >> 4U)
                                                         : 
                                                        (~ 
-                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__FF) 
+                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__FF) 
                                                          >> 4U)))
                                                        : 
                                                       ((1U 
-                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__cc))
+                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__cc))
                                                         ? 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__FF) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__FF) 
                                                         >> 7U)
                                                         : 
                                                        (~ 
-                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__FF) 
+                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__FF) 
                                                          >> 7U))))));
-                                    }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__22__Vfuncout))) {
+                                    }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__30__Vfuncout))) {
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                             } else {
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 1U;
@@ -4115,41 +4115,41 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__LDW = 1U;
                             if (([&]() {
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__cc 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__cc 
                                             = (7U & 
                                                ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                 >> 3U));
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__FF 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__FF 
                                             = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__Vfuncout 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__Vfuncout 
                                             = ((1U 
                                                 & (~ 
-                                                   ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__cc) 
+                                                   ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__cc) 
                                                     >> 2U))) 
                                                && (1U 
                                                    & ((2U 
-                                                       & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__cc))
+                                                       & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__cc))
                                                        ? 
                                                       ((1U 
-                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__cc))
+                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__cc))
                                                         ? 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__FF) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__FF) 
                                                         >> 4U)
                                                         : 
                                                        (~ 
-                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__FF) 
+                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__FF) 
                                                          >> 4U)))
                                                        : 
                                                       ((1U 
-                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__cc))
+                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__cc))
                                                         ? 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__FF) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__FF) 
                                                         >> 7U)
                                                         : 
                                                        (~ 
-                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__FF) 
+                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__FF) 
                                                          >> 7U))))));
-                                    }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__23__Vfuncout))) {
+                                    }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__31__Vfuncout))) {
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IncDec_16 = 0xfU;
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__tstates = 4U;
@@ -4232,41 +4232,41 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                         } else if ((4U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Inc_PC = 1U;
                             if (([&]() {
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__cc 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__cc 
                                             = (7U & 
                                                ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                 >> 3U));
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__FF 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__FF 
                                             = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__Vfuncout 
+                                        __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__Vfuncout 
                                             = ((1U 
                                                 & (~ 
-                                                   ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__cc) 
+                                                   ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__cc) 
                                                     >> 2U))) 
                                                && (1U 
                                                    & ((2U 
-                                                       & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__cc))
+                                                       & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__cc))
                                                        ? 
                                                       ((1U 
-                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__cc))
+                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__cc))
                                                         ? 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__FF) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__FF) 
                                                         >> 4U)
                                                         : 
                                                        (~ 
-                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__FF) 
+                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__FF) 
                                                          >> 4U)))
                                                        : 
                                                       ((1U 
-                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__cc))
+                                                        & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__cc))
                                                         ? 
-                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__FF) 
+                                                       ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__FF) 
                                                         >> 7U)
                                                         : 
                                                        (~ 
-                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__FF) 
+                                                        ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__FF) 
                                                          >> 7U))))));
-                                    }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__24__Vfuncout))) {
+                                    }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__32__Vfuncout))) {
                                 vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Jump = 1U;
                             }
                         }
@@ -4355,39 +4355,39 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__17(Vtop___024root* vlSelf)
                     vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 3U;
                     if ((1U & (IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycle))) {
                         if (([&]() {
-                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__cc 
+                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__cc 
                                         = (7U & ((IData)(vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR) 
                                                  >> 3U));
-                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__FF 
+                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__FF 
                                         = vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__F;
-                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__Vfuncout 
+                                    __Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__Vfuncout 
                                         = ((1U & (~ 
-                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__cc) 
+                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__cc) 
                                                    >> 2U))) 
                                            && (1U & 
                                                ((2U 
-                                                 & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__cc))
+                                                 & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__cc))
                                                  ? 
                                                 ((1U 
-                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__cc))
+                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__cc))
                                                   ? 
-                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__FF) 
+                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__FF) 
                                                   >> 4U)
                                                   : 
                                                  (~ 
-                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__FF) 
+                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__FF) 
                                                    >> 4U)))
                                                  : 
                                                 ((1U 
-                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__cc))
+                                                  & (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__cc))
                                                   ? 
-                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__FF) 
+                                                 ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__FF) 
                                                   >> 7U)
                                                   : 
                                                  (~ 
-                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__FF) 
+                                                  ((IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__FF) 
                                                    >> 7U))))));
-                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__25__Vfuncout))) {
+                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__i_mcode__DOT__is_cc_true__33__Vfuncout))) {
                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__Set_Addr_To = 5U;
                         } else {
                             vlSelfRef.top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__mcycles_d = 1U;
@@ -7240,6 +7240,71 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__18(Vtop___024root* vlSelf)
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___nba_sequent__TOP__18\n"); );
     auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Init
+    SData/*15:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__Vfuncout = 0;
+    SData/*15:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__base_char_addr;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__base_char_addr = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__tile_id;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__tile_id = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__tile_attr;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__tile_attr = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__tileY;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__tileY = 0;
+    SData/*15:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__1__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__1__Vfuncout = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__1__tile_id;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__1__tile_id = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__1__bg_char_data_sel;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__1__bg_char_data_sel = 0;
+    SData/*15:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__Vfuncout = 0;
+    SData/*15:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__base_char_addr;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__base_char_addr = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__tile_id;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__tile_id = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__tile_attr;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__tile_attr = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__tileY;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__tileY = 0;
+    SData/*15:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__3__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__3__Vfuncout = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__3__tile_id;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__3__tile_id = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__3__bg_char_data_sel;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__3__bg_char_data_sel = 0;
+    SData/*15:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__Vfuncout = 0;
+    SData/*15:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__base_char_addr;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__base_char_addr = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__tile_id;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__tile_id = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__tile_attr;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__tile_attr = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__tileY;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__tileY = 0;
+    SData/*15:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__5__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__5__Vfuncout = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__5__tile_id;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__5__tile_id = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__5__bg_char_data_sel;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__5__bg_char_data_sel = 0;
+    SData/*15:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__Vfuncout = 0;
+    SData/*15:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__base_char_addr;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__base_char_addr = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__tile_id;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__tile_id = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__tile_attr;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__tile_attr = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__tileY;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__tileY = 0;
+    SData/*15:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__7__Vfuncout;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__7__Vfuncout = 0;
+    CData/*7:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__7__tile_id;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__7__tile_id = 0;
+    CData/*0:0*/ __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__7__bg_char_data_sel;
+    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__7__bg_char_data_sel = 0;
     // Body
     if (vlSelfRef.top__DOT__soc__DOT____Vcellinp__ppu__lcd_ppu_en) {
         if ((0U == (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__mode))) {
@@ -7270,82 +7335,76 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__18(Vtop___024root* vlSelf)
                         = vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data;
                 }
                 if ((0xffU > (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data))) {
-                    if ((0x80U <= (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data))) {
-                        if ((1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_dmg_compat) 
-                                   | (~ ((IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data) 
-                                         >> 3U))))) {
-                            vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram0_addr 
-                                = (0x3fffU & ((IData)(0x800U) 
-                                              + (VL_SHIFTL_III(14,32,32, (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data), 4U) 
-                                                 + 
-                                                 VL_SHIFTL_III(14,32,32, 
-                                                               ((0x40U 
-                                                                 & (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data))
-                                                                 ? 
-                                                                ((IData)(7U) 
-                                                                 - (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY))
-                                                                 : (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY)), 1U))));
-                        } else {
-                            vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram1_addr 
-                                = (0x3fffU & ((IData)(0x800U) 
-                                              + (VL_SHIFTL_III(14,32,32, (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data), 4U) 
-                                                 + 
-                                                 VL_SHIFTL_III(14,32,32, 
-                                                               ((0x40U 
-                                                                 & (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data))
-                                                                 ? 
-                                                                ((IData)(7U) 
-                                                                 - (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY))
-                                                                 : (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY)), 1U))));
-                        }
-                    } else if ((0x10U & (IData)(vlSelfRef.top__DOT__soc__DOT__io_lcdc))) {
-                        if ((1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_dmg_compat) 
-                                   | (~ ((IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data) 
-                                         >> 3U))))) {
-                            vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram0_addr 
-                                = (0x3fffU & (VL_SHIFTL_III(14,32,32, (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data), 4U) 
-                                              + VL_SHIFTL_III(14,32,32, 
-                                                              ((0x40U 
-                                                                & (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data))
-                                                                ? 
-                                                               ((IData)(7U) 
-                                                                - (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY))
-                                                                : (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY)), 1U)));
-                        } else {
-                            vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram1_addr 
-                                = (0x3fffU & (VL_SHIFTL_III(14,32,32, (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data), 4U) 
-                                              + VL_SHIFTL_III(14,32,32, 
-                                                              ((0x40U 
-                                                                & (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data))
-                                                                ? 
-                                                               ((IData)(7U) 
-                                                                - (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY))
-                                                                : (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY)), 1U)));
-                        }
-                    } else if ((1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_dmg_compat) 
-                                      | (~ ((IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data) 
-                                            >> 3U))))) {
+                    if ((1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_dmg_compat) 
+                               | (~ ((IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data) 
+                                     >> 3U))))) {
                         vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram0_addr 
-                            = (0x3fffU & ((IData)(0x1000U) 
-                                          + (VL_SHIFTL_III(14,32,32, (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data), 4U) 
-                                             + VL_SHIFTL_III(14,32,32, 
-                                                             ((0x40U 
-                                                               & (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data))
-                                                               ? 
-                                                              ((IData)(7U) 
-                                                               - (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY))
-                                                               : (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY)), 1U))));
+                            = (0x3fffU & ([&]() {
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__tileY 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__tile_attr 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__tile_id 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__1__bg_char_data_sel 
+                                        = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_lcdc) 
+                                                 >> 4U));
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__1__tile_id 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__1__Vfuncout 
+                                        = ((0x80U <= (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__1__tile_id))
+                                            ? 0x8800U
+                                            : ((IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__1__bg_char_data_sel)
+                                                ? 0x8000U
+                                                : 0x9000U));
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__base_char_addr 
+                                        = __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__1__Vfuncout;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__Vfuncout 
+                                        = (0xffffU 
+                                           & (((IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__base_char_addr) 
+                                               + VL_SHIFTL_III(16,32,32, (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__tile_id), 4U)) 
+                                              + VL_SHIFTL_III(16,32,32, 
+                                                              ((0x40U 
+                                                                & (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__tile_attr))
+                                                                ? 
+                                                               ((IData)(7U) 
+                                                                - (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__tileY))
+                                                                : (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__tileY)), 1U)));
+                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__0__Vfuncout)));
                     } else {
                         vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram1_addr 
-                            = (0x3fffU & ((IData)(0x1000U) 
-                                          + (VL_SHIFTL_III(14,32,32, (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data), 4U) 
-                                             + VL_SHIFTL_III(14,32,32, 
-                                                             ((0x40U 
-                                                               & (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data))
-                                                               ? 
-                                                              ((IData)(7U) 
-                                                               - (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY))
-                                                               : (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY)), 1U))));
+                            = (0x3fffU & ([&]() {
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__tileY 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__tile_attr 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__tile_id 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__3__bg_char_data_sel 
+                                        = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_lcdc) 
+                                                 >> 4U));
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__3__tile_id 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__3__Vfuncout 
+                                        = ((0x80U <= (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__3__tile_id))
+                                            ? 0x8800U
+                                            : ((IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__3__bg_char_data_sel)
+                                                ? 0x8000U
+                                                : 0x9000U));
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__base_char_addr 
+                                        = __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__3__Vfuncout;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__Vfuncout 
+                                        = (0xffffU 
+                                           & (((IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__base_char_addr) 
+                                               + VL_SHIFTL_III(16,32,32, (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__tile_id), 4U)) 
+                                              + VL_SHIFTL_III(16,32,32, 
+                                                              ((0x40U 
+                                                                & (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__tile_attr))
+                                                                ? 
+                                                               ((IData)(7U) 
+                                                                - (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__tileY))
+                                                                : (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__tileY)), 1U)));
+                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__2__Vfuncout)));
                     }
                 }
             } else if ((4U == (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__step))) {
@@ -7402,86 +7461,82 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__18(Vtop___024root* vlSelf)
                         = vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tmp_pixel;
                 }
                 if ((0xffU > (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_id))) {
-                    if ((0x80U <= (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_id))) {
-                        if ((1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_dmg_compat) 
-                                   | (~ ((IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_attr) 
-                                         >> 3U))))) {
-                            vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram0_addr 
-                                = (0x3fffU & ((IData)(0x801U) 
-                                              + (VL_SHIFTL_III(14,32,32, (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_id), 4U) 
-                                                 + 
-                                                 VL_SHIFTL_III(14,32,32, 
-                                                               ((0x40U 
-                                                                 & (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_attr))
-                                                                 ? 
-                                                                ((IData)(7U) 
-                                                                 - (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY))
-                                                                 : (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY)), 1U))));
-                        } else {
-                            vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram1_addr 
-                                = (0x3fffU & ((IData)(0x801U) 
-                                              + (VL_SHIFTL_III(14,32,32, (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_id), 4U) 
-                                                 + 
-                                                 VL_SHIFTL_III(14,32,32, 
-                                                               ((0x40U 
-                                                                 & (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_attr))
-                                                                 ? 
-                                                                ((IData)(7U) 
-                                                                 - (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY))
-                                                                 : (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY)), 1U))));
-                        }
-                    } else if ((0x10U & (IData)(vlSelfRef.top__DOT__soc__DOT__io_lcdc))) {
-                        if ((1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_dmg_compat) 
-                                   | (~ ((IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_attr) 
-                                         >> 3U))))) {
-                            vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram0_addr 
-                                = (0x3fffU & ((IData)(1U) 
-                                              + (VL_SHIFTL_III(14,32,32, (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_id), 4U) 
-                                                 + 
-                                                 VL_SHIFTL_III(14,32,32, 
-                                                               ((0x40U 
-                                                                 & (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_attr))
-                                                                 ? 
-                                                                ((IData)(7U) 
-                                                                 - (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY))
-                                                                 : (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY)), 1U))));
-                        } else {
-                            vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram1_addr 
-                                = (0x3fffU & ((IData)(1U) 
-                                              + (VL_SHIFTL_III(14,32,32, (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_id), 4U) 
-                                                 + 
-                                                 VL_SHIFTL_III(14,32,32, 
-                                                               ((0x40U 
-                                                                 & (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_attr))
-                                                                 ? 
-                                                                ((IData)(7U) 
-                                                                 - (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY))
-                                                                 : (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY)), 1U))));
-                        }
-                    } else if ((1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_dmg_compat) 
-                                      | (~ ((IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_attr) 
-                                            >> 3U))))) {
+                    if ((1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_dmg_compat) 
+                               | (~ ((IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_attr) 
+                                     >> 3U))))) {
                         vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram0_addr 
-                            = (0x3fffU & ((IData)(0x1001U) 
-                                          + (VL_SHIFTL_III(14,32,32, (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_id), 4U) 
-                                             + VL_SHIFTL_III(14,32,32, 
-                                                             ((0x40U 
-                                                               & (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_attr))
-                                                               ? 
-                                                              ((IData)(7U) 
-                                                               - (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY))
-                                                               : (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY)), 1U))));
+                            = (0x3fffU & ([&]() {
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__tileY 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__tile_attr 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_attr;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__tile_id 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_id;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__5__bg_char_data_sel 
+                                        = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_lcdc) 
+                                                 >> 4U));
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__5__tile_id 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_id;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__5__Vfuncout 
+                                        = ((0x80U <= (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__5__tile_id))
+                                            ? 0x8800U
+                                            : ((IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__5__bg_char_data_sel)
+                                                ? 0x8000U
+                                                : 0x9000U));
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__base_char_addr 
+                                        = __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__5__Vfuncout;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__Vfuncout 
+                                        = (0xffffU 
+                                           & ((IData)(1U) 
+                                              + (((IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__base_char_addr) 
+                                                  + 
+                                                  VL_SHIFTL_III(16,32,32, (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__tile_id), 4U)) 
+                                                 + 
+                                                 VL_SHIFTL_III(16,32,32, 
+                                                               ((0x40U 
+                                                                 & (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__tile_attr))
+                                                                 ? 
+                                                                ((IData)(7U) 
+                                                                 - (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__tileY))
+                                                                 : (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__tileY)), 1U))));
+                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__4__Vfuncout)));
                     } else {
                         vlSelfRef.__Vdly__top__DOT__soc__DOT__ppu_vram1_addr 
-                            = (0x3fffU & ((IData)(0x1001U) 
-                                          + (VL_SHIFTL_III(14,32,32, (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_id), 4U) 
-                                             + VL_SHIFTL_III(14,32,32, 
-                                                             ((0x40U 
-                                                               & (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_attr))
-                                                               ? 
-                                                              ((IData)(7U) 
-                                                               - (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY))
-                                                               : (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY)), 1U))));
+                            = (0x3fffU & ([&]() {
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__tileY 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tileY;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__tile_attr 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_attr;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__tile_id 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_id;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__7__bg_char_data_sel 
+                                        = (1U & ((IData)(vlSelfRef.top__DOT__soc__DOT__io_lcdc) 
+                                                 >> 4U));
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__7__tile_id 
+                                        = vlSelfRef.top__DOT__soc__DOT__ppu__DOT__tile_id;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__7__Vfuncout 
+                                        = ((0x80U <= (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__7__tile_id))
+                                            ? 0x8800U
+                                            : ((IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__7__bg_char_data_sel)
+                                                ? 0x8000U
+                                                : 0x9000U));
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__base_char_addr 
+                                        = __Vfunc_top__DOT__soc__DOT__ppu__DOT__get_base_char_addr__7__Vfuncout;
+                                    __Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__Vfuncout 
+                                        = (0xffffU 
+                                           & ((IData)(1U) 
+                                              + (((IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__base_char_addr) 
+                                                  + 
+                                                  VL_SHIFTL_III(16,32,32, (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__tile_id), 4U)) 
+                                                 + 
+                                                 VL_SHIFTL_III(16,32,32, 
+                                                               ((0x40U 
+                                                                 & (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__tile_attr))
+                                                                 ? 
+                                                                ((IData)(7U) 
+                                                                 - (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__tileY))
+                                                                 : (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__tileY)), 1U))));
+                                }(), (IData)(__Vfunc_top__DOT__soc__DOT__ppu__DOT__load_tile__6__Vfuncout)));
                     }
                 }
             } else if ((6U == (IData)(vlSelfRef.top__DOT__soc__DOT__ppu__DOT__step))) {
@@ -7634,74 +7689,4 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__18(Vtop___024root* vlSelf)
         = vlSelfRef.top__DOT__soc__DOT__vga__DOT__fb_wr;
     vlSelfRef.top__DOT__soc__DOT__vga__DOT__fb__DOT__data_b 
         = vlSelfRef.top__DOT__soc__DOT__vga__DOT__fb_data;
-}
-
-VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__19(Vtop___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___nba_sequent__TOP__19\n"); );
-    auto& vlSelfRef = std::ref(*vlSelf).get();
-    // Body
-    if (vlSelfRef.__VdlySet__top__DOT__soc__DOT__wram_0__DOT__mem__v0) {
-        vlSelfRef.top__DOT__soc__DOT__wram_0__DOT__mem[vlSelfRef.__VdlyDim0__top__DOT__soc__DOT__wram_0__DOT__mem__v0] 
-            = vlSelfRef.__VdlyVal__top__DOT__soc__DOT__wram_0__DOT__mem__v0;
-    }
-    if (vlSelfRef.__VdlySet__top__DOT__soc__DOT__hram__DOT__mem__v0) {
-        vlSelfRef.top__DOT__soc__DOT__hram__DOT__mem[vlSelfRef.__VdlyDim0__top__DOT__soc__DOT__hram__DOT__mem__v0] 
-            = vlSelfRef.__VdlyVal__top__DOT__soc__DOT__hram__DOT__mem__v0;
-    }
-    if (vlSelfRef.__VdlySet__top__DOT__soc__DOT__xram__DOT__mem__v0) {
-        vlSelfRef.top__DOT__soc__DOT__xram__DOT__mem[vlSelfRef.__VdlyDim0__top__DOT__soc__DOT__xram__DOT__mem__v0] 
-            = vlSelfRef.__VdlyVal__top__DOT__soc__DOT__xram__DOT__mem__v0;
-    }
-    if (vlSelfRef.__VdlySet__top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__mem__v0) {
-        vlSelfRef.top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__mem[vlSelfRef.__VdlyDim0__top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__mem__v0] 
-            = vlSelfRef.__VdlyVal__top__DOT__soc__DOT__wram___BRA__1__KET____DOT__wram_N__DOT__mem__v0;
-    }
-    if (vlSelfRef.__VdlySet__top__DOT__soc__DOT__wram___BRA__2__KET____DOT__wram_N__DOT__mem__v0) {
-        vlSelfRef.top__DOT__soc__DOT__wram___BRA__2__KET____DOT__wram_N__DOT__mem[vlSelfRef.__VdlyDim0__top__DOT__soc__DOT__wram___BRA__2__KET____DOT__wram_N__DOT__mem__v0] 
-            = vlSelfRef.__VdlyVal__top__DOT__soc__DOT__wram___BRA__2__KET____DOT__wram_N__DOT__mem__v0;
-    }
-    if (vlSelfRef.__VdlySet__top__DOT__soc__DOT__wram___BRA__3__KET____DOT__wram_N__DOT__mem__v0) {
-        vlSelfRef.top__DOT__soc__DOT__wram___BRA__3__KET____DOT__wram_N__DOT__mem[vlSelfRef.__VdlyDim0__top__DOT__soc__DOT__wram___BRA__3__KET____DOT__wram_N__DOT__mem__v0] 
-            = vlSelfRef.__VdlyVal__top__DOT__soc__DOT__wram___BRA__3__KET____DOT__wram_N__DOT__mem__v0;
-    }
-    if (vlSelfRef.__VdlySet__top__DOT__soc__DOT__wram___BRA__4__KET____DOT__wram_N__DOT__mem__v0) {
-        vlSelfRef.top__DOT__soc__DOT__wram___BRA__4__KET____DOT__wram_N__DOT__mem[vlSelfRef.__VdlyDim0__top__DOT__soc__DOT__wram___BRA__4__KET____DOT__wram_N__DOT__mem__v0] 
-            = vlSelfRef.__VdlyVal__top__DOT__soc__DOT__wram___BRA__4__KET____DOT__wram_N__DOT__mem__v0;
-    }
-    if (vlSelfRef.__VdlySet__top__DOT__soc__DOT__wram___BRA__5__KET____DOT__wram_N__DOT__mem__v0) {
-        vlSelfRef.top__DOT__soc__DOT__wram___BRA__5__KET____DOT__wram_N__DOT__mem[vlSelfRef.__VdlyDim0__top__DOT__soc__DOT__wram___BRA__5__KET____DOT__wram_N__DOT__mem__v0] 
-            = vlSelfRef.__VdlyVal__top__DOT__soc__DOT__wram___BRA__5__KET____DOT__wram_N__DOT__mem__v0;
-    }
-    if (vlSelfRef.__VdlySet__top__DOT__soc__DOT__wram___BRA__6__KET____DOT__wram_N__DOT__mem__v0) {
-        vlSelfRef.top__DOT__soc__DOT__wram___BRA__6__KET____DOT__wram_N__DOT__mem[vlSelfRef.__VdlyDim0__top__DOT__soc__DOT__wram___BRA__6__KET____DOT__wram_N__DOT__mem__v0] 
-            = vlSelfRef.__VdlyVal__top__DOT__soc__DOT__wram___BRA__6__KET____DOT__wram_N__DOT__mem__v0;
-    }
-    if (vlSelfRef.__VdlySet__top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__mem__v0) {
-        vlSelfRef.top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__mem[vlSelfRef.__VdlyDim0__top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__mem__v0] 
-            = vlSelfRef.__VdlyVal__top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__mem__v0;
-    }
-    vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data = 
-        vlSelfRef.top__DOT__soc__DOT__vram_0__DOT__mem
-        [(0x1fffU & (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram0_addr))];
-    vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data = 
-        vlSelfRef.top__DOT__soc__DOT__vram_1__DOT__mem
-        [(0x1fffU & (IData)(vlSelfRef.top__DOT__soc__DOT__ppu_vram1_addr))];
-    if (vlSelfRef.__VdlySet__top__DOT__soc__DOT__vram_0__DOT__mem__v0) {
-        vlSelfRef.top__DOT__soc__DOT__vram_0__DOT__mem[vlSelfRef.__VdlyDim0__top__DOT__soc__DOT__vram_0__DOT__mem__v0] 
-            = vlSelfRef.__VdlyVal__top__DOT__soc__DOT__vram_0__DOT__mem__v0;
-    }
-    if (vlSelfRef.__VdlySet__top__DOT__soc__DOT__vram_1__DOT__mem__v0) {
-        vlSelfRef.top__DOT__soc__DOT__vram_1__DOT__mem[vlSelfRef.__VdlyDim0__top__DOT__soc__DOT__vram_1__DOT__mem__v0] 
-            = vlSelfRef.__VdlyVal__top__DOT__soc__DOT__vram_1__DOT__mem__v0;
-    }
-    vlSelfRef.top__DOT__soc__DOT__ppu__DOT__vram0_data 
-        = vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data;
-    vlSelfRef.top__DOT__soc__DOT__vram_0__DOT__q_b 
-        = vlSelfRef.top__DOT__soc__DOT__ppu_vram0_data;
-    vlSelfRef.top__DOT__soc__DOT__ppu__DOT__vram1_data 
-        = vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data;
-    vlSelfRef.top__DOT__soc__DOT__vram_1__DOT__q_b 
-        = vlSelfRef.top__DOT__soc__DOT__ppu_vram1_data;
 }
