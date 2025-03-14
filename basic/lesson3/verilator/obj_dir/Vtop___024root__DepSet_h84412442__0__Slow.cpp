@@ -31,11 +31,23 @@ VL_ATTR_COLD void Vtop___024root___eval_postponed__TOP(Vtop___024root* vlSelf) {
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if (VL_UNLIKELY(vlSelfRef.top__DOT__soc__DOT____Vstrobe0)) {
-        VL_WRITEF_NX("written to ff4c: %x\n",0,1,vlSelfRef.top__DOT__soc__DOT__io_dmg_compat);
+        VL_WRITEF_NX("LCD Stat %x\n",0,8,vlSelfRef.top__DOT__soc__DOT__io_lcd_stat);
         vlSelfRef.top__DOT__soc__DOT____Vstrobe0 = 0U;
     }
     if (VL_UNLIKELY(vlSelfRef.top__DOT__soc__DOT____Vstrobe1)) {
-        VL_WRITEF_NX("Loading bank %4#\n",0,10,vlSelfRef.top__DOT__soc__DOT__rom_bank);
+        VL_WRITEF_NX("LCD LYC %x\n",0,8,vlSelfRef.top__DOT__soc__DOT__io_lcd_lyc);
         vlSelfRef.top__DOT__soc__DOT____Vstrobe1 = 0U;
+    }
+    if (VL_UNLIKELY(vlSelfRef.top__DOT__soc__DOT____Vstrobe2)) {
+        VL_WRITEF_NX("DMG Compat: %x\n",0,1,vlSelfRef.top__DOT__soc__DOT__io_dmg_compat);
+        vlSelfRef.top__DOT__soc__DOT____Vstrobe2 = 0U;
+    }
+    if (VL_UNLIKELY(vlSelfRef.top__DOT__soc__DOT____Vstrobe3)) {
+        VL_WRITEF_NX("Set IE %x\n",0,8,vlSelfRef.top__DOT__soc__DOT__io_IE);
+        vlSelfRef.top__DOT__soc__DOT____Vstrobe3 = 0U;
+    }
+    if (VL_UNLIKELY(vlSelfRef.top__DOT__soc__DOT____Vstrobe4)) {
+        VL_WRITEF_NX("Loading bank %x\n",0,7,vlSelfRef.top__DOT__soc__DOT__rom_bank);
+        vlSelfRef.top__DOT__soc__DOT____Vstrobe4 = 0U;
     }
 }

@@ -106,6 +106,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ top__DOT__soc__DOT__fb_data;
     CData/*7:0*/ top__DOT__soc__DOT__ppu_vram0_data;
     CData/*7:0*/ top__DOT__soc__DOT__ppu_vram1_data;
+    CData/*6:0*/ top__DOT__soc__DOT__rom_bank;
     CData/*0:0*/ top__DOT__soc__DOT__io_dmg_compat;
     CData/*7:0*/ top__DOT__soc__DOT__cpu_reset_cnt;
     CData/*0:0*/ top__DOT__soc__DOT__cpu_reset;
@@ -130,6 +131,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ top__DOT__soc__DOT__io_svbk;
     CData/*7:0*/ top__DOT__soc__DOT__io_scx;
     CData/*7:0*/ top__DOT__soc__DOT__io_scy;
+    CData/*7:0*/ top__DOT__soc__DOT__io_lcd_stat;
+    CData/*7:0*/ top__DOT__soc__DOT__io_lcd_lyc;
     CData/*7:0*/ top__DOT__soc__DOT__io_bios_disable;
     CData/*7:0*/ top__DOT__soc__DOT__io_IF;
     CData/*7:0*/ top__DOT__soc__DOT__io_IE;
@@ -160,6 +163,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ top__DOT__soc__DOT____Vcellinp__xram__wren_a;
     CData/*0:0*/ top__DOT__soc__DOT____Vstrobe0;
     CData/*0:0*/ top__DOT__soc__DOT____Vstrobe1;
+    CData/*0:0*/ top__DOT__soc__DOT____Vstrobe2;
+    CData/*0:0*/ top__DOT__soc__DOT____Vstrobe3;
+    CData/*0:0*/ top__DOT__soc__DOT____Vstrobe4;
     CData/*7:0*/ top__DOT__soc__DOT____Vcellout__wram___BRA__1__KET____DOT__wram_N__q_a;
     CData/*0:0*/ top__DOT__soc__DOT____Vcellinp__wram___BRA__1__KET____DOT__wram_N__wren_a;
     CData/*7:0*/ top__DOT__soc__DOT____Vcellout__wram___BRA__2__KET____DOT__wram_N__q_a;
@@ -186,6 +192,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__obj_en;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__bg_win_prio;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__gbc_mode;
+    CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__scx;
+    CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__scy;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__fb_clk;
     CData/*0:0*/ top__DOT__soc__DOT__ppu__DOT__fb_wr;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__fb_data;
@@ -197,6 +205,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__step;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__pixel_buf_h;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__pixel_buf_l;
+    CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__tmp_pixel;
+    CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__tmp_pixel_2;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__tile_id;
     CData/*7:0*/ top__DOT__soc__DOT__ppu__DOT__tile_attr;
     CData/*1:0*/ top__DOT__soc__DOT__ppu__DOT__tick;
@@ -585,7 +595,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*7:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__q_b;
     CData/*0:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__byteena_a;
     CData/*0:0*/ top__DOT__soc__DOT__wram___BRA__7__KET____DOT__wram_N__DOT__byteena_b;
-    CData/*0:0*/ __Vdly__top__DOT__soc__DOT__vblank_FF;
+    CData/*0:0*/ __Vdly__top__DOT__soc__DOT__cpu_int_n;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__tile_id;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__tile_attr;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__pixel_buf_h;
@@ -593,7 +603,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     CData/*2:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__mode;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__step;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu__DOT__LX;
-    CData/*7:0*/ __Vdly__top__DOT__soc__DOT__ppu_LY;
     CData/*1:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__XY_State;
     CData/*7:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__IR;
     CData/*0:0*/ __Vdly__top__DOT__soc__DOT__T80x__DOT__i_tv80_core__DOT__reset_4x;
@@ -665,7 +674,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     SData/*14:0*/ top__DOT__soc__DOT__fb_addr;
     SData/*13:0*/ top__DOT__soc__DOT__ppu_vram0_addr;
     SData/*13:0*/ top__DOT__soc__DOT__ppu_vram1_addr;
-    SData/*9:0*/ top__DOT__soc__DOT__rom_bank;
     SData/*15:0*/ top__DOT__soc__DOT__cpu_addr;
     SData/*14:0*/ top__DOT__soc__DOT__ppu__DOT__fb_addr;
     SData/*13:0*/ top__DOT__soc__DOT__ppu__DOT__vram0_addr;
@@ -739,6 +747,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     IData/*24:0*/ top__DOT__ioctl_addr;
     IData/*22:0*/ top__DOT__soc__DOT__game_rom_addr;
     IData/*21:0*/ top__DOT__soc__DOT____Vcellinp__game_rom__address_a;
+    IData/*31:0*/ top__DOT__soc__DOT__ppu__DOT__unnamedblk1__DOT__i;
+    IData/*31:0*/ top__DOT__soc__DOT__ppu__DOT__unnamedblk2__DOT__i;
     IData/*21:0*/ top__DOT__soc__DOT__game_rom__DOT__address_a;
     IData/*21:0*/ top__DOT__soc__DOT__game_rom__DOT__address_b;
     IData/*31:0*/ __VactIterCount;
@@ -847,7 +857,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__game_rom__DOT__width_a = 8U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__game_rom__DOT__widthad_a = 0x00000016U;
     static constexpr VlWide<4>/*103:0*/ top__DOT__soc__DOT__game_rom__DOT__init_file = {{
-        0x2e686578, 0x6c616b65, 0x61697279, 0x00000066
+        0x2e686578, 0x63696432, 0x67622d61, 0x00000063
     }};
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__wram_0__DOT__width_a = 8U;
     static constexpr IData/*31:0*/ top__DOT__soc__DOT__wram_0__DOT__widthad_a = 0x0000000cU;

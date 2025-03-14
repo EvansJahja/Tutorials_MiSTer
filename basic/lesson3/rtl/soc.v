@@ -30,7 +30,7 @@ wire [13:0] ppu_vram0_addr;
 wire [7:0]  ppu_vram0_data;
 wire [13:0] ppu_vram1_addr;
 wire [7:0]  ppu_vram1_data;
-reg [9:0] rom_bank;
+reg [6:0] rom_bank;
 
 reg io_dmg_compat;
 
@@ -43,7 +43,7 @@ always @* begin
 	if (cpu_addr[15:14] == 2'b00)
 			game_rom_addr[22:14] = 9'b0;
 	else
-			game_rom_addr[22:14] = rom_bank;
+			game_rom_addr[22:14] = rom_bank[6:0];
 end
 
 
@@ -70,6 +70,9 @@ ppu ppu (
 	.vram1_data(ppu_vram1_data),
 
 	.gbc_mode(!io_dmg_compat),
+
+	.scx(io_scx),
+	.scy(io_scy),
 
 	.LY(ppu_LY)
 
@@ -171,6 +174,8 @@ reg [7:0] io_lcdc;
 reg [7:0] io_svbk;
 reg [7:0] io_scx;
 reg [7:0] io_scy;
+reg [7:0] io_lcd_stat;
+reg [7:0] io_lcd_lyc;
 reg [7:0] io_bios_disable;
 
 // Interrupts
@@ -221,29 +226,48 @@ reg vblank_FF;
 always @(posedge clk_sys) begin
 	io_IF <= 8'd0;
 	cpu_int_n <= 1'b1;
-	if (ppu_LY == 8'd143)
-		vblank_FF <= 1'b1;
-	if (ppu_LY == 8'd144 && vblank_FF)
+	if (io_IE[0])
 		begin
-			vblank_FF <= 1'b0;
-			io_IF <= 8'd1;
-			cpu_int_n <= 1'b0;
+			if (ppu_LY == 8'd143)
+				vblank_FF <= 1'b1;
+			if (ppu_LY == 8'd144 && vblank_FF)
+				begin
+					vblank_FF <= 1'b0;
+					io_IF <= 8'd1;
+					cpu_int_n <= 1'b0;
+				end
 		end
+	if (io_IE[1])
+		if (ppu_LY == io_lcd_lyc)
+			begin
+					io_IF <= 8'd2;
+					cpu_int_n <= 1'b0;
+			end
 
 end
 
 
 always @(*) begin
 	if (!cpu_iorq_n && cpu_rd_n) begin
-		cpu_din = 8'h40; // VBlank
+		if (io_IF[0])
+			cpu_din = 8'h40; // VBlank
+		else if (io_IF[1])
+		begin
+			cpu_din = 8'h48; // STAT
+		end
 	end
 	else if (!cpu_rd_n) begin
 		if (io_sel) begin
 			case (cpu_addr[7:0])
 				8'h70: cpu_din = io_svbk;
+				8'h40: cpu_din = io_lcdc;
+				8'h41: cpu_din = io_lcd_stat;
+				8'h42: cpu_din = io_scy;
+				8'h43: cpu_din = io_scx;
+				8'h44: cpu_din = ppu_LY;
+				8'h45: cpu_din = io_lcd_lyc;
 				8'h47: cpu_din = io_bgp;
 				8'h0f: cpu_din = ppu_LY >= 8'd144 ? 8'd1 : 8'd0;
-				8'h44: cpu_din = ppu_LY;
 				8'hF0: cpu_din = io_IF;
 				8'hFF: cpu_din = io_IE;
 			endcase
@@ -271,23 +295,37 @@ always @(negedge cpu_mreq_n) begin
 		if (cpu_addr[15:8] == 8'hFF) begin
 			case (cpu_addr[7:0])
 				8'h40: io_lcdc <= cpu_dout;
+				8'h41:
+				begin
+					$strobe("LCD Stat %x", io_lcd_stat);
+					io_lcd_stat <= cpu_dout;
+				end
 				8'h42: io_scy <= cpu_dout;
 				8'h43: io_scx <= cpu_dout;
+				8'h45: 
+				begin
+					$strobe("LCD LYC %x", io_lcd_lyc);
+					io_lcd_lyc <= cpu_dout;
+				end
 				8'h47: io_bgp <= cpu_dout;
-				8'h4c: begin
+				8'h4c:
+				begin
 					io_dmg_compat <= cpu_dout[2];
-					$strobe("written to ff4c: %x", io_dmg_compat);
+					$strobe("DMG Compat: %x", io_dmg_compat);
 				end
 				8'h4F: io_vbk <= cpu_dout;
 				8'h50: io_bios_disable <= cpu_dout;
 				8'h70: io_svbk <= cpu_dout;
-				8'hFF: io_IE <= cpu_dout;
+				8'hFF: begin
+					$strobe("Set IE %x", io_IE);
+					io_IE <= cpu_dout;
+				end
 			endcase
 		end
 
 		if (mbc3_rom_bank_number) begin
-			$strobe("Loading bank %d", rom_bank);
-			rom_bank <= cpu_dout;
+			$strobe("Loading bank %x", rom_bank);
+			rom_bank <= cpu_dout[6:0];
 		end
 	end
 end
@@ -308,7 +346,7 @@ dpram #( .init_file("gbc.hex"),.widthad_a(12),.width_a(8)) rom
 
 );
 
-dpram #( .init_file("fairylake.hex"),.widthad_a(22),.width_a(8)) game_rom
+dpram #( .init_file("cgb-acid2.hex"),.widthad_a(22),.width_a(8)) game_rom
 (
         .clock_a(cpu_clock),
         .address_a(game_rom_addr),

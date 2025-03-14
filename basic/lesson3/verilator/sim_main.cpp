@@ -434,6 +434,8 @@ int main(int argc, char** argv, char** env) {
                 ImGui::Text("Mode		  %d", top->rootp->top__DOT__soc__DOT__ppu__DOT__mode);
                 ImGui::Text("Step		  %d", top->rootp->top__DOT__soc__DOT__ppu__DOT__step);
                 ImGui::Text("LY			%04X", top->rootp->top__DOT__soc__DOT__ppu_LY);
+                ImGui::Text("SCY			%04X", top->rootp->top__DOT__soc__DOT__io_scy);
+                ImGui::Text("SCX			%04X", top->rootp->top__DOT__soc__DOT__io_scx);
                 ImGui::Text("TileY			%04X", top->rootp->top__DOT__soc__DOT__ppu__DOT__tileY);
                 ImGui::Text("TileX			%04X", top->rootp->top__DOT__soc__DOT__ppu__DOT__tileX);
 				ImGui::End();

@@ -14,6 +14,9 @@ module ppu (
 
     input gbc_mode,
 
+    input [7:0] scx,
+    input [7:0] scy,
+
     // connect to VGA frame buffer 
     output fb_clk,
     output reg fb_wr,
@@ -37,6 +40,8 @@ reg [2:0] mode;
 reg [7:0] step;
 reg [7:0] pixel_buf_h;
 reg [7:0] pixel_buf_l;
+reg [7:0] tmp_pixel;
+reg [7:0] tmp_pixel_2;
 reg [7:0] tile_id;
 reg [7:0] tile_attr;
 
@@ -61,9 +66,9 @@ always @(posedge clk, negedge lcd_ppu_en) begin
         if(mode == 3'd0) begin
             case(step)
             8'd0: begin
-                vram0_addr <= 'h9800 + (LX >> 3) + ((LY >> 3) * 'h20);
+                vram0_addr <= 'h9800 + ((LX+scx) >> 3) + (((LY+scy) >> 3) * 'h20);
                 if (gbc_mode)
-                    vram1_addr <= 'h9800 + (LX >> 3) + ((LY >> 3) * 'h20);
+                    vram1_addr <= 'h9800 + ((LX+scx) >> 3) + (((LY+scy) >> 3) * 'h20);
             end
 
             // Get BG Tile and BG Attr
@@ -73,46 +78,58 @@ always @(posedge clk, negedge lcd_ppu_en) begin
                     tile_attr <= vram1_data;
                 if (vram0_data < 255)
                     if (vram0_data >= 128)
+                        // Flip if tile_attr[6] (FlipY)
                         if (!gbc_mode || vram1_data[3] == 1'b0)
-                            vram0_addr <= 'h8800 + (vram0_data[7:0] << 4) + (tileY*2);
+                            vram0_addr <= 'h8800 + (vram0_data[7:0] << 4) + ((vram1_data[6] ? 7-tileY : tileY)*2);
                         else
-                            vram1_addr <= 'h8800 + (vram0_data[7:0] << 4) + (tileY*2);
+                            vram1_addr <= 'h8800 + (vram0_data[7:0] << 4) + ((vram1_data[6] ? 7-tileY : tileY)*2);
                     else //vram depends on bg_char_data_sel
                         if (bg_char_data_sel == 1'b0)
                             if (!gbc_mode || vram1_data[3] == 1'b0)
-                                vram0_addr <= 'h9000 + (vram0_data[7:0] << 4) + (tileY*2);
+                                vram0_addr <= 'h9000 + (vram0_data[7:0] << 4) + ((vram1_data[6] ? 7-tileY : tileY)*2);
                             else
-                                vram1_addr <= 'h9000 + (vram0_data[7:0] << 4) + (tileY*2);
+                                vram1_addr <= 'h9000 + (vram0_data[7:0] << 4) + ((vram1_data[6] ? 7-tileY : tileY)*2);
                         else
                             if (!gbc_mode || vram1_data[3] == 1'b0)
-                                vram0_addr <= 'h8000 + (vram0_data[7:0] << 4) + (tileY*2);
+                                vram0_addr <= 'h8000 + (vram0_data[7:0] << 4) + ((vram1_data[6] ? 7-tileY : tileY)*2);
                             else
-                                vram1_addr <= 'h8000 + (vram0_data[7:0] << 4) + (tileY*2);
+                                vram1_addr <= 'h8000 + (vram0_data[7:0] << 4) + ((vram1_data[6] ? 7-tileY : tileY)*2);
             end
 
             8'd4: begin
                 if (!gbc_mode || tile_attr[3] == 1'b0)
-                    pixel_buf_h <= vram0_data;
+                    tmp_pixel = vram0_data;
                 else
-                    pixel_buf_h <= vram1_data;
+                    tmp_pixel = vram1_data;
+
+                if (tile_attr[5])
+                    begin
+                        // X flip
+                        integer i;
+                        for (i=0; i<8 ; i = i + 1)
+                            tmp_pixel_2[7-i] = tmp_pixel[i];
+                        pixel_buf_h <= tmp_pixel_2;
+                    end
+                else 
+                    pixel_buf_h <= tmp_pixel;
 
                 if (tile_id < 255)
                     if (tile_id >= 128)
                         if (!gbc_mode || tile_attr[3] == 1'b0)
-                            vram0_addr <= 'h8800 + (tile_id[7:0] << 4) + (tileY*2)+1;
+                            vram0_addr <= 'h8800 + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2)+1;
                         else
-                            vram1_addr <= 'h8800 + (tile_id[7:0] << 4) + (tileY*2)+1;
+                            vram1_addr <= 'h8800 + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2)+1;
                     else //vram depends on bg_char_data_sel
                         if (bg_char_data_sel == 1'b0)
                             if (!gbc_mode || tile_attr[3] == 1'b0)
-                                vram0_addr <= 'h9000 + (tile_id[7:0] << 4) + (tileY*2)+1;
+                                vram0_addr <= 'h9000 + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2)+1;
                             else
-                                vram1_addr <= 'h9000 + (tile_id[7:0] << 4) + (tileY*2)+1;
+                                vram1_addr <= 'h9000 + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2)+1;
                         else
                             if (!gbc_mode || tile_attr[3] == 1'b0)
-                                vram0_addr <= 'h8000 + (tile_id[7:0] << 4) + (tileY*2)+1;
+                                vram0_addr <= 'h8000 + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2)+1;
                             else
-                                vram1_addr <= 'h8000 + (tile_id[7:0] << 4) + (tileY*2)+1;
+                                vram1_addr <= 'h8000 + (tile_id[7:0] << 4) + ((tile_attr[6] ? 7-tileY : tileY)*2)+1;
 
 
                 // if (tile_attr[3] == 1'b0) begin
@@ -125,9 +142,21 @@ always @(posedge clk, negedge lcd_ppu_en) begin
 
             8'd6: begin
                 if (!gbc_mode || tile_attr[3] == 1'b0)
-                     pixel_buf_l <= vram0_data;
+                    tmp_pixel = vram0_data;
                 else
-                     pixel_buf_l <= vram1_data;
+                    tmp_pixel = vram1_data;
+
+                if (tile_attr[5])
+                    begin
+                        // X flip
+                        integer i;
+                        for (i=0; i<8 ; i = i + 1)
+                            tmp_pixel_2[7-i] = tmp_pixel[i];
+                        pixel_buf_l <= tmp_pixel_2;
+                    end
+                else 
+                    pixel_buf_l <= tmp_pixel;
+
                 fb_wr <= 1'b1;
                 mode <= 3'd1;
             end
@@ -219,4 +248,5 @@ end
 //         end 
 //     end
 // end
+
 endmodule
